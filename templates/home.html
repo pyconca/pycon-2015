@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+    <div class="section1">
+        <div class="container lead">
+            <p>{% trans 'Join your fellow Pythonistas for a weekend of talks, activities, fun and code!' %}</p>
+        </div>
+    </div>
+    <div class="section2">
+        <div class="container">
+            <p>{% trans 'Conference:' %} <span class='dates'>{% trans 'November 7-8, 2015' %}</span></p>
+
+            <p>{% trans 'Sprints:' %} <span class='dates'>{% trans 'November 9, 2015' %}</span></p>
+
+            <p>{% trans 'Toronto, Ontario' %}</p>
+        </div>
+    </div>
+    <div class="section3">
+        <div class="container">
+            <button>{% trans 'Book Your Ticket' %}</button>
+            <a class='Twitter' href="https://twitter.com/pyconca">Twitter</a>
+            <a class='Facebook' href="https://www.facebook.com/pyconca">Facebook</a>
+        </div>
+    </div>
+    <div class="section4">
+        <div class="container">
+            <div class="column">
+                <h2>{% trans 'Schedule' %}</h2>
+
+                <p>{% trans 'Start the fun Friday evening with a mix and mingle. Feed your brain at talks on Saturday, and if your sprint team is eager, you can start that night. Sprint or attend talks and tutorials on Sunday.' %}</p>
+                <a href="" class="more-info">{% trans 'more info' %}</a>
+            </div>
+            <div class="column">
+                <h2>{% trans 'Venue' %}</h2>
+
+                <p>{% trans 'The event will be held at the Bahen Center for Information Technology, graciously provided by the university of Toronto. With subways access a short walk away you can easily explore the city.' %}</p>
+                <a href="" class="more-info">{% trans 'more info' %}</a>
+            </div>
+        </div>
+    </div>
+    <div class="section5">
+        <div class="container">
+            <h2>{% trans 'Our Sponsors' %}</h2>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{{ STATIC_URL }}js/app.js"></script>
+{% endblock %}
