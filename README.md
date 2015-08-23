@@ -7,12 +7,14 @@ Development Environment Setup
 
 You will need the following:
 
-- Python 3.4+
+- [Python 3.4+](https://www.python.org/downloads/)
 - [npm](https://www.npmjs.org/)
+- [pip](https://pip.pypa.io/en/stable/)
+- [virtualenvwrapper](https://virtualenvwrapper.readthedocs.org/en/latest/)
 
 Start by creating a python virtual environment:
 
-    $ npm instsall
+    $ npm install
     $ mkvirtualenv pycon --python=/usr/local/bin/python3
     (pycon) $
 
