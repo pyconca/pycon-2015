@@ -1,3 +1,4 @@
+{% load i18n %}
 <footer>
     <div class="container">
         {% load i18n %}
@@ -9,7 +10,27 @@
         </div>
         <div class="newsletter">
             <p>{% trans 'Stay up-to-date with PyCon Canada' %}</p>
-            {# newsletter form here #}
+
+            <form action="{% url 'mailing_list' %}?return_url={{ request.path }}" method="post" class="panel">
+                <div class="panel-body">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+
+                    <div class="form-field{% if field.errors %} error{% endif %}">
+                        {{ mailing_form.name.label_tag|safe }}
+                        {{ mailing_form.name }}
+                        {% for error in mailing_form.name.errors %}
+                            <span class="error-block">{{ error|safe }}</span>
+                        {% endfor %}
+                        {{ mailing_form.email.label_tag|safe }}
+                        {{ mailing_form.email }}
+                        {% for error in mailing_form.email.errors %}
+                            <span class="error-block">{{ error|safe }}</span>
+                        {% endfor %}
+                    </div>
+                    <button class="button button-primary">{% trans 'Join the mailing list' %}</button>
+                </div>
+            </form>
+
         </div>
         <div>
             <a class='Twitter' href="https://twitter.com/pyconca">Twitter</a>

@@ -1,0 +1,11 @@
+{% load i18n %}
+{% if messages %}
+    <ul class="message-list">
+        {% for message in messages %}
+            <li class="message message-{{ message.tags }}">
+                <span class="right">{% trans 'close' %}</span>
+                <span>{{ message }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}

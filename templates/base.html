@@ -12,6 +12,7 @@
 </head>
 <body>
     {% block body %}
+        {% include 'include/messages.html' %}
         {% include 'include/header.html' %}
         <div>
             {% block content %}{% endblock %}

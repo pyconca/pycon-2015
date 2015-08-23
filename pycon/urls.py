@@ -6,6 +6,7 @@ from pycon.home.views import HomeView
 
 urlpatterns = [
     url(r"^$", HomeView.as_view(), name='home'),
+    url(r'^mailing/', include('pycon.mailing.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
 

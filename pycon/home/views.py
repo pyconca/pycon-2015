@@ -1,9 +1,9 @@
-from django.views.generic.base import TemplateView
+from pycon.core.views import PyconTemplateView
 
 from pycon.sponsors.models import Sponsor
 
 
-class HomeView(TemplateView):
+class HomeView(PyconTemplateView):
     template_name = 'home.html'
 
     def get(self, request):
