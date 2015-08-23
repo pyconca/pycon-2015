@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% load i18n %}
 {% block content %}
-    <div class="section1">
+    <div class="home-section1">
         <div class="container lead">
             <p>{% trans 'Join your fellow Pythonistas for a weekend of talks, activities, fun and code!' %}</p>
         </div>
     </div>
-    <div class="section2">
+    <div class="home-section2">
         <div class="container">
             <p>{% trans 'Conference:' %} <span class='dates'>{% trans 'November 7-8, 2015' %}</span></p>
 
@@ -15,14 +15,14 @@
             <p>{% trans 'Toronto, Ontario' %}</p>
         </div>
     </div>
-    <div class="section3">
+    <div class="home-section3">
         <div class="container">
             <button>{% trans 'Book Your Ticket' %}</button>
             <a class='Twitter' href="https://twitter.com/pyconca">Twitter</a>
             <a class='Facebook' href="https://www.facebook.com/pyconca">Facebook</a>
         </div>
     </div>
-    <div class="section4">
+    <div class="home-section4">
         <div class="container">
             <div class="column">
                 <h2>{% trans 'Schedule' %}</h2>
@@ -38,12 +38,11 @@
             </div>
         </div>
     </div>
-    <div class="section5">
+    <div class="home-section5">
         <div class="container">
-            <h2>{% trans 'Our Sponsors' %}</h2>
-            <ul>
-                <li></li>
-            </ul>
+            {% for sponsor in sponsors %}
+                <img src="{{ MEDIA_URL }}{{ sponsor.logo_alt }}" alt="{{ sponsor.name }}">
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

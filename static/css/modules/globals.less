@@ -1,0 +1,105 @@
+/* -----------------------------------------------------------------------------
+    elements
+----------------------------------------------------------------------------- */
+
+a {
+    color: @color-accent2;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+hr {
+    border-top: 1px solid #ccc;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    margin: 20px 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+pre {
+    .border-radius(@border-radius);
+
+    background-color: #eee;
+    border: 1px solid #ccc;
+    font-family: @font-family;
+    padding: 10px;
+}
+
+ul {
+    margin-bottom: 15px;
+
+    > li {
+        line-height: 1.6;
+        margin-left: 30px;
+    }
+}
+
+/* -----------------------------------------------------------------------------
+    spacing
+----------------------------------------------------------------------------- */
+
+.space-top-0        { margin-top: 0; }
+.space-top-5        { margin-top: 5px; }
+.space-top-10       { margin-top: 10px; }
+.space-top-15       { margin-top: 15px; }
+.space-top-20       { margin-top: 20px; }
+.space-top-30       { margin-top: 30px; }
+
+.space-right-0      { margin-right: 0; }
+.space-right-5      { margin-right: 5px; }
+.space-right-10     { margin-right: 10px; }
+.space-right-15     { margin-right: 15px; }
+.space-right-20     { margin-right: 20px; }
+.space-right-30     { margin-right: 30px; }
+
+.space-bottom-0     { margin-bottom: 0; }
+.space-bottom-5     { margin-bottom: 5px; }
+.space-bottom-10    { margin-bottom: 10px; }
+.space-bottom-15    { margin-bottom: 15px; }
+.space-bottom-20    { margin-bottom: 20px; }
+.space-bottom-30    { margin-bottom: 30px; }
+
+.space-left-0       { margin-left: 0; }
+.space-left-5       { margin-left: 5px; }
+.space-left-10      { margin-left: 10px; }
+.space-left-15      { margin-left: 15px; }
+.space-left-20      { margin-left: 20px; }
+.space-left-30      { margin-left: 30px; }
+
+/* -----------------------------------------------------------------------------
+    utlity classes
+----------------------------------------------------------------------------- */
+
+.captcha { border: 1px solid #ccc; }
+.clickable { cursor: pointer; }
+
+.circle { .border-radius(50%); }
+
+.placeholder-no-transform {
+    &::-webkit-input-placeholder { text-transform: none; }
+    &:-moz-placeholder { text-transform: none; }
+    &::-moz-placeholder { text-transform: none; }
+    &:-ms-input-placeholder { text-transform: none; }
+}
+
+/* -----------------------------------------------------------------------------
+    display classes
+----------------------------------------------------------------------------- */
+
+.none   { display: none; }
+.inline { display: inline; }
+.block  { display: block; }
+.hidden { visibility: hidden; }
+
+/* -----------------------------------------------------------------------------
+    float classes
+----------------------------------------------------------------------------- */
+
+.left   { float: left; }
+.right  { float: right; }
+.clear  { clear: both; }

@@ -5,6 +5,7 @@
 *.pyc
 .coverage
 .DS_Store
+node_modules
 
 pycon/localsettings.py
 static/css/app.css

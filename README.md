@@ -1,5 +1,3 @@
-# pycon-2015
-
 Pycon Canada 2015
 =================
 
@@ -10,9 +8,11 @@ Development Environment Setup
 You will need the following:
 
 - Python 3.4+
+- [npm](https://www.npmjs.org/)
 
 Start by creating a python virtual environment:
 
+    $ npm instsall
     $ mkvirtualenv pycon --python=/usr/local/bin/python3
     (pycon) $
 
@@ -33,10 +33,30 @@ Create the database:
 
 Create `pycon/localsettings.py` with the following
 
+    
+    import os
+    
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    
+    ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
     DEBUG = True
     TEMPLATE_DEBUG = True
-    ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+    
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'dev_db.sqlite3'),
+        }
+    }
 
 Run the project:
 
     (pycon) $ python manage.py runserver
+
+
+Less Styles Compilation
+-----------------------
+
+Gulp is used to watch and autorun less compilation:
+
+    $ gulp

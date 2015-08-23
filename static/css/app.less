@@ -1,0 +1,122 @@
+/* -----------------------------------------------------------------------------
+    base styles
+----------------------------------------------------------------------------- */
+@import 'modules/variables';
+@import 'modules/mixins';
+@import 'modules/globals';
+
+html, body {
+    .box-sizing();
+
+    background-color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    min-width: @site-width;
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+    .border-radius(25px);
+    margin: 24px 0;
+    border: 1px solid @color-accent2;
+    color: @color-accent2;
+    background-color: @color-accent1;
+    min-width: 150px;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+/* -----------------------------------------------------------------------------
+    header styles
+----------------------------------------------------------------------------- */
+
+header {
+    background-color: @color-accent1;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 200px;
+}
+
+header > .container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.header-link {
+    font-size: 24px;
+    line-height: 48px;
+    padding: 0 15px;
+
+    &:hover, &.active {
+        color: @color-accent3;
+    }
+}
+
+.header-logo {
+    text-indent: -9999px;
+    width: 234px;
+    height: 98px;
+    background-size: 234px 98px;
+    background: url("/static/images/logo.png") no-repeat;
+    display: block;
+    margin: auto;
+}
+
+.language-switch {
+    .button;
+}
+
+/* -----------------------------------------------------------------------------
+    header styles
+----------------------------------------------------------------------------- */
+
+.home {
+    background-color: @color-accent1;
+    p {
+        color: @color-accent2;
+        font-size: 18px;
+    }
+
+    h2 {
+
+    }
+}
+
+.home-section1 {
+    .home;
+
+}
+
+.home-section2 {
+    .home;
+}
+
+.home-section3 {
+    .home;
+}
+
+.home-section4 {
+    .home;
+    background-color: @color-accent2;
+
+    h2, p {
+        color: @color-accent1;
+    }
+}
+
+.home-section5 {
+    .home;
+}
+
+@import 'modules/grid';
