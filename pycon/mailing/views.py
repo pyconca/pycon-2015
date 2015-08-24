@@ -7,12 +7,13 @@ from pycon.mailing.forms import MailingSignUpForm
 
 
 class MailingSignUpView(PyconTemplateView):
-    def post(self, request, return_url='home'):
+
+    template_name = 'home.html'
+
+    def post(self, request):
         form = MailingSignUpForm(data=request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, _('Thanks for signing up!'))
-            return redirect(return_url)
-        return self.render_to_response({
-            'mailing_form': form,
-        })
+            return redirect(request.META.get('HTTP_REFERER'))
+        return self.render_to_response({'mailing_form': form,})

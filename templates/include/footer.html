@@ -11,7 +11,7 @@
         <div class="newsletter">
             <p>{% trans 'Stay up-to-date with PyCon Canada' %}</p>
 
-            <form action="{% url 'mailing_list' %}?return_url={{ request.path }}" method="post" class="panel">
+            <form action="{% url 'mailing_list' %}" method="post" class="panel">
                 <div class="panel-body">
                     <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
 
