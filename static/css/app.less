@@ -41,25 +41,25 @@ html, body {
     message styles
 ----------------------------------------------------------------------------- */
 
-@message-bg:                #eee;
-@message-border:            #999;
-@message-color:             #333;
+@message-bg: #eee;
+@message-border: #999;
+@message-color: #333;
 
-@message-bg-info:           lighten(@color-accent1, 30%);
-@message-border-info:       @color-accent1;
-@message-color-info:        darken(@color-accent1, 40%);
+@message-bg-info: lighten(@color-accent1, 30%);
+@message-border-info: @color-accent1;
+@message-color-info: darken(@color-accent1, 40%);
 
-@message-bg-success:        lighten(@color-accent2, 30%);
-@message-border-success:    @color-accent2;
-@message-color-success:     darken(@color-accent2, 40%);
+@message-bg-success: lighten(@color-accent2, 30%);
+@message-border-success: @color-accent2;
+@message-color-success: darken(@color-accent2, 40%);
 
-@message-bg-warning:        lighten(@color-accent3, 30%);
-@message-border-warning:    @color-accent3;
-@message-color-warning:     darken(@color-accent3, 40%);
+@message-bg-warning: lighten(@color-accent3, 30%);
+@message-border-warning: @color-accent3;
+@message-color-warning: darken(@color-accent3, 40%);
 
-@message-bg-error:          lighten(@color-accent4, 30%);
-@message-border-error:      @color-accent4;
-@message-color-error:       darken(@color-accent4, 40%);
+@message-bg-error: lighten(@color-accent4, 30%);
+@message-border-error: @color-accent4;
+@message-color-error: darken(@color-accent4, 40%);
 
 .message-list {
     list-style-type: none;
@@ -82,27 +82,30 @@ html, body {
         padding: 5px;
     }
 }
+
 .message-info {
     background-color: @message-bg-info;
     border-color: @message-border-info;
     color: @message-color-info;
 }
+
 .message-success {
     background-color: @message-bg-success;
     border-color: @message-border-success;
     color: @message-color-success;
 }
+
 .message-warning {
     background-color: @message-bg-warning;
     border-color: @message-border-warning;
     color: @message-color-warning;
 }
+
 .message-error {
     background-color: @message-bg-error;
     border-color: @message-border-error;
     color: @message-color-error;
 }
-
 
 /* -----------------------------------------------------------------------------
     header styles
@@ -110,9 +113,6 @@ html, body {
 
 header {
     background-color: @color-accent1;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    height: 200px;
 }
 
 header > .container {
@@ -120,10 +120,16 @@ header > .container {
     padding-bottom: 0;
 }
 
+.nav {
+    margin-top: 10px;
+    text-align: center;
+}
+
 .header-link {
     font-size: 24px;
-    line-height: 48px;
-    padding: 0 15px;
+    padding: 0 2%;
+    vertical-align: bottom;
+    line-height: 60px;
 
     &:hover, &.active {
         color: @color-accent3;
@@ -136,12 +142,14 @@ header > .container {
     height: 98px;
     background-size: 234px 98px;
     background: url("/static/images/logo.png") no-repeat;
-    display: block;
-    margin: auto;
+    display: inline-block;
+    margin: 0 10% 0 10%;
 }
+
 
 .language-switch {
     .button;
+    float: right;
 }
 
 /* -----------------------------------------------------------------------------

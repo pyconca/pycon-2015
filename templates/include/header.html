@@ -1,5 +1,6 @@
 {% load i18n %}
 <header>
+    <span><button class="language-switch">{% trans 'Fran&ccedil;ais' %}</button></span>
     <div class="container">
         <div class="nav">
             <a href="#" class="header-link">{% trans 'About' %}</a>
@@ -7,7 +8,6 @@
             <a href="{% url 'home' %}" class="header-logo">Pycon Canada</a>
             <a href="#" class="header-link">{% trans 'Schedule' %}</a>
             <a href="#" class="header-link">{% trans 'Venue' %}</a>
-            <span><button class="language-switch">{% trans 'Fran&ccedil;ais' %}</button></span>
         </div>
     </div>
 </header>
