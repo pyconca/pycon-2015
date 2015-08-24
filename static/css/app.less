@@ -146,39 +146,64 @@ header > .container {
     margin: 0 10% 0 10%;
 }
 
-
 .language-switch {
     .button;
     float: right;
 }
 
 /* -----------------------------------------------------------------------------
-    header styles
+    home styles
 ----------------------------------------------------------------------------- */
 
 .home {
-    background-color: @color-accent1;
-    p {
-        color: @color-accent2;
-        font-size: 18px;
-    }
-
-    h2 {
-
-    }
+    text-align: center;
 }
 
 .home-section1 {
     .home;
-
+    background-color: @color-accent1;
+    color: @color-accent2;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    p {
+        font-size: 30px;
+        line-height: 36px;
+    }
 }
 
 .home-section2 {
     .home;
+    background-color: @color-accent1;
+    color: @color-accent2;
+    p {
+        font-size: 26px;
+        line-height: 34px;
+    }
 }
 
 .home-section3 {
     .home;
+    background-color: @color-accent1;
+    color: @color-accent2;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    p {
+        font-size: 20px;
+        line-height: 36px;
+    }
+
+    .book-ticket {
+        font-size: 16px;
+        border-radius: 25px;
+        border: 1px solid #249cd7;
+        color: #249cd7;
+        background-color: #fff;
+        min-width: 150px;
+        max-width: 350px;
+        display: block;
+        margin: auto;
+        margin-top: 30px;
+    }
 }
 
 .home-section4 {
@@ -192,6 +217,22 @@ header > .container {
 
 .home-section5 {
     .home;
+
+}
+
+/* -----------------------------------------------------------------------------
+    footer styles
+----------------------------------------------------------------------------- */
+
+.newsletter {
+    input {
+        font-size: 20px;
+        border: none;
+        border-bottom: 1px solid @color-accent2;
+        color: @color-accent1;
+        margin-top: 10px;
+        text-align: center;
+    }
 }
 
 @import 'modules/grid';
