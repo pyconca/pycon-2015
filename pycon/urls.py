@@ -1,14 +1,18 @@
 from django.conf import settings
 from django.conf.urls import include, url, patterns
+from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 
 from pycon.home.views import HomeView
 
-urlpatterns = [
+urlpatterns = patterns(
+    url(r'^admin/', include(admin.site.urls)),
+)
+
+urlpatterns += i18n_patterns(
     url(r"^$", HomeView.as_view(), name='home'),
     url(r'^mailing/', include('pycon.mailing.urls')),
-    url(r'^admin/', include(admin.site.urls)),
-]
+)
 
 if getattr(settings, 'DEBUG'):
     urlpatterns += patterns('',
