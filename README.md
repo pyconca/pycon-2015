@@ -62,3 +62,21 @@ Less Styles Compilation
 Gulp is used to watch and autorun less compilation:
 
     $ gulp
+
+Translation Files
+--------------------------
+
+Translation files are stored in `/locale`. To create these files, you must have
+[gettext](http://www.gnu.org/software/gettext/) installed.
+
+    $ django-admin makemessages -l fr
+    
+To update translation files from the code for all languages:
+
+    $ django-admin makemessages -a
+
+To edit translation files, open the `.po` file for the correct language and edit the `msgstr` lines.
+
+After creating or updating translation files, you must compile them into `.mo` files:
+
+    $ django-admin compilemessages

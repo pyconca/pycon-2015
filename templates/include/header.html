@@ -3,7 +3,11 @@
 <header>
     <div id='header-shape1'></div>
     <span>
-        <a class="language-switch" href="{% lang_url 'fr' %}">{% trans 'Fran&ccedil;ais' %}</a>
+        {% if LANGUAGE_CODE == 'en' %}
+            <a class="language-switch" href="{% lang_url 'fr' %}">Fran&ccedil;ais</a>
+        {% else %}
+            <a class="language-switch" href="{% lang_url 'en' %}">English</a>
+        {% endif %}
     </span>
     <div class="container">
         <div class="nav">
