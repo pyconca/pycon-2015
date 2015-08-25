@@ -1,6 +1,11 @@
 {% load i18n %}
+{% load core %}
 <header>
-    <span><button class="language-switch">{% trans 'Fran&ccedil;ais' %}</button></span>
+    <span>
+        <a href="{% lang_url 'fr' %}">
+            <button type="submit" class="language-switch">{% trans 'Fran&ccedil;ais' %}</button>
+        </a>
+    </span>
     <div class="container">
         <div class="nav">
             <a href="#" class="header-link">{% trans 'About' %}</a>
