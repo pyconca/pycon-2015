@@ -2,13 +2,61 @@
     footer styles
 ----------------------------------------------------------------------------- */
 
-.newsletter {
-    input {
-        font-size: 20px;
-        border: none;
-        border-bottom: 1px solid @color-accent2;
+footer {
+    background-color: @color-accent2;
+    color: @color-accent1;
+    height: 270px;
+
+    .container {
+        width: 800px;
+    }
+
+    [class*='col-'] {
+        float: left;
+    }
+
+    a {
         color: @color-accent1;
-        margin-top: 10px;
+        display: block;
+    }
+
+    .footer-links {
+        font-size: 14px;
+    }
+
+    .newsletter {
         text-align: center;
+        font-size: 14px;
+        display: inline;
+
+        .form-field {
+            width: 400px;
+
+        }
+        .mailing-list-button {
+            .border-radius(25px);
+            padding: 10px 40px 10px 40px;
+            margin: 24px 0;
+            border: 1px solid @color-accent1;
+            color: @color-accent1;
+            background-color: @color-accent2;
+            min-width: 150px;
+            font-size: 16px;
+            line-height: 23px;
+        }
+        input {
+            font-size: 20px;
+            border: none;
+            border-bottom: 1px solid @color-accent1;
+            color: @color-accent1;
+            background-color: @color-accent2;
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+
+    .footer-social {
+        display: inline;
+        font-size: 12px;
     }
 }
