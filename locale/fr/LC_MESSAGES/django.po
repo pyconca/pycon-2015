@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-24 20:54-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: pycon/mailing/views.py:17
+msgid "Thanks for signing up!"
+msgstr ""
+
+#: pycon/settings.py:122
+msgid "French"
+msgstr ""
+
+#: pycon/settings.py:123
+msgid "English"
+msgstr ""
+
+#: pycon/sponsors/enums.py:11
+msgid "Diamond"
+msgstr ""
+
+#: pycon/sponsors/enums.py:12
+msgid "Gold"
+msgstr ""
+
+#: pycon/sponsors/enums.py:13
+msgid "Silver"
+msgstr ""
+
+#: pycon/sponsors/enums.py:14
+msgid "Bronze"
+msgstr ""
+
+#: templates/home.html:7
+msgid "Join your fellow Pythonistas for a weekend of"
+msgstr "TESTETSTS"
+
+#: templates/home.html:9
+msgid "talks, activities, fun and code!"
+msgstr "345345345"
+
+#: templates/home.html:16
+msgid "Conference:"
+msgstr "34534534534"
+
+#: templates/home.html:16
+msgid "November 7-8, 2015"
+msgstr ""
+
+#: templates/home.html:17
+msgid "Sprints:"
+msgstr ""
+
+#: templates/home.html:17
+msgid "November 9, 2015"
+msgstr ""
+
+#: templates/home.html:18
+msgid "Toronto, Ontario"
+msgstr ""
+
+#: templates/home.html:25
+msgid "Extra copy here??"
+msgstr ""
+
+#: templates/home.html:26
+msgid "Book Your Ticket"
+msgstr ""
+
+#: templates/home.html:39 templates/include/header.html:17
+msgid "Schedule"
+msgstr ""
+
+#: templates/home.html:41
+msgid ""
+"Start the fun Friday evening with a mix and mingle. Feed your brain at talks "
+"on Saturday, and if your sprint team is eager, you can start that night. "
+"Sprint or attend talks and tutorials on Sunday."
+msgstr ""
+
+#: templates/home.html:42 templates/home.html.py:48
+msgid "more info"
+msgstr ""
+
+#: templates/home.html:45 templates/include/header.html:18
+msgid "Venue"
+msgstr ""
+
+#: templates/home.html:47
+msgid ""
+"The event will be held at the Bahen Center for Information Technology, "
+"graciously provided by the university of Toronto. With subways access a "
+"short walk away you can easily explore the city."
+msgstr ""
+
+#: templates/include/footer.html:12
+msgid "Stay up-to-date with PyCon Canada"
+msgstr ""
+
+#: templates/include/footer.html:30
+msgid "Join the mailing list"
+msgstr ""
+
+#: templates/include/footer.html:38
+msgid "Code of Conduct"
+msgstr ""
+
+#: templates/include/header.html:14
+msgid "About"
+msgstr ""
+
+#: templates/include/header.html:15
+msgid "Sponsors"
+msgstr ""
+
+#: templates/include/messages.html:6
+msgid "close"
+msgstr ""
