@@ -1,31 +1,29 @@
 {% spaceless %}
-<!DOCTYPE html>
-<html lang="{{ LANGUAGE_CODE }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
-    <meta name="viewport" content="width=1024, minimum-scale=0.25">
-    <link rel="icon" type="image/png" href="{{ STATIC_URL }}images/favicon.png">
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/app.css">
-    <title>Pycon CA| {% block title %}Pycon 2015{% endblock %}</title>
-    {% include "include/analytics.html" %}
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="{{ LANGUAGE_CODE }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+        <meta name="viewport" content="width=1024, minimum-scale=0.25">
+        <link rel="icon" type="image/png" href="{{ STATIC_URL }}images/favicon.png">
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/app.css">
+        <title>Pycon CA| {% block title %}Pycon 2015{% endblock %}</title>
+        {% include "include/analytics.html" %}
+    </head>
+    <body>
     {% block body %}
         {% include 'include/messages.html' %}
         {% include 'include/header.html' %}
-        <div>
-            {% block content %}{% endblock %}
-            {% block footer %}
-                {% include 'include/footer.html' %}
-            {% endblock %}
-        </div>
+        {% block content %}{% endblock %}
+    {% endblock %}
+    {% block footer %}
+        {% include 'include/footer.html' %}
     {% endblock %}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     {% block javascript %}
         <script src="{{ STATIC_URL }}js/app.js"></script>
     {% endblock %}
-</body>
-</html>
+    </body>
+    </html>
 {% endspaceless %}
