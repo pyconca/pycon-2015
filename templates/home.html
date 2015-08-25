@@ -2,26 +2,35 @@
 {% load i18n %}
 {% block content %}
     <div class="home-section1">
+        <div id='home-shape2'></div>
         <div class="container lead">
             <p>{% trans 'Join your fellow Pythonistas for a weekend of' %}</p>
+
             <p>{% trans 'talks, activities, fun and code!' %}</p>
         </div>
     </div>
     <div class="home-section2">
-        <div class="container">
-            <p>{% trans 'Conference:' %} <span class='dates'>{% trans 'November 7-8, 2015' %}</span></p>
-
-            <p>{% trans 'Sprints:' %} <span class='dates'>{% trans 'November 9, 2015' %}</span></p>
-
-            <p>{% trans 'Toronto, Ontario' %}</p>
+        <div class='dates-box'>
+            <span class='dates-inner'>
+                <div id='home-shape3' class='home-dates-shape'></div>
+                <p>{% trans 'Conference:' %} <span class='dates'>{% trans 'November 7-8, 2015' %}</span></p>
+                <p>{% trans 'Sprints:' %} <span class='dates'>{% trans 'November 9, 2015' %}</span></p>
+                <p>{% trans 'Toronto, Ontario' %}</p>
+            </span>
         </div>
     </div>
     <div class="home-section3">
-        <div class="container">
+        <div>
+            <div id='home-shape4'></div>
             <p>{% trans 'Extra copy here??' %}</p>
             <button class="book-ticket">{% trans 'Book Your Ticket' %}</button>
-            <a class='Twitter' href="https://twitter.com/pyconca">Twitter</a>
-            <a class='Facebook' href="https://www.facebook.com/pyconca">Facebook</a>
+        </div>
+        <div class='home-social_container'>
+            <div id='home-shape5'></div>
+            <div class='home-social'>
+                <a class='Twitter' href="https://twitter.com/pyconca">Twitter</a>
+                <a class='Facebook' href="https://www.facebook.com/pyconca">Facebook</a>
+            </div>
         </div>
     </div>
     <div class="home-section4">
