@@ -1,0 +1,69 @@
+/* -----------------------------------------------------------------------------
+    message styles
+----------------------------------------------------------------------------- */
+
+@message-bg: #eee;
+@message-border: #999;
+@message-color: #333;
+
+@message-bg-info: lighten(@color-accent1, 30%);
+@message-border-info: @color-accent1;
+@message-color-info: darken(@color-accent1, 40%);
+
+@message-bg-success: lighten(@color-accent2, 30%);
+@message-border-success: @color-accent2;
+@message-color-success: darken(@color-accent2, 40%);
+
+@message-bg-warning: lighten(@color-accent3, 30%);
+@message-border-warning: @color-accent3;
+@message-color-warning: darken(@color-accent3, 40%);
+
+@message-bg-error: lighten(@color-accent4, 30%);
+@message-border-error: @color-accent4;
+@message-color-error: darken(@color-accent4, 40%);
+
+.message-list {
+    list-style-type: none;
+    margin: 0;
+}
+
+.message {
+    .border-radius(@border-radius);
+
+    background-color: @message-bg;
+    border-left: 5px solid @message-border;
+    color: @message-color;
+    margin: 0 0 15px 0;
+    padding: 15px;
+
+    > .icon-cancel {
+        .inline-block();
+        cursor: pointer;
+        margin: -5px;
+        padding: 5px;
+    }
+}
+
+.message-info {
+    background-color: @message-bg-info;
+    border-color: @message-border-info;
+    color: @message-color-info;
+}
+
+.message-success {
+    background-color: @message-bg-success;
+    border-color: @message-border-success;
+    color: @message-color-success;
+}
+
+.message-warning {
+    background-color: @message-bg-warning;
+    border-color: @message-border-warning;
+    color: @message-color-warning;
+}
+
+.message-error {
+    background-color: @message-bg-error;
+    border-color: @message-border-error;
+    color: @message-color-error;
+}
