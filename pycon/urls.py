@@ -5,9 +5,9 @@ from django.contrib import admin
 
 from pycon.home.views import HomeView
 
-urlpatterns = patterns(
+urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-)
+]
 
 urlpatterns += i18n_patterns(
     url(r"^$", HomeView.as_view(), name='home'),
