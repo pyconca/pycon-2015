@@ -1,17 +1,18 @@
 {% load i18n %}
 <footer>
     <div class="container">
-
+        <div id='footer-shape1'></div>
+        <div id='footer-shape2'></div>
         <div class="grid">
 
-            <div class="footer-links col-3">
+            <div class="footer-left footer-links col-3">
                 <a href="#">{% trans 'Home' %}</a>
                 <a href="#">{% trans 'About' %}</a>
                 <a href="#">{% trans 'Sponsors' %}</a>
                 <a href="#">{% trans 'Venue' %}</a>
             </div>
 
-            <div class="newsletter col-6">
+            <div class="footer-middle col-6">
 
                 <form class="join-form" action="{% url 'mailing_list' %}" method="post" class="panel">
                     <p>{% trans 'Keep up with PyCon Canada' %}</p>
@@ -33,10 +34,12 @@
                 </form>
             </div>
 
-            <div class="footer-social col-3">
-                <a class='Twitter' href="https://twitter.com/pyconca">Twitter</a>
-                <a class='Facebook' href="https://www.facebook.com/pyconca">Facebook</a>
-                <a class="conduct" href="">{% trans 'Code of Conduct' %}</a>
+            <div class="footer-right col-3">
+                <div class="social-container">
+                    <a class='twitter' href="https://twitter.com/pyconca">Twitter</a>
+                    <a class='facebook' href="https://www.facebook.com/pyconca">Facebook</a>
+                </div>
+                    <a class="conduct" href="">{% trans 'Code of Conduct' %}</a>
                 <span class="footer-copyright">&copy; Pycon Canada 2015</span>
             </div>
         </div>
