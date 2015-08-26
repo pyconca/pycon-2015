@@ -1,42 +1,49 @@
 {% load i18n %}
 <footer>
     <div class="container">
-        {% load i18n %}
-        <div class="footer-links">
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-        </div>
-        <div class="newsletter">
-            <p>{% trans 'Stay up-to-date with PyCon Canada' %}</p>
+        <div id='footer-shape1'></div>
+        <div id='footer-shape2'></div>
+        <div class="grid">
 
-            <form action="{% url 'mailing_list' %}" method="post" class="panel">
-                <div class="panel-body">
+            <div class="footer-left footer-links col-3">
+                <a href="#">{% trans 'Home' %}</a>
+                <a href="#">{% trans 'About' %}</a>
+                <a href="#">{% trans 'Sponsors' %}</a>
+                <a href="#">{% trans 'Venue' %}</a>
+            </div>
+
+            <div class="footer-middle col-6">
+
+                <form class="join-form" action="{% url 'mailing_list' %}" method="post" class="panel">
+                    <p>{% trans 'Keep up with PyCon Canada' %}</p>
                     <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
 
-                    <div class="form-field{% if field.errors %} error{% endif %}">
-                        {{ mailing_form.name.label_tag|safe }}
+                    <div>
                         {{ mailing_form.name }}
                         {% for error in mailing_form.name.errors %}
-                            <span class="error-block">{{ error|safe }}</span>
-                        {% endfor %}
-                        {{ mailing_form.email.label_tag|safe }}
-                        {{ mailing_form.email }}
-                        {% for error in mailing_form.email.errors %}
-                            <span class="error-block">{{ error|safe }}</span>
+                            <div class="error-block">{{ error|safe }}</div>
                         {% endfor %}
                     </div>
-                    <button class="button button-primary">{% trans 'Join the mailing list' %}</button>
-                </div>
-            </form>
+                    <div>
+                        {{ mailing_form.email }}
+                        {% for error in mailing_form.email.errors %}
+                            <div class="error-block">{{ error|safe }}</div>
+                        {% endfor %}
+                    </div>
+                    <button class="button mailing-list-button">{% trans 'Join the mailing list' %}</button>
+                </form>
+            </div>
 
+            <div class="footer-right col-3">
+                <div class="social-container">
+                    <a class='twitter' href="https://twitter.com/pyconca">Twitter</a>
+                    <a class='facebook' href="https://www.facebook.com/pyconca">Facebook</a>
+                </div>
+                    <a class="conduct" href="">{% trans 'Code of Conduct' %}</a>
+                <span class="footer-copyright">&copy; Pycon Canada 2015</span>
+            </div>
         </div>
-        <div>
-            <a class='Twitter' href="https://twitter.com/pyconca">Twitter</a>
-            <a class='Facebook' href="https://www.facebook.com/pyconca">Facebook</a>
-            <a class="conduct" href="">{% trans 'Code of Conduct' %}</a>
-            <span class="footer-copyright">&copy; Pycon Canada 2015</span>
-        </div>
+
     </div>
+
 </footer>

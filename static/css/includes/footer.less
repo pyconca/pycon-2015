@@ -2,13 +2,186 @@
     footer styles
 ----------------------------------------------------------------------------- */
 
-.newsletter {
-    input {
-        font-size: 20px;
-        border: none;
-        border-bottom: 1px solid @color-accent2;
+footer {
+
+    position: relative;
+    background-color: @color-accent2;
+    color: @color-accent1;
+    height: 270px;
+
+    #footer-shape1 {
+        position: absolute;
+        left: 0px;
+        width: 250px;
+        top: 50px;
+        height: 85px;
+        background: transparent url("/static/images/SnakeShape-42.svg") no-repeat;
+        background-position: -50px 0px;
+    }
+
+    #footer-shape2 {
+        position: absolute;
+        top: 65px;
+        right: 0px;
+        width: 219px;
+        height: 85px;
+        background: transparent url("/static/images/SnakeShape-43.svg") no-repeat;
+        background-position: 100px 0px;
+    }
+
+    .container {
+        width: 800px;
+    }
+
+    a {
         color: @color-accent1;
-        margin-top: 10px;
+        display: block;
+    }
+
+    [class*='col-'] {
+        float: left;
+    }
+
+    .footer-left {
+        font-size: 14px;
+        line-height: 28px;
+        padding-left: 50px;
+
+    }
+
+    .footer-middle {
         text-align: center;
+        font-size: 14px;
+        display: inline;
+
+        .form-field {
+            width: 400px;
+
+        }
+        .mailing-list-button {
+            .border-radius(25px);
+            padding: 10px 40px 10px 40px;
+            margin: 24px 0;
+            border: 1px solid @color-accent1;
+            color: @color-accent1;
+            background-color: @color-accent2;
+            min-width: 150px;
+            font-size: 16px;
+            line-height: 23px;
+            width: 80%;
+        }
+        input {
+            font-size: 20px;
+            border: none;
+            border-bottom: 1px solid @color-accent1;
+            color: @color-accent1;
+            background-color: @color-accent2;
+            margin-top: 10px;
+            text-align: center;
+            width: 80%;
+        }
+    }
+
+    .footer-right {
+
+        display: inline;
+        font-size: 12px;
+        line-height: 24px;
+        padding-left: 60px;
+
+        .social-container {
+            width: 90px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        .twitter {
+            float: left;
+            text-indent: -9999px;
+            width: 40px;
+            height: 40px;
+            background: url("/static/images/twitter_footer.svg") center center no-repeat;
+        }
+
+        .facebook {
+            float: right;
+            text-indent: -9999px;
+            width: 40px;
+            height: 40px;
+            background: url("/static/images/facebook_footer.svg") center center no-repeat;
+        }
+
+        .conduct {
+            text-decoration: underline;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    footer {
+
+        height: 420px;
+
+        #footer-shape1 {
+            top: 200px;
+            left: -200px;
+        }
+
+        #footer-shape2 {
+            right: -80px;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        [class*='col-'] {
+            display: block;
+        }
+
+        .footer-left {
+            position: absolute;
+            bottom: 70px;
+            width: 30%;
+            float: left;
+        }
+
+        .footer-middle {
+            text-align: center;
+            font-size: 14px;
+            display: block;
+            width: 100%;
+            .form-field {
+                width: 400px;
+
+            }
+            .mailing-list-button {
+                .border-radius(25px);
+                padding: 10px 40px 10px 40px;
+                margin: 24px 0;
+                border: 1px solid @color-accent1;
+                color: @color-accent1;
+                background-color: @color-accent2;
+                min-width: 150px;
+                font-size: 16px;
+                line-height: 23px;
+            }
+            input {
+                font-size: 20px;
+                border: none;
+                border-bottom: 1px solid @color-accent1;
+                color: @color-accent1;
+                background-color: @color-accent2;
+                margin-top: 10px;
+                text-align: center;
+            }
+        }
+
+        .footer-right {
+            width: 55%;
+            float: right;
+        }
     }
 }
