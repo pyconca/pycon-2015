@@ -14,3 +14,4 @@ class Sponsor(models.Model):
     logo = models.ImageField(max_length=512, upload_to=upload_path)
     logo_alt = models.ImageField(max_length=512, upload_to=upload_path)
     level = models.CharField(max_length=64, choices=SponsorLevels.choices)
+    link = models.URLField(blank=True)
