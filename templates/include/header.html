@@ -2,13 +2,13 @@
 {% load core %}
 <header>
     <div id='header-shape1'></div>
-    <span>
+    <div class="language-switch-container">
         {% if LANGUAGE_CODE == 'en' %}
             <a class="language-switch" href="{% lang_url 'fr' %}">Fran&ccedil;ais</a>
         {% else %}
             <a class="language-switch" href="{% lang_url 'en' %}">English</a>
         {% endif %}
-    </span>
+    </div>
     <div class="container">
         <div class="nav">
             <a href="#" class="header-link">{% trans 'About' %}</a>
