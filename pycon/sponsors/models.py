@@ -9,8 +9,8 @@ class Sponsor(models.Model):
     def upload_path(self, filename):
         return os.path.basename(filename)
 
-    description_en = models.TextField(max_length=512)
-    description_fr = models.TextField(max_length=512)
+    description_en = models.TextField(max_length=2048)
+    description_fr = models.TextField(max_length=2048)
     logo_en = models.ImageField(max_length=512, upload_to=upload_path)
     logo_fr = models.ImageField(max_length=512, upload_to=upload_path)
     name_en = models.CharField(max_length=128)

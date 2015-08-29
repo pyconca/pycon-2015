@@ -2,9 +2,17 @@
 
 {% for sponsor in sponsors %}
     <div>
-        <div class="col-4">
+        <div class="col-3">
             <img class="sponsor-logo" src="{{ sponsor|i18n_get:'logo'|get:'url' }}">
         </div>
-        <div class="col-8"></div>
+        <div class="col-6">
+            <div class="sponsor-name">{{ sponsor|i18n_get:'name' }}</div>
+            <div class="sponsor-url">
+                <a class="sponsor-url-link" href="{{ sponsor|i18n_get:'url_website' }}">{{ sponsor|i18n_get:'url_website' }}</a>
+            </div>
+            <div class="sponsor-description">
+                {{ sponsor|i18n_get:'description'|linebreaks }}
+            </div>
+        </div>
     </div>
 {% endfor %}
