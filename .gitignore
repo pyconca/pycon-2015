@@ -11,6 +11,7 @@ pycon/localsettings.py
 static/css/app.css
 **/migrations/*
 dev_db.sqlite3
+media/*
 
 #-------------------------------------------------------------------------------
 # JetBrains
