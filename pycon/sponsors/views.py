@@ -8,7 +8,7 @@ class SponsorView(PyconTemplateView):
 
     def get(self, request):
         sponsors = defaultdict(list)
-        for sponsor in Sponsor.objects.all():
+        for sponsor in Sponsor.objects.all().order_by('id'):
             sponsors[sponsor.level].append(sponsor)
         return self.render_to_response({
             'sponsors': sponsors,

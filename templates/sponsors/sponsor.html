@@ -1,24 +1,43 @@
 {% extends 'base.html' %}
 {% load i18n %}
+{% load static %}
+
 {% block content %}
     <div class="container">
         <div class="col-3"></div>
         <div class="col-9">
             {% if sponsors.diamond %}
-                <div class="sponsor-level">{% trans 'Diamond' %}</div>
-                {% include 'sponsors/include/details.html' with sponsors=sponsors.diamond only %}
+                <div class="sponsor">
+                    <div class="sponsor-level">{% trans 'Diamond' %}</div>
+                    {% include 'sponsors/include/details.html' with sponsors=sponsors.diamond only %}
+                    <div class="sponsor-shape">
+                        <img src="{% static "images/SnakeShape-22.svg" %}">
+                    </div>
+                </div>
             {% endif %}
             {% if sponsors.gold %}
-                <div class="sponsor-level">{% trans 'Gold' %}</div>
-                {% include 'sponsors/include/details.html' with sponsors=sponsors.gold only %}
+                <div class="sponsor">
+                    <div class="sponsor-level">{% trans 'Gold' %}</div>
+                    {% include 'sponsors/include/details.html' with sponsors=sponsors.gold only %}
+                    <div class="sponsor-shape">
+                        <img src="{% static "images/SnakeShape-23.svg" %}">
+                    </div>
+                </div>
             {% endif %}
             {% if sponsors.silver %}
-                <div class="sponsor-level">{% trans 'Silver' %}</div>
-                {% include 'sponsors/include/details.html' with sponsors=sponsors.silver only %}
+                <div class="sponsor">
+                    <div class="sponsor-level">{% trans 'Silver' %}</div>
+                    {% include 'sponsors/include/details.html' with sponsors=sponsors.silver only %}
+                    <div class="sponsor-shape">
+                        <img src="{% static "images/SnakeShape-24.svg" %}">
+                    </div>
+                </div>
             {% endif %}
             {% if sponsors.bronze %}
-                <div class="sponsor-level">{% trans 'Bronze' %}</div>
-                {% include 'sponsors/include/details.html' with sponsors=sponsors.bronze only %}
+                <div class="sponsor">
+                    <div class="sponsor-level">{% trans 'Bronze' %}</div>
+                    {% include 'sponsors/include/details.html' with sponsors=sponsors.bronze only %}
+                </div>
             {% endif %}
         </div>
     </div>
