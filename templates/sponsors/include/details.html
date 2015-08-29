@@ -8,7 +8,7 @@
         <div class="col-6">
             <div class="sponsor-name">{{ sponsor|i18n_get:'name' }}</div>
             <div class="sponsor-url">
-                <a class="sponsor-url-link" href="{{ sponsor|i18n_get:'url_website' }}">{{ sponsor|i18n_get:'url_website' }}</a>
+                {{ sponsor|i18n_get:'url_website'|urlize }}
             </div>
             <div class="sponsor-description">
                 {{ sponsor|i18n_get:'description'|linebreaks }}
