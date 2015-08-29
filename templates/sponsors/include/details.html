@@ -1,0 +1,10 @@
+{% load core %}
+
+{% for sponsor in sponsors %}
+    <div>
+        <div class="col-4">
+            <img class="sponsor-logo" src="{{ sponsor|i18n_get:'logo'|get:'url' }}">
+        </div>
+        <div class="col-8"></div>
+    </div>
+{% endfor %}

@@ -21,3 +21,14 @@ def lang_url(context, new_lang):
     new_url = reverse(url_name)
     activate(cur_lang)
     return new_url
+
+
+@register.filter(name='get')
+def get(value, arg):
+    return getattr(value, arg)
+
+
+@register.filter(name='i18n_get')
+def i18n_get(value, arg):
+    key = '{}_{}'.format(arg, get_language())
+    return getattr(value, key, '')

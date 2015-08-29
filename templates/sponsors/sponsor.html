@@ -5,16 +5,20 @@
         <div class="col-3"></div>
         <div class="col-9">
             {% if sponsors.diamond %}
-                <span class="sponsor-level">{% trans 'Diamond' %}</span>
+                <div class="sponsor-level">{% trans 'Diamond' %}</div>
+                {% include 'sponsors/include/details.html' with sponsors=sponsors.diamond only %}
             {% endif %}
             {% if sponsors.gold %}
-                <span class="sponsor-level">{% trans 'Gold' %}</span>
+                <div class="sponsor-level">{% trans 'Gold' %}</div>
+                {% include 'sponsors/include/details.html' with sponsors=sponsors.gold only %}
             {% endif %}
             {% if sponsors.silver %}
-                <span class="sponsor-level">{% trans 'Silver' %}</span>
+                <div class="sponsor-level">{% trans 'Silver' %}</div>
+                {% include 'sponsors/include/details.html' with sponsors=sponsors.silver only %}
             {% endif %}
             {% if sponsors.bronze %}
-                <span class="sponsor-level">{% trans 'Bronze' %}</span>
+                <div class="sponsor-level">{% trans 'Bronze' %}</div>
+                {% include 'sponsors/include/details.html' with sponsors=sponsors.bronze only %}
             {% endif %}
         </div>
     </div>
