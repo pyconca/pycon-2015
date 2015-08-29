@@ -4,7 +4,7 @@ from pycon.sponsors.models import Sponsor
 
 
 class SponsorView(PyconTemplateView):
-    template_name = 'sponsor.html'
+    template_name = 'sponsors/sponsor.html'
 
     def get(self, request):
         sponsors = defaultdict(list)
