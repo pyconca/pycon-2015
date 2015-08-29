@@ -1,52 +1,101 @@
 .sponsor-level {
-    margin: 72px 0
-}
+    margin-top: 72px;
 
-.sponsor-level-name {
-    background-color: @color-accent1;
-    color: @color-accent2;
-    font-size: 30px;
-    font-weight: 300;
-    line-height: 34px;
-    border-bottom: 1px solid @color-accent2;
-    display: inline-block;
-    margin-bottom: 60px;
-}
-
-.sponsor-name {
-    background-color: @color-accent1;
-    color: @color-accent2;
-    font-size: 26px;
-    font-weight: 300;
-    margin-bottom: 18px;
-}
-
-.sponsor-logo {
-    max-width: 100%;
-}
-
-.sponsor-url {
-    a {
-        color: @color-accent6;
-        font-weight: 100;
-        font-size: 16px;
-    }
-    margin-bottom: 18px;
-}
-
-.sponsor-description {
-    p {
+    .sponsor-level-name {
+        background-color: @color-accent1;
         color: @color-accent2;
-        line-height: 24px;
-        font-size: 18px;
-        font-weight: 100;
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 34px;
+        border-bottom: 1px solid @color-accent2;
+        display: inline-block;
+        margin-bottom: 60px;
+    }
+}
+
+.sponsor {
+    .sponsor-name {
+        background-color: @color-accent1;
+        color: @color-accent2;
+        font-size: 26px;
+        font-weight: 300;
         margin-bottom: 18px;
     }
+
+    .sponsor-logo {
+        max-width: 100%;
+    }
+
+    .sponsor-url {
+        a {
+            color: @color-accent6;
+            font-weight: 100;
+            font-size: 16px;
+        }
+        margin-bottom: 18px;
+    }
+
+    .sponsor-description {
+        p {
+            color: @color-accent2;
+            line-height: 24px;
+            font-size: 18px;
+            font-weight: 100;
+            margin-bottom: 18px;
+        }
+    }
 }
 
-.sponsor-shape {
+.sponsor-divider {
     position: absolute;
     width: 100%;
     right: 0;
     left: -74px;
+}
+
+.sponsor-header {
+    top: 24px;
+    position: relative;
+    background-color: @color-accent2;
+    color: @color-accent1;
+
+    .sponsor-header-text {
+        margin: 42px 0;
+
+        .sponsor-title {
+            font-weight: 300;
+            font-size: 30px;
+            color: white;
+        }
+
+        .sponsor-intro {
+            font-weight: 100;
+            font-size: 18px;
+            line-height: 24px;
+            #sponsor-mailto {
+                color: @color-accent1;
+                border-bottom: 1px solid @color-accent1;
+            }
+        }
+    }
+
+    #sponsor-header-shape1 {
+        position: absolute;
+        left: 0;
+        width: 250px;
+        bottom: 32px;
+        height: 85px;
+        background: transparent url("/static/images/SnakeShape-20.svg") no-repeat;
+        background-position: -50px 0px;
+    }
+
+    #sponsor-header-shape2 {
+        position: absolute;
+        top: 36px;
+        right: 0;
+        width: 219px;
+        height: 85px;
+        background: transparent url("/static/images/SnakeShape-21.svg") no-repeat;
+        background-position: 100px 0;
+    }
 }
