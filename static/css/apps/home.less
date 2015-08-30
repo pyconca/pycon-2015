@@ -5,20 +5,9 @@
 .home {
     text-align: center;
 
-    #home-shape2 {
-        position: absolute;
-        top: 96px;
-        right: 0px;
-        width: 219px;
-        height: 78px;
-        background: transparent url("/static/images/SnakeShape-02.svg") no-repeat;
-        background-size: 219px 78px;
-        background-position: 100px 0px;
-    }
-
     #home-shape4 {
         position: absolute;
-        top: 650px;
+        top: 0px;
         background: transparent url("/static/images/SnakeShape-04.svg") right center no-repeat;
         background-size: 313px 97px;
         background-position: right center;
@@ -28,10 +17,21 @@
 
     }
 
+    .home-social_container {
+        position: relative;
+    }
+
+    .home-social {
+        position: absolute;
+        top: 0px;
+        right: 3%;
+        width: 100px;
+    }
+
     #home-shape5 {
         position: absolute;
         right: 0;
-        top: 580px;
+        top: -35px;
 
         background: transparent url("/static/images/SnakeShape-05.svg") center center no-repeat;
         background-position: left center;
@@ -40,12 +40,6 @@
         height: 108px;
     }
 
-    .home-social {
-        position: absolute;
-        top: 615px;
-        right: 3%;
-        width: 100px;
-    }
 }
 
 .home-section1 {
@@ -104,6 +98,7 @@
 
 .home-section3 {
     .home;
+    position: relative;
     background-color: @color-accent1;
     color: @color-accent2;
     margin-top: 60px;
