@@ -4,7 +4,7 @@
     <div class="mobile menu">
         <ul>
             <li><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
-            <li><a href="#">{% trans 'About' %}</a></li>
+            <li><a href="{% url 'about' %}">{% trans 'About' %}</a></li>
             <li><a href="{% url 'sponsor' %}">{% trans 'Sponsors' %}</a></li>
             <li><a href="#">{% trans 'Schedule' %}</a></li>
             <li><a href="#">{% trans 'Venue' %}</a></li>
@@ -27,7 +27,7 @@
                     <a class="mobile mobile-language-switch" href="{% lang_url 'en' %}">En</a>
                 {% endif %}
             </div>
-            <a href="#" class="header-link">{% trans 'About' %}</a>
+            <a href="{% url 'about' %}" class="header-link">{% trans 'About' %}</a>
             <a href="{% url 'sponsor' %}" class="header-link">{% trans 'Sponsors' %}</a>
             <a href="{% url 'home' %}" class="header-logo">Pycon Canada</a>
             <a href="#" class="header-link">{% trans 'Schedule' %}</a>
