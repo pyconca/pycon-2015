@@ -4,7 +4,7 @@ from pycon.sponsors.models import Sponsor
 
 
 class HomeView(PyconTemplateView):
-    template_name = 'home.html'
+    template_name = 'home/home.html'
 
     def get(self, request):
         return self.render_to_response({
