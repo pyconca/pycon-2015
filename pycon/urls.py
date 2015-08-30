@@ -12,6 +12,7 @@ urlpatterns = [
 urlpatterns += i18n_patterns(
     url(r"^$", HomeView.as_view(), name='home'),
     url(r'^sponsors/', include('pycon.sponsors.urls')),
+    url(r'^venue/', include('pycon.venue.urls')),
     url(r'^mailing/', include('pycon.mailing.urls')),
 )
 

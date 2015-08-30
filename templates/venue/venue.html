@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+    <div class="container venue-block">
+        <div id="sponsor-header-shape1"></div>
+        <div id="sponsor-header-shape2"></div>
+        <div class="grid">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="col-6 venue-text">
+                    <div class="venue-title">
+                        {% trans "Location" %}
+                    </div>
+                    <p>{% trans "PyCon Canada 2015 will be held at Bahen Centre for Information Technology" %}</p>
+                    <p>{% trans "University of Toronto - St. George Campus 40 St George St Toronto, ON M5S 2E4" %}</p>
+                </div>
+                <div class="col-6 venue-text venue-map">
+                    <iframe width="600" height="450" frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/place?q=Bahen%20Centre%20for%20Information%20Technology%2C%20Saint%20George%20Street%2C%20Toronto%2C%20ON%2C%20Canada&key=..." allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="grid venue-inverted">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div class="venue-title">{% trans "Getting to Toronto" %}</div>
+                <div class="venue-text">
+                    <p>{% trans "Toronto has 2 major airports. Pearson is the international airport and is the location for almost all the major domestic and international airlines. It's about a 35 minute drive from Pearson Airport to Chestnut Residence, but be aware that downtown Toronto traffic is busy all day and is particularly busy during peak rush hour. Allow at least an hour for travel time from the airport." %}</p>
+                    <p>{% trans "<b>Porter Airlines</b> has frequent, reasonably-priced flights for trips from several US cities to Toronto, including Boston, Burlington (VT), Chicago, Myrtle Beach, New York, and Washington." %}</p>
+                    <p>{% trans "VIA is a good alternative to the airlines if you are coming from somewhere like Montreal or Ottawa. Advance pricing is often available at a discount." %}</p>
+                    <p>{% trans "<b>If you're coming from the US: </b>" %}</p>
+                    <p>{% trans "Make sure that you've got a valid passport and don't forget to bring it with you." %}</p>
+                    <p>{% trans "Porter Airlines has frequent, reasonably-priced flights for trips from several US cities to Toronto, including Boston, Burlington (VT), Chicago, Myrtle Beach, New York, and Washington." %}</p>
+                    <br>
+                    <p>{% trans "<b>VIA Rail </b> is offering discounts on train fares for attendees:" %}</p>
+                    <p>{% trans "Valid for travel between Thursday August 8 and Friday August 16, 2013, from all stations throughout the VIA system to Toronto, Ontario and return." %}</p>
+                    <p>{% trans "Fare applies to a maximum of two passengers per booking. One complimentary stopover is allowed at no additional charge. For travel on all fare plans in Business class, the first stopover is allowed at no additional charge, provided that this stopover takes place in Toronto, Montéal, or Ottawa only." %}</p>
+                    <p>{% trans 'The discount is 10% off the best available fare in Economy, Business, Sleeper, or Sleeper Touring class. "Subject to the conditions and restrictions of the fare plan to which the additional discount is being applied."' %}</p>
+                    <p>{% trans 'Discount does not apply in "Economy–special" or escape fare and in "Business–supersaver" fee.' %}</p>
+                    <p>{% trans "Reference VIA convention code 12614." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="grid venue-block">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div class="venue-title">{% trans "Public Transit and Parking" %}</div>
+                <div class="venue-text">
+                    <p>{% trans "The nearest TTC subway stops are St. Patrick Station and Dundas Station, both on the Yonge-University-Spadina line. Dundas Street streetcars also stop at Chestnut Street. Cash fare is $3, or multiple tokens can be purchased at discounted rates." %}</p>
+                    <p>{% trans "The closest municipal parking (Green P) lots are the Toronto Coach Terminal at 130 Elizabeth Street and the Nathan Phillips Square Garage at 10 Queen Street West" %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="grid venue-block">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div class="venue-title">{% trans "What do to in Toronto" %}</div>
+                <div class="venue-text">
+                    <p>{% trans 'Tourism Toronto&#39;s <a href="http://www.seetorontonow.com/" target="_blank">website</a> has information on things to see and do in Toronto, as well as a "Deals" section including coupons. They also have a <a href="http://www.seetorontonow.com/mobile-app/" target="_blank">mobile app</a> available for download.' %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
