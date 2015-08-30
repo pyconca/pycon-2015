@@ -80,7 +80,26 @@ footer {
             text-align: center;
             width: 80%;
         }
+
+        ::-webkit-input-placeholder {
+            color: @color-accent1;
+        }
+
+        :-moz-placeholder {
+            /* Firefox 18- */
+            color: @color-accent1;
+        }
+
+        ::-moz-placeholder {
+            /* Firefox 19+ */
+            color: @color-accent1;
+        }
+
+        :-ms-input-placeholder {
+            color: red;
+        }
     }
+
 
     .footer-right {
 
