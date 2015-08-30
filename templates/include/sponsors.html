@@ -1,0 +1,7 @@
+{% load i18n %}
+<div class="container sponsors-include">
+    <h2>{% trans 'Our Sponsors' %}</h2>
+    {% for sponsor in sponsors %}
+        <img src="{{ MEDIA_URL }}{{ sponsor.logo_alt }}" alt="{{ sponsor.name }}">
+    {% endfor %}
+</div>

@@ -49,11 +49,7 @@
         </div>
     </div>
     <div class="home-section5">
-        <div class="container">
-            {% for sponsor in sponsors %}
-                <img src="{{ MEDIA_URL }}{{ sponsor.logo_alt }}" alt="{{ sponsor.name }}">
-            {% endfor %}
-        </div>
+        {% include 'include/sponsors.html' %}
     </div>
 {% endblock %}
 
