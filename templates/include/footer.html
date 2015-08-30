@@ -6,8 +6,8 @@
         <div class="grid">
 
             <div class="footer-left footer-links col-3">
-                <a href="#">{% trans 'Home' %}</a>
-                <a href="#">{% trans 'About' %}</a>
+                <a href="{% url 'home' %}">{% trans 'Home' %}</a>
+                <a href="{% url 'about' %}">{% trans 'About' %}</a>
                 <a href="{% url 'sponsor' %}">{% trans 'Sponsors' %}</a>
                 <a href="#">{% trans 'Venue' %}</a>
             </div>
