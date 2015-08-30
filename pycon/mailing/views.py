@@ -8,7 +8,7 @@ from pycon.mailing.forms import MailingSignUpForm
 
 class MailingSignUpView(PyconTemplateView):
 
-    template_name = 'home.html'
+    template_name = 'home/home.html'
 
     def post(self, request):
         form = MailingSignUpForm(data=request.POST)
