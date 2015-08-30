@@ -3,6 +3,72 @@
 {% load static %}
 
 {% block content %}
-    <div class="container ">
+    <div class="about-section1">
+        <p>{% trans 'PyCon Canada is an initiative to strengthen the Canadian Python community.' %}</p>
+        <button class="book-ticket">{% trans 'Book Your Ticket' %}</button>
+    </div>
+    <div class="about-section2">
+        <h3>{% trans 'What is PyCon Canada?' %}</h3>
+
+        <p>
+            {% blocktrans %}
+                Our main goal is to strengthen the Canadian
+                Python community by providing more opportunities
+                for us to share knowledge and ideas, encourage
+                support and education for speaking at conferences,
+                and increase the visibility of developers, organizations,
+                and companies within the community
+            {% endblocktrans %}
+        </p>
+
+        <p>
+            {% blocktrans %}
+                PyCon Canada is entirely run by volunteers
+                who are passionate about these goals.
+                We hope to see you at the 2015 conference!
+                We're also proud to host development sprints
+                which provide a gateway for new contributors
+                and a way for you to give back to the open-source community.
+            {% endblocktrans %}
+    </div>
+    <div class="about-section3">
+        <h3>{% trans 'Join the conversation' %}</h3>
+
+        <p>{% trans 'Be sure to use #pyconca2015. We love hearing from our community members!' %}</p>
+    </div>
+    <div class="about-section4">
+        <h3>{% trans 'Key Contacts' %}</h3>
+
+        <p>{% trans 'The majority of our discussion occurs on the mailing list <b>pyconca@googlegroups.com</b>.' %}</p>
+
+        <p>{% trans 'The organizing committee can be contacted privately at <b>organizers@pycon.ca</b>' %}</p>
+
+        <p>{% trans 'The board can be contacted privately at <b>board@pycon.ca.</b>.' %}</p>
+
+        <p>{% trans 'The majority of our discussion occurs on the mailing list <b>pyconca@googlegroups.com</b>.' %}</p>
+
+        <p>{% trans 'You can also find us on:' %}</p>
+
+        <p><a href="github.com/pyconca">github.com/pyconca</a></p>
+
+    </div>
+    <div class="twitter-feed">
+    </div>
+    <div class="about-section5">
+        <h3>{% trans 'The Team' %}</h3>
+        <ul>
+            <li>Daniel Quattrociocchi</li>
+            <li>David Hoffman</li>
+            <li>Ellen</li>
+            <li>Francis Deslauriers</li>
+            <li>Peter McCormick</li>
+        </ul>
+    </div>
+
+    <div class="about-section5">
+        <h3>{% trans '' %}</h3>
+
+        <p>{% trans '' %}</p>
+        {% include 'include/sponsors.html' %}
     </div>
 {% endblock %}
