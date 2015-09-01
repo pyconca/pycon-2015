@@ -1,0 +1,315 @@
+.about {
+
+    p {
+        line-height: 24px;
+        font-size: 18px;
+    }
+
+    #about-shape1 {
+        position: absolute;
+        right: 0;
+        top: -35px;
+        background: transparent url("/static/images/SnakeShape-11.svg") right center no-repeat;
+        background-position: left center;
+        width: 7%;
+        height: 108px;
+    }
+    #about-shape2 {
+        position: absolute;
+        top: 80px;
+        background: transparent url("/static/images/SnakeShape-10.svg") right center no-repeat;
+        background-position: right center;
+        width: 21%;
+        height: 100px;
+    }
+
+    .about-section1 {
+        margin-top: 70px;
+        margin-bottom: 90px;
+        position: relative;
+        text-align: center;
+        color: @color-accent2;
+        p {
+            color: @color-accent2;
+            font-size: 30px;
+            line-height: 36px;
+            width: 60%;
+            margin: auto;
+        }
+        .book-ticket {
+            font-size: 16px;
+            border-radius: 25px;
+            border: 1px solid #249cd7;
+            color: #249cd7;
+            background-color: #fff;
+            min-width: 150px;
+            max-width: 350px;
+            display: block;
+            margin: auto;
+            margin-top: 30px;
+            padding: 8px 30px 5px 30px;
+        }
+    }
+
+    #about-shape3 {
+        position: absolute;
+        right: 0;
+        top: 10%;
+        background: transparent url("/static/images/SnakeShape-11.svg") right center no-repeat;
+        background-position: left center;
+        width: 30%;
+        height: 108px;
+    }
+
+    #about-shape4 {
+        position: absolute;
+        top: 70%;
+        left: 0;
+        background: transparent url("/static/images/SnakeShape-12.svg") right center no-repeat;
+        background-position: right center;
+        width: 39%;
+        height: 120px;
+    }
+
+    .about-section2 {
+        position: relative;
+        padding: 0 22%;
+        margin-bottom: 100px;
+        color: @color-accent2;
+
+        h3 {
+            color: @color-accent2;
+            margin-bottom: 23px;
+        }
+
+        .blurb-1 {
+            display: block;
+            margin-bottom: 60px;
+        }
+
+        .blurb-2 {
+            float: right;
+        }
+
+    }
+
+    .about-section2:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    #about-shape5 {
+        position: absolute;
+        right: 0;
+        top: 40px;
+        background: transparent url("/static/images/SnakeShape-13.svg") right center no-repeat;
+        background-position: left center;
+        width: 9%;
+        height: 76px;
+    }
+
+    #about-shape6 {
+        position: absolute;
+        top: 180px;
+        left: 0;
+        background: transparent url("/static/images/SnakeShape-14.svg") right center no-repeat;
+        background-position: right center;
+        width: 12%;
+        height: 130px;
+    }
+
+    #about-shape7 {
+        position: absolute;
+        right: 0;
+        bottom: 40px;
+        background: transparent url("/static/images/SnakeShape-15.svg") right center no-repeat;
+        background-position: left center;
+        width: 28%;
+        height: 100px;
+    }
+
+    .about-section3 {
+        padding: 40px 20% 40px 20%;
+        position: relative;
+        background-color: @color-accent2;
+        color: @color-accent1;
+
+        h3, a, p {
+            color: @color-accent1;
+        }
+
+        h3, p {
+            margin-bottom: 24px;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+    }
+
+    #about-shape8 {
+        position: absolute;
+        right: 0;
+        top: 40px;
+        background: transparent url("/static/images/SnakeShape-16.svg") right center no-repeat;
+        background-position: left center;
+        width: 16%;
+        height: 62px;
+    }
+
+    #about-shape9 {
+        position: absolute;
+        top: 160px;
+        left: 0;
+        background: transparent url("/static/images/SnakeShape-17.svg") right center no-repeat;
+        background-position: right center;
+        width: 12%;
+        height: 130px;
+    }
+
+    #about-shape10 {
+        position: absolute;
+        right: 0;
+        bottom: -150%;
+        background: transparent url("/static/images/SnakeShape-18.svg") right center no-repeat;
+        background-position: left center;
+        width: 5%;
+        height: 72px;
+    }
+
+    .about-section4 {
+        position: relative;
+        padding: 65px 12% 0 12%;
+
+        h2 {
+            color: @color-accent2;
+            margin-bottom: 40px;
+        }
+        color: @color-accent2;
+
+        ul.names {
+            text-align: center;
+            list-style-type: none;
+        }
+        ul.names li {
+            list-style: none;
+            font-size: 18px;
+            height: 50px;
+            color: @color-accent3;
+            float: left;
+            text-align: left;
+            height: 50px;
+            width: 180px;
+        }
+
+        ul > li {
+            margin-right: 10%;
+            margin-left: 0;
+        }
+
+        @media only screen and (min-width: 769px) {
+            ul.names li:nth-child(3n+4) {
+                clear: left;
+                float: left;
+            }
+        }
+
+    }
+
+    #about-shape11 {
+        background: transparent url("/static/images/SnakeShape-19.svg") right center no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 20px;
+    }
+
+    .about-section5 {
+        padding-top: 60px;
+        clear: both;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .about {
+
+        #about-shape3 {
+            top: 95%;
+            width: 15%;
+        }
+
+        .about-section1 {
+            padding: 0 10px 0 10px;
+            margin-bottom: 20px;
+            p {
+                width: 100%;
+            }
+            .book-ticket {
+                width: 62%;
+                max-width: 320px;
+            }
+        }
+
+        .about-section2 {
+            padding: 0 10px 0 10px;
+            text-align: left;
+            font-size: 26px;
+            p {
+                font-size: 26px;
+                line-height: 24px;
+                margin-bottom: 24px;
+            }
+            .blurb-1, .blurb-2 {
+                margin: 0;
+            }
+            div {
+                width: 100%;
+            }
+        }
+
+        .about-section3 {
+            padding: 0 10px 0 10px;
+            text-align: left;
+            font-size: 26px;
+            p {
+                font-size: 26px;
+                line-height: 24px;
+                margin-bottom: 24px;
+            }
+            div {
+                width: 100%;
+            }
+        }
+
+        .about-section4 {
+            padding: 0 10px 0 10px;
+            width: 100%;
+            margin-bottom: 50px;
+
+            h2 {
+                margin-top: 50px;
+            }
+
+            ul.names li:nth-child(2n+1) {
+                clear: left;
+                float: left;
+            }
+
+            ul > li {
+                margin-right: 2%;
+            }
+
+        }
+
+        #about-shape11 {
+            height: 5px;
+        }
+        .about-section5 {
+        }
+
+    }
+
+}
