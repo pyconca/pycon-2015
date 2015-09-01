@@ -42,6 +42,9 @@
             </div>
         </div>
         <div class="about-section3">
+            <div id='about-shape5'></div>
+            <div id='about-shape6'></div>
+            <div id='about-shape7'></div>
             <div class="col-5">
                 <h3>{% trans 'Join the conversation' %}</h3>
 
@@ -57,9 +60,7 @@
 
                 <p>{% trans 'The majority of our discussion occurs on the mailing list <b>pyconca@googlegroups.com</b>.' %}</p>
 
-                <p>{% trans 'You can also find us on:' %}</p>
-
-                <p><a href="github.com/pyconca">github.com/pyconca</a></p>
+                <p>{% trans 'You can also find us on:' %}<br><a href="github.com/pyconca">github.com/pyconca</a></p>
             </div>
 
             <div class="col-5 twitter-feed">
@@ -67,20 +68,25 @@
             </div>
         </div>
         <div class="about-section4">
-            <h3>{% trans 'The Team' %}</h3>
-            <ul>
-                <li>Daniel Quattrociocchi</li>
-                <li>David Hoffman</li>
-                <li>Ellen</li>
-                <li>Francis Deslauriers</li>
-                <li>Peter McCormick</li>
-            </ul>
+            <div id='about-shape8'></div>
+            <div id='about-shape9'></div>
+            <div id='about-shape10'></div>
+            <h2>{% trans 'The Team' %}</h2>
+            <table>
+                <tr>
+                    <td>Anarosa</td>
+                    <td>Daniel Quattrociocchi</td>
+                    <td>David Hoffman</td>
+                </tr>
+                <tr>
+                    <td>Ellen</td>
+                    <td>Francis Deslauriers</td>
+                    <td>Peter McCormick</td>
+                </tr>
+            </table>
         </div>
-
         <div class="about-section5">
-            <h3>{% trans '' %}</h3>
-
-            <p>{% trans '' %}</p>
+            <div id='about-shape11'></div>
             {% include 'include/sponsors.html' %}
         </div>
     </div>
