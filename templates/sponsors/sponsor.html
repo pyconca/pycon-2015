@@ -27,44 +27,53 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="grid">
-            <div class="col-3"></div>
-            <div class="col-9">
-                {% if sponsors.diamond %}
+    <div class="sponsors-list container">
+        {% if sponsors.diamond %}
+            <div class="grid">
+                <div class="col-3"></div>
+                <div class="col-9">
                     <div class="sponsor-level">
                         <div class="sponsor-level-name">{% trans 'Diamond' %}</div>
                         {% include 'sponsors/include/details.html' with sponsors=sponsors.diamond only %}
                     </div>
-                    <div class="sponsor-divider">
-                        <img src="{% static "images/SnakeShape-22.svg" %}">
-                    </div>
-                {% endif %}
-                {% if sponsors.gold %}
+                </div>
+            </div>
+            <div class="sponsor-divider diamond-divider"></div>
+        {% endif %}
+        {% if sponsors.gold %}
+            <div class="grid">
+                <div class="col-3"></div>
+                <div class="col-9">
                     <div class="sponsor-level">
                         <div class="sponsor-level-name">{% trans 'Gold' %}</div>
                         {% include 'sponsors/include/details.html' with sponsors=sponsors.gold only %}
                     </div>
-                    <div class="sponsor-divider">
-                        <img src="{% static "images/SnakeShape-23.svg" %}">
-                    </div>
-                {% endif %}
-                {% if sponsors.silver %}
+                </div>
+            </div>
+            <div class="sponsor-divider gold-divider"></div>
+        {% endif %}
+        {% if sponsors.silver %}
+            <div class="grid">
+                <div class="col-3"></div>
+                <div class="col-9">
                     <div class="sponsor-level">
                         <div class="sponsor-level-name">{% trans 'Silver' %}</div>
                         {% include 'sponsors/include/details.html' with sponsors=sponsors.silver only %}
                     </div>
-                     <div class="sponsor-divider">
-                        <img src="{% static "images/SnakeShape-24.svg" %}">
-                    </div>
-                {% endif %}
-                {% if sponsors.bronze %}
+                </div>
+            </div>
+            <div class="sponsor-divider silver-divider"></div>
+        {% endif %}
+        {% if sponsors.bronze %}
+            <div class="grid">
+                <div class="col-3"></div>
+                <div class="col-9">
                     <div class="sponsor-level">
                         <div class="sponsor-level-name">{% trans 'Bronze' %}</div>
                         {% include 'sponsors/include/details.html' with sponsors=sponsors.bronze only %}
                     </div>
-                {% endif %}
+                </div>
             </div>
-        </div>
+        {% endif %}
     </div>
 {% endblock %}
