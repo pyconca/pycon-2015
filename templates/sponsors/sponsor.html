@@ -2,6 +2,10 @@
 {% load i18n %}
 {% load static %}
 
+{% block javascript %}
+    <script src="{{ STATIC_URL }}js/app.js"></script>
+{% endblock %}
+
 {% block content %}
     <div class="container sponsor-header">
         <div id="sponsor-header-shape1"></div>

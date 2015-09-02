@@ -1,4 +1,5 @@
 {% load core %}
+{% load i18n %}
 
 {% for sponsor in sponsors %}
     <div class="sponsor">
@@ -9,6 +10,9 @@
             <div class="sponsor-name">{{ sponsor|i18n_get:'name' }}</div>
             <div class="sponsor-url">
                 {{ sponsor|i18n_get:'url_website'|urlize }}
+            </div>
+            <div class="sponsor-url">
+                <a href="{{ sponsor|i18n_get:'url_twitter' }}">{% trans "Twitter" %}</a>
             </div>
             <div class="sponsor-description">
                 {{ sponsor|i18n_get:'description'|linebreaks }}

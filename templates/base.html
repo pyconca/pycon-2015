@@ -20,10 +20,8 @@
         {% include 'include/footer.html' %}
     {% endblock %}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-    {% block javascript %}
-        <script src="{{ STATIC_URL }}js/app.js"></script>
-    {% endblock %}
+    <script src="{{ STATIC_URL }}js/app.js"></script>
+    {% block javascript %}{% endblock %}
     </body>
     </html>
 {% endspaceless %}
