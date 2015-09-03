@@ -3,7 +3,7 @@ from pycon.sponsors.models import Sponsor
 
 
 class SponsorAdmin(admin.ModelAdmin):
-    list_display = ('name_en', 'name_fr', 'level')
+    list_display = ('name', 'name', 'level')
 
 
 admin.site.register(Sponsor, SponsorAdmin)

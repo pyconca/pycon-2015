@@ -4,10 +4,10 @@
 {% for sponsor in sponsors %}
     <div class="sponsor">
         <div class="col-3">
-            <img class="sponsor-logo" src="{{ sponsor|i18n_get:'logo'|get:'url' }}">
+            <img class="sponsor-logo" src="{{ sponsor.logo.url }}">
         </div>
         <div class="col-6">
-            <div class="sponsor-name">{{ sponsor|i18n_get:'name' }}</div>
+            <div class="sponsor-name">{{ sponsor.name }}</div>
             <div class="sponsor-url">
                 {{ sponsor|i18n_get:'url_website'|urlize }}
             </div>
