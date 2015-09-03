@@ -4,7 +4,13 @@
 {% for sponsor in sponsors %}
     <div class="sponsor">
         <div class="col-3">
-            <img class="sponsor-logo" src="{{ sponsor.logo.url }}">
+            {% if sponsor|i18n_get:'url_website' %}
+                <a href="{{ sponsor|i18n_get:'url_website' }}">
+                    <img class="sponsor-logo" src="{{ sponsor.logo.url }}">
+                </a>
+            {% else %}
+                <img class="sponsor-logo" src="{{ sponsor.logo.url }}">
+            {% endif %}
         </div>
         <div class="col-6">
             <div class="sponsor-name">{{ sponsor.name }}</div>
