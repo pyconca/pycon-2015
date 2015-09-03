@@ -1,7 +1,15 @@
 {% load i18n %}
+{% load core %}
+
 <div class="container sponsors-include">
-    <h2>{% trans 'Our Sponsors' %}</h2>
+    <div class="sponsors-include-title">{% trans 'Our Sponsors' %}</div>
     {% for sponsor in sponsors %}
-        <img src="{{ MEDIA_URL }}{{ sponsor.logo_alt }}" alt="{{ sponsor.name }}">
+        {% if sponsor|i18n_get:'url_website' %}
+            <a href="{{ sponsor|i18n_get:'url_website' }}">
+                <img class="sponsors-include-img" src="{{ MEDIA_URL }}{{ sponsor.logo }}" alt="{{ sponsor.name }}">
+            </a>
+        {% else %}
+            <img class="sponsors-include-img" src="{{ MEDIA_URL }}{{ sponsor.logo }}" alt="{{ sponsor.name }}">
+        {% endif %}
     {% endfor %}
 </div>
