@@ -73,12 +73,15 @@
             <div id='about-shape10' class="desktop"></div>
             <h2>{% trans 'The Team' %}</h2>
             <ul class="names">
-                <li>Anarosa</li>
-                <li>Daniel Quattrociocchi</li>
-                <li>David Hoffman</li>
-                <li>Ellen</li>
-                <li>Francis Deslauriers</li>
-                <li>Peter McCormick</li>
+                {% for volunteer in volunteers %}
+                    {% if volunteer.url %}
+                        <li>
+                            <a class="volunteer-url" href="{{ volunteer.url }}">{{ volunteer.name }}</a>
+                        </li>
+                    {% else %}
+                        <li>{{ volunteer.name }}</li>
+                    {% endif %}
+                {% endfor %}
             </ul>
         </div>
         <div class="about-section5">
