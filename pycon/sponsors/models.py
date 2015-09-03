@@ -14,8 +14,8 @@ class Sponsor(models.Model):
     logo = models.ImageField(max_length=512, upload_to=upload_path)
     name = models.CharField(max_length=128)
     level = models.CharField(max_length=64, choices=SponsorLevels.choices)
-    url_twitter_en = models.URLField(blank=True)
-    url_twitter_fr = models.URLField(blank=True)
+    twitter_en = models.CharField(max_length=32, blank=True)
+    twitter_fr = models.CharField(max_length=32, blank=True)
     url_website_en = models.URLField(blank=True)
     url_website_fr = models.URLField(blank=True)
 
