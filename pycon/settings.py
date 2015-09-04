@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'pycon.about',
     'pycon.sponsors',
     'pycon.mailing',
+    'pycon.conduct',
 )
 
 MIDDLEWARE_CLASSES = (

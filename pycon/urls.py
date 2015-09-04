@@ -15,6 +15,7 @@ urlpatterns += i18n_patterns(
     url(r'^sponsors/', include('pycon.sponsors.urls')),
     url(r'^venue/', include('pycon.venue.urls')),
     url(r'^mailing/', include('pycon.mailing.urls')),
+    url(r'^conduct/', include('pycon.conduct.urls')),
 )
 
 if getattr(settings, 'DEBUG'):
