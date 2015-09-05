@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load i18n %}
+{% load static %}
 {% block content %}
     <div class="home-section1">
         <div class="container lead">
@@ -33,18 +34,34 @@
         </div>
     </div>
     <div class="home-section4">
-        <div class="container">
-            <div class="column">
-                <h2>{% trans 'Schedule' %}</h2>
+    <div class="container">
+        <div class="grid">
+            <div class="col-6 schedule-col">
+                <div class="grid">
+                    <div class="col-2">
+                        <img src="{% static "images/02-Calendar.svg" %}">
+                    </div>
+                    <div class="col-10">
+                        <h2>{% trans 'Schedule' %}</h2>
 
-                <p>{% trans 'Start the fun Friday evening with a mix and mingle. Feed your brain at talks on Saturday, and if your sprint team is eager, you can start that night. Sprint or attend talks and tutorials on Sunday.' %}</p>
-                <a href="" class="more-info">{% trans 'more info' %}</a>
+                        <p>{% trans 'Start the fun Friday evening with a mix and mingle. Feed your brain at talks on Saturday, and if your sprint team is eager, you can start that night. Sprint or attend talks and tutorials on Sunday.' %}</p>
+                        <a href="" class="more-info">{% trans 'more info' %}</a>
+                    </div>
+                </div>
             </div>
-            <div class="column">
-                <h2>{% trans 'Venue' %}</h2>
+            <div class="col-5 venue-col">
+                <div class="grid">
+                    <div class="col-2">
+                        <img src="{% static "images/03-Location.svg" %}">
+                    </div>
+                    <div class="col-10">
 
-                <p>{% trans 'The event will be held at the Bahen Center for Information Technology, graciously provided by the university of Toronto. With subways access a short walk away you can easily explore the city.' %}</p>
-                <a href="" class="more-info">{% trans 'more info' %}</a>
+                        <h2>{% trans 'Venue' %}</h2>
+
+                        <p>{% trans 'The event will be held at the Bahen Center for Information Technology, graciously provided by the university of Toronto. With subways access a short walk away you can easily explore the city.' %}</p>
+                        <a href="" class="more-info">{% trans 'more info' %}</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
