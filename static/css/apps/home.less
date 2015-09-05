@@ -17,18 +17,6 @@
 
     }
 
-    #home-shape5 {
-        position: absolute;
-        right: 0;
-        top: -35px;
-
-        background: transparent url("/static/images/SnakeShape-05.svg") center center no-repeat;
-        background-position: left center;
-
-        width: 20%;
-        height: 108px;
-    }
-
 }
 
 .home-section1 {
@@ -95,6 +83,18 @@
     p {
         font-size: 20px;
         line-height: 36px;
+    }
+
+    #home-shape5 {
+        position: absolute;
+        right: 0;
+        top: -35px;
+
+        background: transparent url("/static/images/SnakeShape-05.svg") center center no-repeat;
+        background-position: left center;
+
+        width: 20%;
+        height: 108px;
     }
 
     .book-ticket {
@@ -171,4 +171,55 @@
 .home-section5 {
     .home;
     background-color: @color-accent1;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #home-shape4 {
+        display: none;
+    }
+
+    .home-section3 {
+
+        #home-shape5 {
+            width: 140%;
+            left: -40px;
+        }
+
+        .home-social_container {
+            margin-top: 80px;
+            height: 80px;
+            width: 100%;
+        }
+
+        .home-social {
+            position: relative;
+            width: 400px;
+            padding: 0 10% 0 15%;
+            margin: auto;
+        }
+
+    }
+
+    .home-section4 {
+        .schedule-col {
+            display: block;
+            padding: 0;
+            width: 100%;
+
+            p {
+                margin-right: 0;
+            }
+        }
+
+        .venue-col {
+            padding: 0;
+            width: 100%;
+
+            p {
+                margin-right: 0;
+            }
+        }
+    }
+
 }
