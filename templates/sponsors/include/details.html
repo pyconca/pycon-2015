@@ -3,7 +3,7 @@
 
 {% for sponsor in sponsors %}
     <div class="sponsor">
-        <div class="col-3">
+        <div class="col-3 sponsor-logo-col">
             {% if sponsor|i18n_get:'url_website' %}
                 <a href="{{ sponsor|i18n_get:'url_website' }}">
                     <img class="sponsor-logo" src="{{ sponsor.logo.url }}">
