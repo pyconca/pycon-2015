@@ -1,128 +1,177 @@
 .venue {
-  margin-top: 70px;
-  .container {
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-  }
-  .venue-block {
+    margin-top: 70px;
+    .container {
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+    }
+    .venue-block {
 
-    position: relative;
-    background-color: #ffffff;
-    color: @color-accent2;
-    padding: 66px 20px !important;
+        position: relative;
+        background-color: #ffffff;
+        color: @color-accent2;
+        padding: 66px 20px;
 
-    #venue-shape1 {
-      position: absolute;
-      right: 0;
-      top: -35px;
-      background: transparent url("/static/images/SnakeShape-11.svg") right center no-repeat;
-      background-position: left center;
-      width: 7%;
-      height: 108px;
+        #venue-shape1 {
+            position: absolute;
+            right: 0;
+            top: -35px;
+            background: transparent url("/static/images/SnakeShape-11.svg") right center no-repeat;
+            background-position: left center;
+            width: 7%;
+            height: 108px;
+        }
+        #venue-shape2 {
+            position: absolute;
+            bottom: 84px;
+            left: 0;
+            background: transparent url("/static/images/SnakeShape-25.svg") right center no-repeat;
+            background-position: right center;
+            width: 21%;
+            height: 94px;
+        }
+        #venue-shape7 {
+            position: absolute;
+            right: 0;
+            top: 84px;
+            background: transparent url("/static/images/SnakeShape-30.svg") right center no-repeat;
+            background-position: left center;
+            width: 15%;
+            height: 72px;
+        }
+        #venue-shape8 {
+            position: absolute;
+            bottom: 84px;
+            left: 0;
+            background: transparent url("/static/images/SnakeShape-31.svg") right center no-repeat;
+            background-position: right center;
+            width: 17%;
+            height: 97px;
+        }
     }
-    #venue-shape2 {
-      position: absolute;
-      bottom: 84px;
-      left: 0;
-      background: transparent url("/static/images/SnakeShape-25.svg") right center no-repeat;
-      background-position: right center;
-      width: 21%;
-      height: 94px;
+    #venue-shape9 {
+        background: transparent url("/static/images/SnakeShape-19.svg") right center no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 20px;
     }
-    #venue-shape7 {
-      position: absolute;
-      right: 0;
-      top: 84px;
-      background: transparent url("/static/images/SnakeShape-30.svg") right center no-repeat;
-      background-position: left center;
-      width: 15%;
-      height: 72px;
-    }
-    #venue-shape8 {
-      position: absolute;
-      bottom: 84px;
-      left: 0;
-      background: transparent url("/static/images/SnakeShape-31.svg") right center no-repeat;
-      background-position: right center;
-      width: 17%;
-      height: 97px;
-    }
-  }
-  #venue-shape9 {
-    background: transparent url("/static/images/SnakeShape-19.svg") right center no-repeat;
-    background-position: center center;
-    width: 100%;
-    height: 20px;
-  }
 
-  .venue-inverted {
+    .venue-inverted {
 
-    background-color: @color-accent2;
-    color: #ffffff !important;
-    padding: 66px 20px !important;
-    position: relative;
-    #venue-shape3 {
-      position: absolute;
-      right: 0;
-      top: 120px;
-      background: transparent url("/static/images/SnakeShape-26.svg") right center no-repeat;
-      background-position: left center;
-      width: 20%;
-      height: 79px;
+        background-color: @color-accent2;
+        color: #ffffff !important;
+        padding: 66px 20px;
+        position: relative;
+        #venue-shape3 {
+            position: absolute;
+            right: 0;
+            top: 120px;
+            background: transparent url("/static/images/SnakeShape-26.svg") right center no-repeat;
+            background-position: left center;
+            width: 20%;
+            height: 79px;
+        }
+        #venue-shape4 {
+            position: absolute;
+            right: 0;
+            top: 690px;
+            background: transparent url("/static/images/SnakeShape-28.svg") right center no-repeat;
+            background-position: left center;
+            width: 10%;
+            height: 99px;
+        }
+        #venue-shape5 {
+            position: absolute;
+            top: 670px;
+            left: 0;
+            background: transparent url("/static/images/SnakeShape-27.svg") right center no-repeat;
+            background-position: right center;
+            width: 21%;
+            height: 76px;
+        }
+        #venue-shape6 {
+            position: absolute;
+            bottom: 84px;
+            left: 0;
+            background: transparent url("/static/images/SnakeShape-29.svg") right center no-repeat;
+            background-position: right center;
+            width: 8%;
+            height: 84px;
+        }
     }
-    #venue-shape4 {
-      position: absolute;
-      right: 0;
-      top: 690px;
-      background: transparent url("/static/images/SnakeShape-28.svg") right center no-repeat;
-      background-position: left center;
-      width: 10%;
-      height: 99px;
-    }
-    #venue-shape5 {
-      position: absolute;
-      top: 670px;
-      left: 0;
-      background: transparent url("/static/images/SnakeShape-27.svg") right center no-repeat;
-      background-position: right center;
-      width: 21%;
-      height: 76px;
-    }
-    #venue-shape6 {
-      position: absolute;
-      bottom: 84px;
-      left: 0;
-      background: transparent url("/static/images/SnakeShape-29.svg") right center no-repeat;
-      background-position: right center;
-      width: 8%;
-      height: 84px;
-    }
-  }
 
-  .venue-title {
-    font-size: 30px;
-    font-weight: 300;
-  }
-
-  .venue-text {
-    p {
-
-      font-weight: @font-weight-normal;
-      line-height: 24px;
-      font-size: 18px;
-      padding: 12px 0;
+    .venue-title {
+        font-size: 30px;
+        font-weight: 300;
     }
-    a {
-      text-decoration: none;
-      font-weight: @font-weight-bold;
-    }
-  }
 
-  .venue-map {
-    border-style: solid;
-    border-width: 5px;
-    border-color: @color-accent2;
-    padding: 6px 0px 0px 6px;
-  }
+    .venue-text {
+        p {
+
+            font-weight: @font-weight-normal;
+            line-height: 24px;
+            font-size: 18px;
+            padding: 12px 0;
+        }
+        a {
+            text-decoration: none;
+            font-weight: @font-weight-bold;
+        }
+    }
+
+    .venue-map {
+        border-style: solid;
+        border-width: 5px;
+        border-color: @color-accent2;
+        padding: 5px 5px 5px 5px;
+        height: 500px;
+    }
+    .venue-map iframe {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .venue {
+
+        #venue-shape2, #venue-shape7 {
+            display: none;
+        }
+
+        margin-top: 0;
+
+        .venue-block {
+
+            .grid {
+                width: 100%;
+
+            }
+
+        }
+        .col-8 {
+            width: 100%;
+        }
+
+        .venue-text {
+            display: block;
+            width: 100%;
+        }
+
+        .venue-inverted {
+            .col-6 {
+                width: 100%;
+            }
+        }
+
+        .venue-block {
+            padding-top: 0;
+            .col-6 {
+                width: 100%;
+            }
+        }
+    }
+
 }
