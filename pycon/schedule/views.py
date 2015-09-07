@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from pycon.core.views import PyconTemplateView
 
-# Create your views here.
+
+class ScheduleView(PyconTemplateView):
+    template_name = 'schedule/schedule.html'
+
+    def get(self, request):
+        return self.render_to_response({})

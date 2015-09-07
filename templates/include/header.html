@@ -6,7 +6,7 @@
             <li><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
             <li><a href="{% url 'about' %}">{% trans 'About' %}</a></li>
             <li><a href="{% url 'sponsor' %}">{% trans 'Sponsors' %}</a></li>
-            <li><a href="#">{% trans 'Schedule' %}</a></li>
+            <li><a href="{% url 'schedule' %}">{% trans 'Schedule' %}</a></li>
             <li><a href="#">{% trans 'Venue' %}</a></li>
         </ul>
     </div>
@@ -30,7 +30,7 @@
             <a href="{% url 'about' %}" class="header-link">{% trans 'About' %}</a>
             <a href="{% url 'sponsor' %}" class="header-link">{% trans 'Sponsors' %}</a>
             <a href="{% url 'home' %}" class="header-logo">PyCon Canada</a>
-            <a href="#" class="header-link">{% trans 'Schedule' %}</a>
+            <a href="{% url 'schedule' %}" class="header-link">{% trans 'Schedule' %}</a>
             <a href="{% url 'venue' %}" class="header-link">{% trans 'Venue' %}</a>
 
             <div class="mobile burger-container">
