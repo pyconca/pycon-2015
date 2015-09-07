@@ -21,14 +21,14 @@ ul {
     }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: @screen-min-width) {
     .mobile {
         display: none;
     }
 
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: @screen-max-width) {
     .desktop {
         display: none;
     }
