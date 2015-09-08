@@ -1,0 +1,85 @@
+---
+
+- hosts: all
+
+  vars_files:
+    - var/site.yml
+
+  tasks:
+
+    - set_fact:
+        base_dir: "{{ web_dir }}/{{ fqdn }}"
+
+    - set_fact:
+        venv_dir: "{{ base_dir }}/venv"
+        django_dir: "{{ base_dir }}/pyconca"
+        static_dir: "{{ base_dir }}/static"
+        media_dir: "{{ base_dir }}/media"
+
+    - name: Create data dir
+      file: path={{ base_dir }} state=directory
+
+    - name: Update Git repo
+      git: repo=git@github.com:pyconca/pycon-2015.git
+           dest={{ base_dir }}/pyconca
+           version=master
+
+    - template: src=template/localsettings.py.j2 dest={{ django_dir }}/pycon/localsettings.py
+
+    - name: Create virtualenv
+      command: creates={{ venv_dir }} /home/deploy/.local/bin/virtualenv -p python3.4 {{ venv_dir }}
+
+    - name: Install Python requirements
+      pip: requirements={{ django_dir }}/requirements.txt extra_args='--upgrade'
+           virtualenv={{ venv_dir }}
+           virtualenv_command=/home/deploy/.local/bin/virtualenv
+
+   # clear and re-create the static dir
+    - file: path={{ static_dir }} state=absent
+    - file: path={{ static_dir }} state=directory
+
+    - name: Run collectstatic and migrate
+      django_manage: command={{ item }} app_path={{ django_dir }} virtualenv={{ venv_dir }}
+      with_items:
+        - collectstatic
+        - migrate
+  #
+  #  # compile LESS files
+  #  - npm: name=less global=yes
+  #    sudo: True
+  #    sudo_user: root
+  #  - shell: lessc -x {{ django_path }}/static/css/app.less > {{ static_path }}/css/app.css
+  #  - shell: lessc -x {{ django_path }}/static/css/external.less > {{ static_path }}/css/external.css
+  #
+  #  # build API documentation
+  #  - shell: sphinx-build -b html {{ django_path }}/brain/api/documentation/source/ {{ django_path }}/brain/api/documentation/build/
+  #
+  #  # build BrandStem documentation
+  #  - shell: sphinx-build {{ django_path }}/documentation/source/ {{ docs_path }}/sdm
+  #
+  #  # setup crontab
+  #  - command: crontab {{ django_path }}/config/{{ config_type }}/crontab.txt
+  #
+  #  # memcached
+  #  - template: src=templates/memcached.conf.j2 dest=/etc/memcached.conf
+  #    sudo: True
+  #    sudo_user: root
+  #    notify: restart memcached
+  #
+  #  # ElasticSearch
+  #  - service: name=elasticsearch state=started enabled=yes
+  #    sudo: True
+  #    sudo_user: root
+  #
+  #  # supervisor
+  #  - template: src=templates/supervisord.conf.j2 dest=/etc/supervisor/supervisord.conf
+  #    notify: restart supervisor
+  #    sudo: True
+  #    sudo_user: root
+  #  - service: name=supervisor enabled=yes
+  #  - supervisorctl: name=brain state=restarted
+  #  - supervisorctl: name=celery state=restarted
+  #
+  #  # remove maintenance.html
+  #  - shell: rm {{ static_path }}/maintenance.html
+  #    ignore_errors: True
