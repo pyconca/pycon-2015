@@ -80,3 +80,26 @@ To edit translation files, open the `.po` file for the correct language and edit
 After creating or updating translation files, you must compile them into `.mo` files:
 
     $ django-admin compilemessages
+
+Deploying
+---------
+
+### Setup
+
+Ensure the following is in your ~/.ssh/config:
+
+    Host pycon-ca
+        HostName 72.51.30.16
+        User deploy
+
+Install less:
+
+    $ sudo -i npm install -g less
+
+Obtain a copy of private.yml and put it in `deploy/vars`.
+
+### Deploying to Stage or Prod
+
+Go to the `deploy` directory and run:
+
+    $ ansible-playbook -i inventories/prod site.yml

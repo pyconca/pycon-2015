@@ -1,0 +1,55 @@
+---
+
+- hosts: all
+
+  vars_files:
+    - var/site.yml
+    - var/private.yml
+
+  tasks:
+
+    - set_fact:
+        base_dir: "{{ web_dir }}/{{ fqdn }}"
+
+    - set_fact:
+        venv_dir: "/data/virtualenv/{{ fqdn }}"
+        django_dir: "{{ base_dir }}/pyconca"
+        static_dir: "{{ base_dir }}/static"
+        media_dir: "{{ base_dir }}/media"
+
+    - name: Create data dir
+      file: path={{ base_dir }} state=directory
+
+    - name: Update Git repo
+      git: repo=git@github.com:pyconca/pycon-2015.git
+           dest={{ base_dir }}/pyconca
+           version=deploy
+
+    - template: src=template/localsettings.py.j2 dest={{ django_dir }}/pycon/localsettings.py
+
+    - name: Create virtualenv
+      command: creates={{ venv_dir }} /usr/bin/pyvenv -p python3.4 {{ venv_dir }}
+
+    - name: Install Python requirements
+      pip: requirements={{ django_dir }}/requirements.txt extra_args='--upgrade'
+           virtualenv={{ venv_dir }}
+           virtualenv_command=/usr/bin/pyvenv
+
+   # clear and re-create the static dir
+    - file: path={{ static_dir }} state=absent
+    - file: path={{ static_dir }} state=directory
+
+    - name: Run collectstatic and migrate
+      django_manage: command={{ item }} app_path={{ django_dir }} virtualenv={{ venv_dir }}
+      with_items:
+        - collectstatic
+        - migrate
+
+    - name: Compile less to CSS
+      local_action: command lessc ../static/css/app.less /tmp/app.css
+
+    - name: Copy over CSS
+      copy: src=/tmp/app.css dest={{ static_dir }}/css
+
+    - name: Restart site
+      supervisorctl: name={{ supervisor_name }} state=restarted
