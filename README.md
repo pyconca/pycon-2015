@@ -97,7 +97,6 @@ Install less:
     $ sudo -i npm install -g less
 
 Obtain a copy of private.yml and put it in `deploy/vars`.
-Obtain a copy of private.yml and put it in `deploy/vars`.
 
 ### Deploying to Stage or Prod
 

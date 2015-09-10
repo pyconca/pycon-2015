@@ -50,3 +50,6 @@
 
     - name: Copy over CSS
       copy: src=/tmp/app.css dest={{ static_dir }}/css
+
+    - name: Restart site
+      supervisorctl: name={{ supervisor_name }} state=restarted
