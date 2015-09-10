@@ -75,5 +75,93 @@
                 </div>
             </div>
         {% endif %}
+        {% if sponsors.workshop %}
+            <div class="grid">
+                <div class="col-3 spacer"></div>
+                <div class="col-9 sponsor-col">
+                    <div class="sponsor-level">
+                        <div class="sponsor-level-name">{% trans 'Workshop' %}</div>
+                        {% include 'sponsors/include/details.html' with sponsors=sponsors.workshop only %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        {% if sponsors.party %}
+            <div class="grid">
+                <div class="col-3 spacer"></div>
+                <div class="col-9 sponsor-col">
+                    <div class="sponsor-level">
+                        <div class="sponsor-level-name">{% trans 'Party' %}</div>
+                        {% include 'sponsors/include/details.html' with sponsors=sponsors.party only %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        {% if sponsors.sprint %}
+            <div class="grid">
+                <div class="col-3 spacer"></div>
+                <div class="col-9 sponsor-col">
+                    <div class="sponsor-level">
+                        <div class="sponsor-level-name">{% trans 'Sprint' %}</div>
+                        {% include 'sponsors/include/details.html' with sponsors=sponsors.sprint only %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        {% if sponsors.travel %}
+            <div class="grid">
+                <div class="col-3 spacer"></div>
+                <div class="col-9 sponsor-col">
+                    <div class="sponsor-level">
+                        <div class="sponsor-level-name">{% trans 'Travel' %}</div>
+                        {% include 'sponsors/include/details.html' with sponsors=sponsors.travel only %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        {% if sponsors.lanyard %}
+            <div class="grid">
+                <div class="col-3 spacer"></div>
+                <div class="col-9 sponsor-col">
+                    <div class="sponsor-level">
+                        <div class="sponsor-level-name">{% trans 'Lanyard' %}</div>
+                        {% include 'sponsors/include/details.html' with sponsors=sponsors.lanyard only %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        {% if sponsors.diversity %}
+            <div class="grid">
+                <div class="col-3 spacer"></div>
+                <div class="col-9 sponsor-col">
+                    <div class="sponsor-level">
+                        <div class="sponsor-level-name">{% trans 'Diversity' %}</div>
+                        {% include 'sponsors/include/details.html' with sponsors=sponsors.diversity only %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        {% if sponsors.hosting %}
+            <div class="grid">
+                <div class="col-3 spacer"></div>
+                <div class="col-9 sponsor-col">
+                    <div class="sponsor-level">
+                        <div class="sponsor-level-name">{% trans 'Hosting' %}</div>
+                        {% include 'sponsors/include/details.html' with sponsors=sponsors.hosting only %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        {% if sponsors.community %}
+            <div class="grid">
+                <div class="col-3 spacer"></div>
+                <div class="col-9 sponsor-col">
+                    <div class="sponsor-level">
+                        <div class="sponsor-level-name">{% trans 'Community' %}</div>
+                        {% include 'sponsors/include/details.html' with sponsors=sponsors.community only %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
     </div>
 {% endblock %}
