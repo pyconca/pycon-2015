@@ -15,10 +15,10 @@ ADMINS = (
 )
 
 ALLOWED_HOSTS = [
-    '.{{ fqdn }}',
+    '{{ fqdn }}',
 ]
 
-SESSION_COOKIE_DOMAIN = '.{{ fqdn }}'
+SESSION_COOKIE_DOMAIN = '{{ fqdn }}'
 
 SECRET_KEY = '{{ secret_key }}'
 
