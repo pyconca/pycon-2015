@@ -6,10 +6,10 @@
         <div class="col-3 sponsor-logo-col">
             {% if sponsor|i18n_get:'url_website' %}
                 <a href="{{ sponsor|i18n_get:'url_website' }}">
-                    <img class="sponsor-logo" src="{{ sponsor.logo.url }}">
+                    <img class="sponsorlogo" src="{{ sponsor.logo.url }}">
                 </a>
             {% else %}
-                <img class="sponsor-logo" src="{{ sponsor.logo.url }}">
+                <img class="sponsorlogo" src="{{ sponsor.logo.url }}">
             {% endif %}
         </div>
         <div class="col-6">

@@ -6,10 +6,10 @@
     {% for sponsor in sponsors %}
         {% if sponsor|i18n_get:'url_website' %}
             <a href="{{ sponsor|i18n_get:'url_website' }}">
-                <img class="sponsors-include-img" title="{{ sponsor|i18n_get:'description' }}" src="{{ MEDIA_URL }}{{ sponsor.logo }}" alt="{{ sponsor.name }}">
+                <img class="sponsors-include-img" title="{{ sponsor|i18n_get:'description' }}" src="{{ MEDIA_URL }}{{ sponsor.logo_bw }}" alt="{{ sponsor.name }}">
             </a>
         {% else %}
-            <img class="sponsors-include-img" title="{{ sponsor|i18n_get:'description' }}" src="{{ MEDIA_URL }}{{ sponsor.logo }}" alt="{{ sponsor.name }}">
+            <img class="sponsors-include-img" title="{{ sponsor|i18n_get:'description' }}" src="{{ MEDIA_URL }}{{ sponsor.logo_bw }}" alt="{{ sponsor.name }}">
         {% endif %}
     {% endfor %}
 </div>
