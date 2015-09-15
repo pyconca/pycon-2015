@@ -5,7 +5,7 @@ import socket
 PROJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
 
 SITE_DOMAIN = socket.getfqdn()
-SITE_SCHEME = '{% if fqdn == "2015.pycon.ca" %}https{% else %}http{% endif %}'
+SITE_SCHEME = '{% if fqdn == "2015.pycon.ca" or fqdn == "testing.2015.pycon.ca" %}https{% else %}http{% endif %}'
 
 MEDIA_ROOT = '{{ media_dir }}/'
 STATIC_ROOT = '{{ static_dir }}/'
@@ -15,10 +15,10 @@ ADMINS = (
 )
 
 ALLOWED_HOSTS = [
-    '{{ fqdn }}',
+    '.{{ fqdn }}',
 ]
 
-SESSION_COOKIE_DOMAIN = '{{ fqdn }}'
+SESSION_COOKIE_DOMAIN = '.{{ fqdn }}'
 
 SECRET_KEY = '{{ secret_key }}'
 
