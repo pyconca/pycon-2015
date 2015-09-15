@@ -9,10 +9,10 @@
   tasks:
 
     - set_fact:
-        base_dir: "{{ web_dir }}/{{ fqdn }}"
+        base_dir: "{{ web_dir }}/{{ dir }}"
 
     - set_fact:
-        venv_dir: "/data/virtualenv/{{ fqdn }}"
+        venv_dir: "/data/virtualenv/{{ dir }}"
         django_dir: "{{ base_dir }}/pyconca"
         static_dir: "{{ base_dir }}/static"
         media_dir: "{{ base_dir }}/media"
@@ -52,5 +52,4 @@
       copy: src=/tmp/app.css dest={{ static_dir }}/css
 
     - name: Restart site
-      sudo: true
-      supervisorctl: name={{ supervisor_name }} state=restarted
+      command: sudo supervisorctl restart {{ supervisor_name }}
