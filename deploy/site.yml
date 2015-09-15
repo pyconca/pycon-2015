@@ -52,4 +52,5 @@
       copy: src=/tmp/app.css dest={{ static_dir }}/css
 
     - name: Restart site
+      sudo: true
       supervisorctl: name={{ supervisor_name }} state=restarted
