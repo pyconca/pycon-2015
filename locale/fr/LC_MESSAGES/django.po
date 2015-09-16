@@ -83,7 +83,7 @@ msgstr "À propos"
 msgid ""
 "PyCon Canada is an initiative to strengthen the Canadian Python community."
 msgstr ""
-"PyCon Canada est une initiative to renforcer la communauté Python canadienne."
+"PyCon Canada est une initiative pour renforcer la communauté Python canadienne."
 
 #: templates/about/about.html:19
 msgid "What is PyCon Canada?"
