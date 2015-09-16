@@ -23,8 +23,8 @@
     .home;
     background-color: @color-accent1;
     color: @color-accent2;
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin-top: 50px;
+    margin-bottom: 25px;
     p {
         font-size: 30px;
         line-height: 36px;
@@ -46,6 +46,10 @@
         background: transparent url("/static/images/SnakeShape-03.svg") center center no-repeat;
         background-size: 1288px 174px;
         background-position: left center;
+    }
+
+    .dates {
+        font-weight: bold;
     }
 
     .dates-box {
@@ -131,6 +135,15 @@
 .home-section4 {
     .home;
     background-color: @color-accent2;
+
+    a, a:visited {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
 
     h2, p {
         color: @color-accent1;

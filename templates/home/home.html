@@ -6,9 +6,8 @@
 {% block content %}
     <div class="home-section1">
         <div class="container lead">
-            <p>{% trans 'Join your fellow Pythonistas for a weekend of' %}</p>
-
-            <p>{% trans 'talks, activities, fun and code!' %}</p>
+            <p>{% trans 'Join your fellow Pythonistas for the third annual PyCon Canada,' %}</p>
+            <p>{% trans 'a weekend of talks, activities, fun and code!' %}</p>
         </div>
     </div>
     <div class="home-section2">
@@ -43,10 +42,10 @@
                         <img src="{% static "images/02-Calendar.svg" %}">
                     </div>
                     <div class="col-10 txt">
-                        <h2>{% trans 'Schedule' %}</h2>
+                        <h2><a href="{% url 'schedule' %}">{% trans 'Schedule' %}</a></h2>
 
-                        <p>{% trans 'Start the fun Friday evening with a mix and mingle. Feed your brain at talks on Saturday, and if your sprint team is eager, you can start that night. Sprint or attend talks and tutorials on Sunday.' %}</p>
-                        <a href="" class="more-info">{% trans 'more info' %}</a>
+                        <p>{% trans 'Find out about the Saturday and Sunday keynotes, over 40 talks, tutorials and sprints.' %}</p>
+                        <a href="{% url 'schedule' %}" class="more-info">{% trans 'Learn more...' %}</a>
                     </div>
                 </div>
             </div>
@@ -57,10 +56,10 @@
                     </div>
                     <div class="col-10 txt">
 
-                        <h2>{% trans 'Venue' %}</h2>
+                        <h2><a href="{% url 'venue' %}">{% trans 'Venue' %}</a></h2>
 
                         <p>{% trans 'The event will be held at the Bahen Center for Information Technology, graciously provided by the University of Toronto. With subways access a short walk away you can easily explore the city.' %}</p>
-                        <a href="" class="more-info">{% trans 'more info' %}</a>
+                        <a href="{% url 'venue' %}" class="more-info">{% trans 'Learn more...' %}</a>
                     </div>
                 </div>
             </div>
