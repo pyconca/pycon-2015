@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-16 14:45-0400\n"
+"POT-Creation-Date: 2015-09-16 19:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,8 +59,6 @@ msgid "Travel"
 msgstr "Déplacement"
 
 #: pycon/sponsors/enums.py:27 templates/sponsors/sponsor.html:106
-#, fuzzy
-#| msgid "Sprints:"
 msgid "Sprint"
 msgstr "Sprint"
 
@@ -140,37 +138,38 @@ msgstr "Joignez-vous à la conversation"
 
 #: templates/about/about.html:52
 #, python-format
+#| msgid ""
+#| "Be sure to use <a href=\"https://twitter.com/search?q=%23pyconca2015\" "
+#| "target=\"_blank\">#pyconca2015</a>. We love hearing from our community "
+#| "members!"
 msgid ""
-"Be sure to use <a href=\"https://twitter.com/search?q="
-"%23pyconca2015\">#pyconca2015</a>. We love hearing from our community "
+"Be sure to use <a href=\"https://twitter.com/search?q=%23pyconca2015\" "
+"target=\"_blank\">#pyconca2015</a>. We love hearing from our community "
 "members!"
 msgstr ""
 "Assurez-vous d'utiliser <a href=\"https://twitter.com/search?q="
-"%23pyconca2015\">#pyconca2015</a>. Nous aimons recevoir des nouvelles de la "
-"communauté!"
+"%23pyconca2015\" target=\"_blank\">#pyconca2015</a>. Nous aimons recevoir "
+"des nouvelles de la communauté!"
 
 #: templates/about/about.html:54
 msgid "Key Contacts"
 msgstr "Contacts clés"
 
 #: templates/about/about.html:56
-#| msgid "The organizing committee can be contacted at <a href="
 msgid ""
 "The organizing committee can be contacted at <a href=\"mailto:"
 "organizers@pycon.ca\">organizers@pycon.ca</a>."
-msgstr "Le comité organisateur peut être rejoint à <a href=\"mailto:"
-"organizers@pycon.ca\">organizers@pycon.ca</a>"
+msgstr ""
+"Le comité organisateur peut être rejoint à <a href=\"mailto:organizers@pycon."
+"ca\">organizers@pycon.ca</a>."
 
 #: templates/about/about.html:58
-#| msgid ""
-#| "The organizing committee can be contacted privately at "
-#| "<b>organizers@pycon.ca</b>"
 msgid ""
 "The board can be contacted privately at <a href=\"mailto:board@pycon.ca"
 "\">board@pycon.ca</a>."
-msgstr "Le conseil d'administration peut être rejoint à <a href=\"mailto:board@pycon.ca"
-"\">board@pycon.ca</a>."
-
+msgstr ""
+"Le conseil d'administration peut être rejoint à <a href=\"mailto:board@pycon."
+"ca\">board@pycon.ca</a>."
 
 #: templates/about/about.html:60
 msgid "You can also find us on:"
@@ -255,11 +254,11 @@ msgid ""
 "of the conference. We value your attendance.</p>\n"
 "                <div class=\"conduct-subtitle\">Attribution</div>\n"
 "                <p>This anti-harassment policy is based on the <a href="
-"\"http://geekfeminism.wikia.com/wiki/Conference_anti-harassment\"> example "
-"policy</a> from the Geek Feminism wiki, created by the Ada Initiative and "
-"other volunteers. It is used under the terms of the <a href=\"https://"
-"creativecommons.org/publicdomain/zero/1.0/\">Creative Commons Zero</a> "
-"license.</p>\n"
+"\"http://geekfeminism.wikia.com/wiki/Conference_anti-harassment\" target="
+"\"_blank\"> example policy</a> from the Geek Feminism wiki, created by the "
+"Ada Initiative and other volunteers. It is used under the terms of the <a "
+"href=\"https://creativecommons.org/publicdomain/zero/1.0/\" target=\"_blank"
+"\">Creative Commons Zero</a> license.</p>\n"
 "            "
 msgstr ""
 "\n"
@@ -443,10 +442,12 @@ msgstr "L'horaire sera disponible bientôt"
 #: templates/schedule/schedule.html:10
 msgid ""
 "We will be updating soon with the full schedule, stay tuned to <a href="
-"\"https://twitter.com/pyconca/\">@pyconca on Twitter</a> for updates!"
+"\"https://twitter.com/pyconca/\" target=\"_blank\">@pyconca on Twitter</a> "
+"for updates!"
 msgstr ""
 "Nous mettrons à jour l'horaire bientôt, restez à jour en nous suivant <a "
-"href=\"https://twitter.com/pyconca/\">@pyconca on Twitter</a>"
+"href=\"https://twitter.com/pyconca/\" target=\"_blank\">@pyconca sur "
+"Twitter</a>."
 
 #: templates/sponsors/sponsor.html:24
 msgid "We thank our fantastic sponsors who help make this event possible."
@@ -469,19 +470,37 @@ msgstr "Lieu"
 #: templates/venue/venue.html:19
 msgid ""
 "This year PyCon Canada is taking place November 7-9, 2015 in Toronto, "
-"Ontario, Canada at the <a href='http://map.utoronto.ca/utsg/"
-"building/080'>Bahen Centre for Information Technology</a> on the University "
-"of Toronto St. George campus. "
+"Ontario, Canada at the <a href=\"http://map.utoronto.ca/utsg/building/080\" "
+"target=\"_blank\">Bahen Centre for Information Technology</a> on the "
+"University of Toronto St. George campus."
 msgstr ""
 "PyCon Canada 2015 se tiendra du 7 au 9 novembre 2015 à Toronto, Ontario, "
-"Canada au <a href='http://map.utoronto.ca/utsg/building/080'>Bahen Centre "
-"for Information Technology</a> à l'Université de Toronto campus St. George."
+"Canada au <a href=\"http://map.utoronto.ca/utsg/building/080\" target="
+"\"_blank\">Bahen Centre for Information Technology</a> à l'Université de "
+"Toronto campus St. George."
 
 #: templates/venue/venue.html:37
 msgid "Getting to Toronto"
 msgstr "Se rendre à Toronto"
 
 #: templates/venue/venue.html:40
+#| msgid ""
+#| "\n"
+#| "                                Toronto has 2 major airports. Toronto "
+#| "Pearson is the international airport and is the\n"
+#| "                                location for almost all the major "
+#| "domestic and international airlines. It's about a 35\n"
+#| "                                minute drive from Toronto Pearson to the "
+#| "University of Toronto, but be aware that\n"
+#| "                                downtown Toronto traffic is busy all day "
+#| "and is particularly busy during peak rush hour.\n"
+#| "                                Allow at least an hour for travel time "
+#| "from the airport. The\n"
+#| "                                <a href=\"https://www.upexpress.com/\" "
+#| "target=\"_blank\">Union Pearson Express</a> train is \n"
+#| "                                also an good option to get downtown from "
+#| "Pearson.\n"
+#| "                            "
 msgid ""
 "\n"
 "                                Toronto has 2 major airports. Toronto "
@@ -493,7 +512,11 @@ msgid ""
 "                                downtown Toronto traffic is busy all day and "
 "is particularly busy during peak rush hour.\n"
 "                                Allow at least an hour for travel time from "
-"the airport.\n"
+"the airport. The\n"
+"                                <a href=\"https://www.upexpress.com/\" "
+"target=\"_blank\">Union Pearson Express</a> train is\n"
+"                                also an good option to get downtown from "
+"Pearson.\n"
 "                            "
 msgstr ""
 "\n"
@@ -502,25 +525,27 @@ msgstr ""
 "internationnale. Il y a environ 35 minutes de voiture de l'aéroport aux "
 "campus St. George de l'université de Toronto mais soyez prévoyant il y a du "
 "traffic tout le long de la journée. Prévoyez au moins une heure de transport "
-"en voiture. Le UP train est également une option pour vous rendre au centre-"
-"ville à partir de l'aéroport Pearson.<b>https://www.upexpress.com/?lng=fr</b>"
+"en voiture. Le <a href=\"https://www.upexpress.com/?lng=fr\" target=\"_blank"
+"\">train Union Pearson</a> est également une option pour vous rendre au "
+"centre-ville à partir de l'aéroport Pearson."
 
-#: templates/venue/venue.html:50
+#: templates/venue/venue.html:52
 msgid ""
 "\n"
-"                                <a href=\"http://www.viarail.ca/\">VIA Rail</"
-"a> is a good alternative to the airlines if\n"
+"                                <a href=\"http://www.viarail.ca/\" target="
+"\"_blank\">VIA Rail</a> is a good alternative to the airlines if\n"
 "                                you are coming from somewhere like Montreal "
 "or Ottawa. Advance pricing is often\n"
 "                                available at a discount.\n"
 "                            "
 msgstr ""
 "\n"
-"Viarail est une bonne alternative aux vols si vous arrivez de Montréal, "
-"d'Ottawa ou de Windsor.\n"
+"<a href=\"http://www.viarail.ca/\" target=\"_blank\">VIA Rail</a> est une "
+"bonne alternative aux vols si vous arrivez de Montréal, d'Ottawa ou de "
+"Windsor.\n"
 " "
 
-#: templates/venue/venue.html:58
+#: templates/venue/venue.html:60
 msgid ""
 "\n"
 "                                <b>If you're coming from the US: </b>\n"
@@ -529,7 +554,7 @@ msgstr ""
 "\n"
 "<b>Si vous arrivez des États-Unis:</b>"
 
-#: templates/venue/venue.html:64
+#: templates/venue/venue.html:66
 msgid ""
 "\n"
 "                                Make sure that you've got a valid passport "
@@ -540,11 +565,11 @@ msgstr ""
 "Assurez-vous d'avoir un passeport valide et n'oubliez pas de l'apporter avec "
 "vous. "
 
-#: templates/venue/venue.html:69
+#: templates/venue/venue.html:71
 msgid ""
 "\n"
-"                                <a href=\"https://www.flyporter.com/"
-"\">Porter Airlines</a> has frequent, reasonably-priced\n"
+"                                <a href=\"https://www.flyporter.com/\" "
+"target=\"_blank\">Porter Airlines</a> has frequent, reasonably-priced\n"
 "                                flights for trips from several US cities to "
 "Toronto, including Boston, Burlington (VT),\n"
 "                                Chicago, Myrtle Beach, New York, and "
@@ -552,24 +577,25 @@ msgid ""
 "                            "
 msgstr ""
 "\n"
-"L'aéroport Billy Bishop géré par <b>Porter Airlines</b> offre des vols "
-"fréquents à des prix raisonables en provenance de la Côte-Est américaine et "
-"des provinces de l'Est du Canada Billy Bishop est à deux pas du centre-ville "
-"et est à 30 minutes de transport en commun ou 15 minutes de voiture de "
-"l'université de Toronto."
+"L'aéroport Billy Bishop géré par <a href=\"https://www.flyporter.com/\" "
+"target=\"_blank\">Porter Airlines</a> offre des vols fréquents à des prix "
+"raisonables en provenance de la Côte-Est américaine et des provinces de "
+"l'Est du Canada Billy Bishop est à deux pas du centre-ville et est à 30 "
+"minutes de transport en commun ou 15 minutes de voiture de l'université de "
+"Toronto."
 
-#: templates/venue/venue.html:77
+#: templates/venue/venue.html:79
 msgid ""
 "\n"
-"                                <a href=\"http://www.viarail.ca/\">VIA Rail</"
-"a> is offering discounts on train fares for attendees:\n"
+"                                <a href=\"http://www.viarail.ca/\" target="
+"\"_blank\">VIA Rail</a> is offering discounts on train fares for attendees:\n"
 "                            "
 msgstr ""
 "\n"
-"<a href=\"http://www.viarail.ca/\">VIA Rail</a> offre un rabais sur les "
-"billets de train pour les participants à PyCon Canada 2015:"
+"<a href=\"http://www.viarail.ca/\" target=\"_blank\">VIA Rail</a> offre un "
+"rabais sur les billets de train pour les participants à PyCon Canada 2015:"
 
-#: templates/venue/venue.html:82
+#: templates/venue/venue.html:84
 msgid ""
 "\n"
 "                                Valid for travel between Thursday November 5 "
@@ -584,7 +610,7 @@ msgstr ""
 "retour.\n"
 " "
 
-#: templates/venue/venue.html:89
+#: templates/venue/venue.html:91
 msgid ""
 "\n"
 "                                Fare applies to a maximum of two passengers "
@@ -605,7 +631,7 @@ msgstr ""
 "ou Ottawa seulement.\n"
 " "
 
-#: templates/venue/venue.html:97
+#: templates/venue/venue.html:99
 #, python-format
 msgid ""
 "\n"
@@ -625,7 +651,7 @@ msgstr ""
 "être appliqué.\n"
 "                            "
 
-#: templates/venue/venue.html:105
+#: templates/venue/venue.html:107
 msgid ""
 "\n"
 "                                Discount does not apply in Escape Class "
@@ -637,7 +663,7 @@ msgstr ""
 "                            "
 
 # is n’est pas valide pour les tarifs Économie évasion:atemplates/venue/venue.html:110
-#: templates/venue/venue.html:110
+#: templates/venue/venue.html:112
 msgid ""
 "\n"
 "                                Reference VIA convention code <strong>13148</"
@@ -648,38 +674,39 @@ msgstr ""
 "Code de conférence VIA:<strong>13148</strong>.\n"
 "                            "
 
-#: templates/venue/venue.html:123
+#: templates/venue/venue.html:125
 msgid "Public Transit"
 msgstr "Transport en commun"
 
-#: templates/venue/venue.html:126
+#: templates/venue/venue.html:128
 msgid ""
 "\n"
 "                                The nearest TTC subway stops is\n"
 "                                <a href=\"https://ttc.ca/Subway/Stations/"
-"Queens_Park/station.jsp\">Queen's Park Station</a>\n"
+"Queens_Park/station.jsp\" target=\"_blank\">Queen's Park Station</a>\n"
 "                                on Line 1 Yonge-University. College "
 "streetcars also stop at St. George Street.\n"
 "                                Cash fare is $3, or multiple tokens can be "
 "purchased at discounted rates. Check with\n"
-"                                the <a href=\"http://www.ttc.ca/\">TTC</a> "
-"for more details.\n"
+"                                the <a href=\"http://www.ttc.ca/\" target="
+"\"_blank\">TTC</a> for more details.\n"
 "                            "
 msgstr ""
 "\n"
-"La station de Metro du TTC la plus près est la station Queen's Park sur la "
-"ligne 1 Yonge-University. Les tramways de la rue College font également un "
-"arrêt à la rue St. George.\n"
+"La station de Metro du TTC la plus près est la station <a href=\"https://ttc."
+"ca/Subway/Stations/Queens_Park/station.jsp\" target=\"_blank\">Queen's Park</"
+"a> sur la ligne 1 Yonge-University. Les tramways de la rue College font "
+"également un arrêt à la rue St. George.\n"
 "Le prix du billet est de 3$ et plusieurs billets peuvent être achetés à un "
-"prix réduit. Plus de détails sur le site du <a href=\"http://www.ttc.ca/"
-"\">TTC</a>.\n"
+"prix réduit. Plus de détails sur le site du <a href=\"http://www.ttc.ca/\" "
+"target=\"_blank\">TTC</a>.\n"
 "                            "
 
-#: templates/venue/venue.html:143
+#: templates/venue/venue.html:145
 msgid "What do to in Toronto"
 msgstr "Quoi faire à Toronto"
 
-#: templates/venue/venue.html:146
+#: templates/venue/venue.html:148
 msgid ""
 "\n"
 "                                Tourism Toronto's\n"
