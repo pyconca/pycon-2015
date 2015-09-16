@@ -49,7 +49,7 @@
             <div class="col-5">
                 <h3>{% trans 'Join the conversation' %}</h3>
 
-                <p>{% trans 'Be sure to use <a href="https://twitter.com/search?q=%23pyconca2015">#pyconca2015</a>. We love hearing from our community members!' %}</p>
+                <p>{% trans 'Be sure to use <a href="https://twitter.com/search?q=%23pyconca2015" target="_blank">#pyconca2015</a>. We love hearing from our community members!' %}</p>
 
                 <h3>{% trans 'Key Contacts' %}</h3>
 
@@ -57,7 +57,7 @@
 
                 <p>{% trans 'The board can be contacted privately at <a href="mailto:board@pycon.ca">board@pycon.ca</a>.' %}</p>
 
-                <p>{% trans 'You can also find us on:' %}<br><a href="https://www.github.com/pyconca/">github.com/pyconca/</a></p>
+                <p>{% trans 'You can also find us on:' %}<br><a href="https://www.github.com/pyconca/ target="_blank">github.com/pyconca/</a></p>
             </div>
 
             <div class="col-7 twitter-feed">
@@ -85,7 +85,7 @@
                 {% for volunteer in volunteers %}
                     {% if volunteer.url %}
                         <li>
-                            <a class="volunteer-url" href="{{ volunteer.url }}">{{ volunteer.name }}</a>
+                            <a class="volunteer-url" href="{{ volunteer.url }}" target="_blank">{{ volunteer.name }}</a>
                         </li>
                     {% else %}
                         <li>{{ volunteer.name }}</li>

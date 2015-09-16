@@ -5,7 +5,7 @@
     <div class="sponsor">
         <div class="col-3 sponsor-logo-col">
             {% if sponsor|i18n_get:'url_website' %}
-                <a href="{{ sponsor|i18n_get:'url_website' }}">
+                <a href="{{ sponsor|i18n_get:'url_website' }}" target="_blank">
                     <img class="logo" src="{{ sponsor.logo.url }}">
                 </a>
             {% else %}
@@ -19,7 +19,7 @@
             </div>
             {% if sponsor|i18n_get:'twitter' %}
                 <div>
-                    <a href="https://twitter.com/{{ sponsor|i18n_get:'twitter' }}" class="twitter-follow-button" data-show-count="false">Follow @{{ sponsor|i18n_get:'twitter' }}</a>
+                    <a href="https://twitter.com/{{ sponsor|i18n_get:'twitter' }}" class="twitter-follow-button" data-show-count="false" target="_blank">Follow @{{ sponsor|i18n_get:'twitter' }}</a>
                 </div>
             {% endif %}
             <div class="sponsor-description">
