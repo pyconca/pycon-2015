@@ -29,3 +29,18 @@ class SponsorLevels():
         (DIVERSITY, _('Diversity')),
         (COMMUNITY, _('Community')),
     )
+
+    reverse = {
+        DIAMOND: 'diamond',
+        GOLD: 'gold',
+        SILVER: 'silver',
+        BRONZE: 'bronze',
+        LANYARD: 'lanyard',
+        WORKSHOP: 'workshop',
+        PARTY: 'party',
+        TRAVEL: 'travel',
+        SPRINT: 'sprint',
+        HOSTING: 'hosting',
+        DIVERSITY: 'diversity',
+        COMMUNITY: 'community',
+    }

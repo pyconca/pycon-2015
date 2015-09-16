@@ -1,5 +1,6 @@
 from collections import defaultdict
 from pycon.core.views import PyconTemplateView
+from pycon.sponsors.enums import SponsorLevels
 from pycon.sponsors.models import Sponsor
 
 
@@ -9,7 +10,8 @@ class SponsorView(PyconTemplateView):
     def get(self, request):
         sponsors = defaultdict(list)
         for sponsor in Sponsor.objects.all().order_by('id'):
-            sponsors[sponsor.level].append(sponsor)
+            level = SponsorLevels.reverse[sponsor.level]
+            sponsors[level].append(sponsor)
         return self.render_to_response({
             'sponsors': sponsors,
         })
