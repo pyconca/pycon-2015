@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-24 20:54-0400\n"
+"POT-Creation-Date: 2015-09-16 14:45-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,116 +18,733 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: pycon/mailing/views.py:17
-msgid "Thanks for signing up!"
-msgstr ""
-
-#: pycon/settings.py:122
+#: pycon/settings.py:124
 msgid "French"
-msgstr ""
+msgstr "Français"
 
-#: pycon/settings.py:123
+#: pycon/settings.py:125
 msgid "English"
-msgstr ""
+msgstr "Anglais"
 
-#: pycon/sponsors/enums.py:11
+#: pycon/sponsors/enums.py:19 templates/sponsors/sponsor.html:37
 msgid "Diamond"
-msgstr ""
+msgstr "Diamant"
 
-#: pycon/sponsors/enums.py:12
+#: pycon/sponsors/enums.py:20 templates/sponsors/sponsor.html:49
 msgid "Gold"
-msgstr ""
+msgstr "Or"
 
-#: pycon/sponsors/enums.py:13
+#: pycon/sponsors/enums.py:21 templates/sponsors/sponsor.html:61
 msgid "Silver"
-msgstr ""
+msgstr "Argent"
 
-#: pycon/sponsors/enums.py:14
+#: pycon/sponsors/enums.py:22 templates/sponsors/sponsor.html:73
 msgid "Bronze"
+msgstr "Bronze"
+
+#: pycon/sponsors/enums.py:23 templates/sponsors/sponsor.html:128
+msgid "Lanyard"
 msgstr ""
 
-#: templates/home.html:7
-msgid "Join your fellow Pythonistas for a weekend of"
-msgstr "TESTETSTS"
-
-#: templates/home.html:9
-msgid "talks, activities, fun and code!"
-msgstr "345345345"
-
-#: templates/home.html:16
-msgid "Conference:"
-msgstr "34534534534"
-
-#: templates/home.html:16
-msgid "November 7-8, 2015"
+#: pycon/sponsors/enums.py:24 templates/sponsors/sponsor.html:84
+msgid "Workshop"
 msgstr ""
 
-#: templates/home.html:17
-msgid "Sprints:"
+#: pycon/sponsors/enums.py:25 templates/sponsors/sponsor.html:95
+msgid "Party"
 msgstr ""
 
-#: templates/home.html:17
-msgid "November 9, 2015"
-msgstr ""
+#: pycon/sponsors/enums.py:26 templates/sponsors/sponsor.html:117
+msgid "Travel"
+msgstr "Déplacement"
 
-#: templates/home.html:18
-msgid "Toronto, Ontario"
-msgstr ""
+#: pycon/sponsors/enums.py:27 templates/sponsors/sponsor.html:106
+#, fuzzy
+#| msgid "Sprints:"
+msgid "Sprint"
+msgstr "Sprint"
 
-#: templates/home.html:25
-msgid "Extra copy here??"
-msgstr ""
+#: pycon/sponsors/enums.py:28 templates/sponsors/sponsor.html:150
+msgid "Hosting"
+msgstr "Hébergement Web"
 
-#: templates/home.html:26
-msgid "Book Your Ticket"
-msgstr ""
+#: pycon/sponsors/enums.py:29 templates/sponsors/sponsor.html:139
+msgid "Diversity"
+msgstr "Diversité"
 
-#: templates/home.html:39 templates/include/header.html:17
-msgid "Schedule"
-msgstr ""
+#: pycon/sponsors/enums.py:30 templates/sponsors/sponsor.html:161
+msgid "Community"
+msgstr "Communauté"
 
-#: templates/home.html:41
+#: templates/about/about.html:5 templates/include/footer.html:10
+#: templates/include/header.html:7 templates/include/header.html.py:30
+msgid "About"
+msgstr "À propos"
+
+#: templates/about/about.html:11
 msgid ""
-"Start the fun Friday evening with a mix and mingle. Feed your brain at talks "
-"on Saturday, and if your sprint team is eager, you can start that night. "
-"Sprint or attend talks and tutorials on Sunday."
+"PyCon Canada is an initiative to strengthen the Canadian Python community."
 msgstr ""
+"PyCon Canada est une initiative to renforcer la communauté Python canadienne."
 
-#: templates/home.html:42 templates/home.html.py:48
-msgid "more info"
+#: templates/about/about.html:19
+msgid "What is PyCon Canada?"
+msgstr "Qu'est-ce que PyCon Canada?"
+
+#: templates/about/about.html:22
+msgid ""
+"\n"
+"                            Our main goal is to strengthen the Canadian\n"
+"                            Python community by providing more "
+"opportunities\n"
+"                            for us to share knowledge and ideas, encourage\n"
+"                            support and education for speaking at "
+"conferences,\n"
+"                            and increase the visibility of developers, "
+"organizations,\n"
+"                            and companies within the community\n"
+"                        "
 msgstr ""
+"\n"
+"Notre objectif est de renforcer la communauté\n"
+" Python canadienne en nous donnant l'opportunité de partager nos "
+"connaissances et nos idées en plus d'encourager le support et la formation "
+"et finalement augmenter la visibilité des développeurs, des organisations et "
+"des compagnies au sein de la communauté\n"
+"                        "
 
-#: templates/home.html:45 templates/include/header.html:18
+#: templates/about/about.html:34
+msgid ""
+"\n"
+"                            PyCon Canada is entirely run by volunteers\n"
+"                            who are passionate about these goals.\n"
+"                            We hope to see you at the 2015 conference!\n"
+"                            We're also proud to host development sprints\n"
+"                            which provide a gateway for new contributors\n"
+"                            and a way for you to give back to the open-"
+"source community.\n"
+"                        "
+msgstr ""
+"\n"
+"PyCon Canada est organisé par des bénévoles qui sont\n"
+"passionnés par ces objectifs.\n"
+"Nous espérons vous voir à l'édition 2015 de la conférence!\n"
+"Nous sommes très fiers d'organiser un sprint de développement\n"
+"qui est une excellente occasion pour s'impliquer dans un \n"
+"nouveau projet et redonner à la communauté du logiciel libre.\n"
+"                        "
+
+#: templates/about/about.html:50
+msgid "Join the conversation"
+msgstr "Joignez-vous à la conversation"
+
+#: templates/about/about.html:52
+#, python-format
+msgid ""
+"Be sure to use <a href=\"https://twitter.com/search?q="
+"%23pyconca2015\">#pyconca2015</a>. We love hearing from our community "
+"members!"
+msgstr ""
+"Assurez-vous d'utiliser <a href=\"https://twitter.com/search?q="
+"%23pyconca2015\">#pyconca2015</a>. Nous aimons recevoir des nouvelles de la "
+"communauté!"
+
+#: templates/about/about.html:54
+msgid "Key Contacts"
+msgstr "Contacts clés"
+
+#: templates/about/about.html:56
+#| msgid "The organizing committee can be contacted at <a href="
+msgid ""
+"The organizing committee can be contacted at <a href=\"mailto:"
+"organizers@pycon.ca\">organizers@pycon.ca</a>."
+msgstr "Le comité organisateur peut être rejoint à <a href=\"mailto:"
+"organizers@pycon.ca\">organizers@pycon.ca</a>"
+
+#: templates/about/about.html:58
+#| msgid ""
+#| "The organizing committee can be contacted privately at "
+#| "<b>organizers@pycon.ca</b>"
+msgid ""
+"The board can be contacted privately at <a href=\"mailto:board@pycon.ca"
+"\">board@pycon.ca</a>."
+msgstr "Le conseil d'administration peut être rejoint à <a href=\"mailto:board@pycon.ca"
+"\">board@pycon.ca</a>."
+
+
+#: templates/about/about.html:60
+msgid "You can also find us on:"
+msgstr "Vous pouvez également nous trouver:"
+
+#: templates/about/about.html:83
+msgid "The Team"
+msgstr "L'équipe"
+
+#: templates/conduct/conduct.html:4 templates/conduct/conduct.html.py:7
+#: templates/include/footer.html:25
+msgid "Code of Conduct"
+msgstr "Code de conduite"
+
+#: templates/conduct/conduct.html:11
+msgid ""
+"\n"
+"                <p>PyCon Canada is a community conference intended for "
+"networking and collaboration in the developer community.</p>\n"
+"                <p>We value the participation of each member of the Python "
+"community and want all attendees to have an enjoyable and fulfilling "
+"experience. Accordingly, all attendees are expected to show respect and "
+"courtesy to other attendees throughout the conference and at all conference "
+"events, whether officially sponsored by PyCon Canada or not.</p>\n"
+"                <p>To make clear what is expected, all delegates, speakers, "
+"exhibitors and volunteers at any PyCon Canada event are required to conform "
+"to the following Code of Conduct. Organizers will enforce this code "
+"throughout the event.</p>\n"
+"                <div class=\"conduct-subtitle\">The Short Version</div>\n"
+"                <p>PyCon Canada is dedicated to providing a harassment-free "
+"conference experience for everyone, regardless of gender, sexual "
+"orientation, disability, physical appearance, body size, race or religion. "
+"We do not tolerate harassment of conference participants in any form.</p>\n"
+"                <p>All communication should be appropriate for a "
+"professional audience including people of many different backgrounds. Sexual "
+"language and imagery is not appropriate for any conference venue, including "
+"talks.</p>\n"
+"                <p><b>Be kind</b> to others. Do not insult or put down other "
+"attendees. Behave professionally. Remember that harassment and sexist, "
+"racist, or exclusionary jokes are not appropriate for PyCon Canada.</p>\n"
+"                <p>Attendees violating these rules may be asked to leave the "
+"conference without a refund at the sole discretion of the conference "
+"organizers.</p>\n"
+"                <p>Thank you for helping make this a welcoming, friendly "
+"event for all.</p>\n"
+"                <div class=\"conduct-subtitle\">The Longer Version</div>\n"
+"                <p>Harassment includes offensive verbal comments related to "
+"gender, sexual orientation, disability, physical appearance, body size, "
+"race, religion, sexual images in public spaces, deliberate intimidation, "
+"stalking, following, harassing photography or recording, sustained "
+"disruption of talks or other events, inappropriate physical contact, and "
+"unwelcome sexual attention.</p>\n"
+"                <p>Participants asked to stop any harassing behavior are "
+"expected to comply immediately.</p>\n"
+"                <p>Exhibitors in the expo hall, sponsor or vendor booths, or "
+"similar activities are also subject to the anti-harassment policy. In "
+"particular, exhibitors should not use sexualized images, activities, or "
+"other material. Booth staff (including volunteers) should not use sexualized "
+"clothing/uniforms/costumes, or otherwise create a sexualized environment.</"
+"p>\n"
+"                <p>Be careful in the words that you choose. Remember that "
+"sexist, racist, and other exclusionary jokes can be offensive to those "
+"around you. Excessive swearing and offensive jokes are not appropriate for "
+"PyCon Canada.</p>\n"
+"                <p>If a participant engages in behavior that violates this "
+"code of conduct, the conference organizers may take any action they deem "
+"appropriate, including warning the offender or expulsion from the conference "
+"with no refund.</p>\n"
+"                <div class=\"conduct-subtitle\">Contact Information</div>\n"
+"                <p>If you are being harassed, notice that someone else is "
+"being harassed, or have any other concerns, please contact a member of "
+"conference staff.</p>\n"
+"                <p>If the matter is especially urgent, please call/contact "
+"any of these individuals:</p>\n"
+"                <ul>\n"
+"                    <li><b>Peter McCormick:</b> +1 (416) 834-5960</li>\n"
+"                    <li><b>Francis Deslauriers:</b> +1 (514) 974-0018</li>\n"
+"                </ul>\n"
+"                <p>Conference staff will be happy to help participants "
+"contact venue security or local law enforcement, provide escorts, or "
+"otherwise assist those experiencing harassment to feel safe for the duration "
+"of the conference. We value your attendance.</p>\n"
+"                <div class=\"conduct-subtitle\">Attribution</div>\n"
+"                <p>This anti-harassment policy is based on the <a href="
+"\"http://geekfeminism.wikia.com/wiki/Conference_anti-harassment\"> example "
+"policy</a> from the Geek Feminism wiki, created by the Ada Initiative and "
+"other volunteers. It is used under the terms of the <a href=\"https://"
+"creativecommons.org/publicdomain/zero/1.0/\">Creative Commons Zero</a> "
+"license.</p>\n"
+"            "
+msgstr ""
+"\n"
+"<p>PyCon Canada s'engage à fournir à tous une conférence sans harcèlement, "
+"sans égard au genre, l'orientation sexuelle, les handicaps, l'apparence "
+"physique, la taille, la race, ou la religion. Nous ne tolérons aucune forme "
+"d'harcèlement envers les participants à la conférence.</p>\n"
+"<p>Toute communication devrait être appropriée pour une audience de "
+"professionnels incluant des personnes de différents horizons. Le langage et "
+"les images à caractère sexuel n'est pas approprié en aucun lieu de la "
+"conférence incluant les présentations. </p>\n"
+"<p>Soyez gentils envers les autres. N'insultez ou n'humiliez pas d'autres "
+"participants. Comportez-vous de manière professionnelle. Rappelez-vous que "
+"le harcèlement ou les blagues sexistes, racistes ou exclusives ne sont pas "
+"appropriées pour PyCon Canada. </p>\n"
+"<p>Les participants contrevenant à ces règles pourraient se voir demander  "
+"de quitter la conférence sans aucun remboursement à la seule discrétion des "
+"organisateurs de la conférence.</p>\n"
+"<p>Merci de contribuer à faire de cet événement, un événement accueillant et "
+"amical pour tous.</p>\n"
+"<div class=\"conduct-subtitle\">LA VERSION COURTE</div><p>PyCon Canada "
+"s'engage à fournir à tous une conférence sans harcèlement, sans égard au "
+"genre, l'orientation sexuelle, les handicaps, l'apparence physique, la "
+"taille, la race, ou la religion. Nous ne tolérons aucune forme d'harcèlement "
+"envers les participants à la conférence.</p>\n"
+"<p>Toute communication devrait être appropriée pour une audience de "
+"professionnels incluant des personnes de différents horizons. Le langage et "
+"les images à caractère sexuel n'est pas approprié en aucun lieu de la "
+"conférence incluant les présentations.</p>\n"
+"<p>Soyez gentils envers les autres. N'insultez ou n'humiliez pas d'autres "
+"participants. Comportez-vous de manière professionnelle. Rappelez-vous que "
+"le harcèlement ou les blagues sexistes, racistes ou exclusives ne sont pas "
+"appropriées pour PyCon Canada.</p>\n"
+"<p>Les participants contrevenant à ces règles pourraient se voir demander de "
+"quitter la conférence sans aucun remboursement à la seule discrétion des "
+"organisateurs de la conférence.</p>\n"
+"<p>Merci de contribuer à faire de cet événement, un événement accueillant et "
+"amical pour tous.</p>\n"
+"<div class=\"conduct-subtitle\">LA VERSION LONGUE</div><p>Le harcèlement "
+"inclut des commentaires verbaux offensants liés au genre, à l'orientation "
+"sexuelle, aux handicaps, à l'apparence physique, à la taille, à la race, à "
+"la religion, des images sexuelles dans des espaces publics, de "
+"l'intimidation délibérée, suivre quelqu'un, des prises harcelantes de photos "
+"ou d'enregistrements, des interruptions répétitives de présentation ou autre "
+"événement, des contacts physiques inappropriés et de l'attention sexuelle "
+"non bienvenue.</p>\n"
+"<p>Il est attendu qu'un participant mette fin à un comportement "
+"harcelantimmédiatement lorsque demandé.</p>\n"
+"<p>Les exposants dans le hall d'exposition, les kiosques de commanditaires "
+"ou de fournisseurs, ou toute activité similaire sont aussi sujet à la "
+"politique anti-harcèlement. En particulier, les exposants ne devraient pas "
+"utiliser d'images, d'activités ou autre matériel sexualisés. Les personnels "
+"aux kiosques (incluant les bénévoles) ne devraient pas utiliser des habits/"
+"uniformes/costumes sexualisés ou par ailleurs créer un environnement "
+"sexualisé.</p>\n"
+"<p>Soyez attentifs aux mots que vous choisissez. Rappelez-vous que les "
+"blagues sexistes, racistes ou exclusives d'une autre manière peuvent "
+"offenser ceux qui vous entourent.</p>\n"
+"<p>Si un participant s'engage dans un comportement qui viole ce code de "
+"conduite, les organisateurs de la conférence peuvent prendre toute mesure "
+"qu'ils jugent appropriée incluant avertir l'offenseur ou l'expulser de la "
+"conférence sans remboursement.</p>\n"
+"<div class=\"conduct-subtitle\">INFORMATIONS DE CONTACT</div><p>Si vous êtes "
+"victime d'harcèlement, témoin d'un harcèlement ou avez tout autre souci, "
+"veuillez contacter un membre du comité d'administration:\n"
+"                <ul>\n"
+"                   <li><b>Peter McCormick:</b> +1 (416) 834-5960</li>\n"
+"     \t\t\t\t\t\t\t<li><b>Francis Deslauriers:</b> +1 (514) 974-0018</li>\n"
+"                </ul>\n"
+"<p>Le personnel de la conférence se fera un plaisir d'aider les participants "
+"à contacter la service de sécurité des lieux ou les répresantants locaux de "
+"la loi, à escorter, ou assister en toute autre manière ceux étant la cible "
+"d'harcèlement afin qu'ils se sentent en sécurité pendant la conférence. Nous "
+"apprécions votre présence.\n"
+"</p><div class=\"conduct-subtitle\">ATTRIBUTION</div>\n"
+"<p>Cette politique anti-harcelement est basée sur l'<a href=\"http://"
+"geekfeminism.wikia.com/wiki/Conference_anti-harassment\"> exemple</a> "
+"fournie par le «Geek Feminism wiki», et créée par l'«Ada Initiative» et "
+"d'autre bénévoles. Elle est utilisée sous les termes de la license <a href="
+"\"https://creativecommons.org/publicdomain/zero/1.0/\">Creative Commons "
+"Zero</a> </p>\n"
+"  "
+
+#: templates/home/home.html:5
+msgid "Welcome!"
+msgstr "Bienvenue!"
+
+#: templates/home/home.html:9
+msgid "Join your fellow Pythonistas for the third annual PyCon Canada,"
+msgstr ""
+"Joignez-vous à la communauté Python lors du troisième PyCon Canada, pour une "
+"fin de semaine de"
+
+#: templates/home/home.html:10
+msgid "a weekend of talks, activities, fun and code!"
+msgstr "présentations, d'activités, de programmation et de plaisir!"
+
+#: templates/home/home.html:17
+msgid "Conference:"
+msgstr "Conférence:"
+
+#: templates/home/home.html:17
+msgid "November 7-8, 2015"
+msgstr "7-8 novembre 2015"
+
+#: templates/home/home.html:18
+msgid "Sprints:"
+msgstr "Sprints:"
+
+#: templates/home/home.html:18
+msgid "November 9, 2015"
+msgstr "9 novembre 2015"
+
+#: templates/home/home.html:19
+msgid "Toronto, Ontario"
+msgstr "Toronto, Ontario"
+
+#: templates/home/home.html:45 templates/include/footer.html:12
+#: templates/include/header.html:9 templates/include/header.html.py:33
+#: templates/schedule/schedule.html:5
+msgid "Schedule"
+msgstr "Horaire"
+
+#: templates/home/home.html:47
+msgid ""
+"Find out about the Saturday and Sunday keynotes, over 40 talks, tutorials "
+"and sprints."
+msgstr ""
+"Venez assiter à nos keynotes de samedi et dimanche, plus 40 présentations, "
+"des tutoriels et une journée de sprints"
+
+#: templates/home/home.html:48 templates/home/home.html.py:62
+msgid "Learn more..."
+msgstr "Apprenez-en plus..."
+
+#: templates/home/home.html:59 templates/include/footer.html:13
+#: templates/include/header.html:10 templates/include/header.html.py:34
+#: templates/venue/venue.html:5
 msgid "Venue"
-msgstr ""
+msgstr "Lieu"
 
-#: templates/home.html:47
+#: templates/home/home.html:61
 msgid ""
 "The event will be held at the Bahen Center for Information Technology, "
-"graciously provided by the university of Toronto. With subways access a "
+"graciously provided by the University of Toronto. With subways access a "
 "short walk away you can easily explore the city."
 msgstr ""
+"L'événement se tiendra au Bahen Centre for Information Technology, "
+"gracieusement offert par l'université de Toronto. Facilement accessible en "
+"métro et localisé au coeur de la ville."
 
-#: templates/include/footer.html:12
-msgid "Stay up-to-date with PyCon Canada"
-msgstr ""
+#: templates/include/book_now.html:2
+msgid "Buy A Ticket!"
+msgstr "Acheter un billet!"
 
-#: templates/include/footer.html:30
-msgid "Join the mailing list"
-msgstr ""
+#: templates/include/footer.html:9 templates/include/header.html:6
+msgid "Home"
+msgstr "Accueil"
 
-#: templates/include/footer.html:38
-msgid "Code of Conduct"
-msgstr ""
-
-#: templates/include/header.html:14
-msgid "About"
-msgstr ""
-
-#: templates/include/header.html:15
+#: templates/include/footer.html:11 templates/include/header.html:8
+#: templates/include/header.html.py:31 templates/sponsors/sponsor.html:5
 msgid "Sponsors"
-msgstr ""
+msgstr "Commanditaires"
+
+#: templates/include/footer.html:17
+msgid "Join our mailing list"
+msgstr "Abonnez-vous à la liste d'envoi"
 
 #: templates/include/messages.html:6
 msgid "close"
+msgstr "fermer"
+
+#: templates/include/sponsors.html:5 templates/sponsors/sponsor.html:18
+msgid "Our Sponsors"
+msgstr "Nos commanditaires"
+
+#: templates/schedule/schedule.html:8
+msgid "Schedule is still being finalized!"
+msgstr "L'horaire sera disponible bientôt"
+
+#: templates/schedule/schedule.html:10
+msgid ""
+"We will be updating soon with the full schedule, stay tuned to <a href="
+"\"https://twitter.com/pyconca/\">@pyconca on Twitter</a> for updates!"
 msgstr ""
+"Nous mettrons à jour l'horaire bientôt, restez à jour en nous suivant <a "
+"href=\"https://twitter.com/pyconca/\">@pyconca on Twitter</a>"
+
+#: templates/sponsors/sponsor.html:24
+msgid "We thank our fantastic sponsors who help make this event possible."
+msgstr ""
+"Nous remercions nos merveilleux commanditaires qui rendre cet événement "
+"possible."
+
+#: templates/sponsors/sponsor.html:25
+msgid "Get in touch"
+msgstr "Contactez-nous"
+
+#: templates/sponsors/sponsor.html:26
+msgid "if your organization would like to support PyCon Canada 2015."
+msgstr "si votre organisation aimerait aider PyCon Canada 2015."
+
+#: templates/venue/venue.html:17
+msgid "Location"
+msgstr "Lieu"
+
+#: templates/venue/venue.html:19
+msgid ""
+"This year PyCon Canada is taking place November 7-9, 2015 in Toronto, "
+"Ontario, Canada at the <a href='http://map.utoronto.ca/utsg/"
+"building/080'>Bahen Centre for Information Technology</a> on the University "
+"of Toronto St. George campus. "
+msgstr ""
+"PyCon Canada 2015 se tiendra du 7 au 9 novembre 2015 à Toronto, Ontario, "
+"Canada au <a href='http://map.utoronto.ca/utsg/building/080'>Bahen Centre "
+"for Information Technology</a> à l'Université de Toronto campus St. George."
+
+#: templates/venue/venue.html:37
+msgid "Getting to Toronto"
+msgstr "Se rendre à Toronto"
+
+#: templates/venue/venue.html:40
+msgid ""
+"\n"
+"                                Toronto has 2 major airports. Toronto "
+"Pearson is the international airport and is the\n"
+"                                location for almost all the major domestic "
+"and international airlines. It's about a 35\n"
+"                                minute drive from Toronto Pearson to the "
+"University of Toronto, but be aware that\n"
+"                                downtown Toronto traffic is busy all day and "
+"is particularly busy during peak rush hour.\n"
+"                                Allow at least an hour for travel time from "
+"the airport.\n"
+"                            "
+msgstr ""
+"\n"
+"Toronto a deux aéroports d'importance. Pearson est un aéroport "
+"internationnale et sert un grand nombre de vol domestique et "
+"internationnale. Il y a environ 35 minutes de voiture de l'aéroport aux "
+"campus St. George de l'université de Toronto mais soyez prévoyant il y a du "
+"traffic tout le long de la journée. Prévoyez au moins une heure de transport "
+"en voiture. Le UP train est également une option pour vous rendre au centre-"
+"ville à partir de l'aéroport Pearson.<b>https://www.upexpress.com/?lng=fr</b>"
+
+#: templates/venue/venue.html:50
+msgid ""
+"\n"
+"                                <a href=\"http://www.viarail.ca/\">VIA Rail</"
+"a> is a good alternative to the airlines if\n"
+"                                you are coming from somewhere like Montreal "
+"or Ottawa. Advance pricing is often\n"
+"                                available at a discount.\n"
+"                            "
+msgstr ""
+"\n"
+"Viarail est une bonne alternative aux vols si vous arrivez de Montréal, "
+"d'Ottawa ou de Windsor.\n"
+" "
+
+#: templates/venue/venue.html:58
+msgid ""
+"\n"
+"                                <b>If you're coming from the US: </b>\n"
+"                            "
+msgstr ""
+"\n"
+"<b>Si vous arrivez des États-Unis:</b>"
+
+#: templates/venue/venue.html:64
+msgid ""
+"\n"
+"                                Make sure that you've got a valid passport "
+"and don't forget to bring it with you.\n"
+"                            "
+msgstr ""
+"\n"
+"Assurez-vous d'avoir un passeport valide et n'oubliez pas de l'apporter avec "
+"vous. "
+
+#: templates/venue/venue.html:69
+msgid ""
+"\n"
+"                                <a href=\"https://www.flyporter.com/"
+"\">Porter Airlines</a> has frequent, reasonably-priced\n"
+"                                flights for trips from several US cities to "
+"Toronto, including Boston, Burlington (VT),\n"
+"                                Chicago, Myrtle Beach, New York, and "
+"Washington.\n"
+"                            "
+msgstr ""
+"\n"
+"L'aéroport Billy Bishop géré par <b>Porter Airlines</b> offre des vols "
+"fréquents à des prix raisonables en provenance de la Côte-Est américaine et "
+"des provinces de l'Est du Canada Billy Bishop est à deux pas du centre-ville "
+"et est à 30 minutes de transport en commun ou 15 minutes de voiture de "
+"l'université de Toronto."
+
+#: templates/venue/venue.html:77
+msgid ""
+"\n"
+"                                <a href=\"http://www.viarail.ca/\">VIA Rail</"
+"a> is offering discounts on train fares for attendees:\n"
+"                            "
+msgstr ""
+"\n"
+"<a href=\"http://www.viarail.ca/\">VIA Rail</a> offre un rabais sur les "
+"billets de train pour les participants à PyCon Canada 2015:"
+
+#: templates/venue/venue.html:82
+msgid ""
+"\n"
+"                                Valid for travel between Thursday November 5 "
+"and Wednesday November 11, 2015, from\n"
+"                                all stations throughout the VIA system to "
+"Toronto, Ontario and return.\n"
+"                            "
+msgstr ""
+"\n"
+"Ce code est valide du jeudi 5 novembre jusqu'au mercredi 11 novembre 2015 à "
+"partir de toutes les stations du réseau VIA jusqu'à Toronto ainsi que le "
+"retour.\n"
+" "
+
+#: templates/venue/venue.html:89
+msgid ""
+"\n"
+"                                Fare applies to a maximum of two passengers "
+"per booking. One complimentary\n"
+"                                stopover is allowed at no additional charge. "
+"For travel on all fare plans\n"
+"                                in Business class, the first stopover is "
+"allowed at no additional charge,\n"
+"                                provided that this stopover takes place in "
+"Toronto, Montéal, or Ottawa only.\n"
+"                            "
+msgstr ""
+"\n"
+"Le tarif s’applique à un maximum de deux voyageurs par réservation. Un arrêt "
+"en route gratuit est permis sans frais supplémentaires. Pour tous les plans "
+"tarifaires de la classe Affaires, le premier arrêt en route est permis sans "
+"frais supplémentaires, en autant que cet arrêt ait lieu à Toronto, Montréal "
+"ou Ottawa seulement.\n"
+" "
+
+#: templates/venue/venue.html:97
+#, python-format
+msgid ""
+"\n"
+"                                The discount is 10%% off the best available "
+"fare in Economy, Economy Plus,\n"
+"                                Business, Business Plus, Sleeper, or Sleeper "
+"Plus class. Subject to the\n"
+"                                conditions and restrictions of the fare plan "
+"to which the additional\n"
+"                                discount is being applied.\n"
+"                            "
+msgstr ""
+"\n"
+"Le rabais est de 10 %% sur le meilleur tarif disponible en classes Économie, "
+"Économie Plus, Affaires, Affaires Plus, Voiture-lits et Voiture-lits Plus. "
+"Ce rabais est sujet à d'autres restriction sur le type de classes il peut "
+"être appliqué.\n"
+"                            "
+
+#: templates/venue/venue.html:105
+msgid ""
+"\n"
+"                                Discount does not apply in Escape Class "
+"fares.\n"
+"                            "
+msgstr ""
+"\n"
+"Le rabais n'est pas valide pour les tarifs Économie évasion\n"
+"                            "
+
+# is n’est pas valide pour les tarifs Économie évasion:atemplates/venue/venue.html:110
+#: templates/venue/venue.html:110
+msgid ""
+"\n"
+"                                Reference VIA convention code <strong>13148</"
+"strong>.\n"
+"                            "
+msgstr ""
+"\n"
+"Code de conférence VIA:<strong>13148</strong>.\n"
+"                            "
+
+#: templates/venue/venue.html:123
+msgid "Public Transit"
+msgstr "Transport en commun"
+
+#: templates/venue/venue.html:126
+msgid ""
+"\n"
+"                                The nearest TTC subway stops is\n"
+"                                <a href=\"https://ttc.ca/Subway/Stations/"
+"Queens_Park/station.jsp\">Queen's Park Station</a>\n"
+"                                on Line 1 Yonge-University. College "
+"streetcars also stop at St. George Street.\n"
+"                                Cash fare is $3, or multiple tokens can be "
+"purchased at discounted rates. Check with\n"
+"                                the <a href=\"http://www.ttc.ca/\">TTC</a> "
+"for more details.\n"
+"                            "
+msgstr ""
+"\n"
+"La station de Metro du TTC la plus près est la station Queen's Park sur la "
+"ligne 1 Yonge-University. Les tramways de la rue College font également un "
+"arrêt à la rue St. George.\n"
+"Le prix du billet est de 3$ et plusieurs billets peuvent être achetés à un "
+"prix réduit. Plus de détails sur le site du <a href=\"http://www.ttc.ca/"
+"\">TTC</a>.\n"
+"                            "
+
+#: templates/venue/venue.html:143
+msgid "What do to in Toronto"
+msgstr "Quoi faire à Toronto"
+
+#: templates/venue/venue.html:146
+msgid ""
+"\n"
+"                                Tourism Toronto's\n"
+"                                <a href=\"http://www.seetorontonow.com/\" "
+"target=\"_blank\">website</a> has information\n"
+"                                on things to see and do in Toronto, as well "
+"as a \"Deals\" section including coupons.\n"
+"                                They also have a\n"
+"                                <a href=\"http://www.seetorontonow.com/"
+"mobile-app/\" target=\"_blank\">mobile app</a>\n"
+"                                available for download.\n"
+"                            "
+msgstr ""
+"\n"
+"<a href=\"http://www.seetorontonow.com/\" target=\"_blank\">Tourisme "
+"Toronto</a> offre de l'information sur des choses à voir et sur des "
+"activités disponible à Toronto. Le site web offre également un nombre de "
+"coupon-rabais.  Ils offrent également une <a href=\"http://www.seetorontonow."
+"com/mobile-app/\" target=\"_blank\">application mobile</a> à télécharger."
+
+#~ msgid ""
+#~ "Start the fun Friday evening with a mix and mingle. Feed your brain at "
+#~ "talks on Saturday, and if your sprint team is eager, you can start that "
+#~ "night. Sprint or attend talks and tutorials on Sunday."
+#~ msgstr ""
+#~ "Venez lancer le plaisir vendredi soir avec une soirée de réseautage. "
+#~ "Satisfait ta soif de connaisances avec un samedi et un dimanche rempli de "
+#~ "présentations. La soirée du samedi est libre pour ceux et celles qui "
+#~ "veulent débuter leurs sprints."
+
+#~ msgid "more info"
+#~ msgstr "plus d'info"
+
+#, fuzzy
+#~| msgid "Stay up-to-date with PyCon Canada"
+#~ msgid "Keep up with PyCon Canada"
+#~ msgstr "Restez à jour avec PyCon Canada"
+
+#~ msgid "Email"
+#~ msgstr "Courriel"
+
+#~ msgid ""
+#~ "PyCon Canada 2015 will be held at Bahen Centre for Information Technology"
+#~ msgstr ""
+#~ "PyCon Canada 2015 se tiendra au Bahen Centre for Information Technology"
+
+#~ msgid ""
+#~ "University of Toronto - St. George Campus 40 St George St Toronto, ON M5S "
+#~ "2E4"
+#~ msgstr ""
+#~ "Université de Toronto - Campus St. George, 40 St George St Toronot, ON "
+#~ "M5S 2E4"
+
+#~ msgid ""
+#~ "\n"
+#~ "                                Porter Airlines has frequent, reasonably-"
+#~ "priced flights for trips from several\n"
+#~ "                                US cities to Toronto, including Boston, "
+#~ "Burlington (VT), Chicago, Myrtle Beach,\n"
+#~ "                                New York, and Washington.\n"
+#~ "                            "
+#~ msgstr ""
+#~ "\n"
+#~ "<b>Porter Airlines</b> offre des vols fréquents à des prix raisonables en "
+#~ "provenance de la Côte-Est américaine."
+
+#~ msgid "Thanks for signing up!"
+#~ msgstr "Merci de vous être inscrit!"
