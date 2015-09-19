@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.exceptions import ObjectDoesNotExist
 
 class Speaker(models.Model):
     name = models.CharField(max_length=100)
@@ -42,6 +43,36 @@ class Slot(models.Model):
     kind = models.ForeignKey(SlotKind)
     start = models.TimeField()
     end = models.TimeField()
+    content_override = models.TextField(blank=True)
+    
+    def assign(self, content):
+        """
+        Assign the given content to this slot and if a previous slot content
+        was given we need to unlink it to avoid integrity errors.
+        """
+        self.unassign()
+        content.slot = self
+        content.save()
+    
+    def unassign(self):
+        """
+        Unassign the associated content with this slot.
+        """
+        content = self.content
+        if content and content.slot_id:
+            content.slot = None
+            content.save()
+    
+    @property
+    def content(self):
+        """
+        Return the content this slot represents.
+        @@@ hard-coded for presentation for now
+        """
+        try:
+            return self.content_ptr
+        except ObjectDoesNotExist:
+            return None
     
     @property
     def start_datetime(self):
