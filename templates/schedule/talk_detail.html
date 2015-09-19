@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <h1>{{ talk.name }} <em>with {{ talk.speaker }}</em></h1>
+        
+        <p>Date: {{ talk.talk_start|date:"l" }} at {{ talk.talk_start|date:"P" }}</p>
+        <p>Room: {{ talk.room }}</p>
+        
+        {{ talk.description|linebreaks }}
+        
+        <h2>{{ talk.speaker }} Bio</h2>
+        
+        {{ talk.speaker.bio|linebreaks }}
+    </div>
+{% endblock %}
