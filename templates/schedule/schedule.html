@@ -5,8 +5,9 @@
 {% block title %}{% trans 'Schedule' %}{% endblock %}
 {% block content %}
     <div class="container schedule">
-        <h1>{% trans 'Schedule is still being finalized!' %}</h1>
-
-        <p>{% trans 'We will be updating soon with the full schedule, stay tuned to <a href="https://twitter.com/pyconca/" target="_blank">@pyconca on Twitter</a> for updates!' %}</p>
+        {% for timetable in days %}
+        <h3>{{ timetable.day.date }}</h3>
+        {% include "schedule/_grid.html" %}
+        {% endfor %}
     </div>
 {% endblock %}
