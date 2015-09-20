@@ -1,10 +1,22 @@
 .schedule {
+	text-align: center;
+	
 	table {
 		width: 100%;
-		
-		.slot {
-			border: 1px solid @color-accent6;
-			padding: 0.5em 1em;
+	}
+	
+	th, td {
+		border: 1px solid @color-accent6;
+		padding: 0.5em 1em;
+	}
+	
+	.time {
+		width: 10%
+	}
+	
+	tr:hover {
+		td {
+			border: 1px solid @color-accent5;
 		}
 	}
 }

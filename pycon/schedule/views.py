@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404
 
 from pycon.core.views import PyconTemplateView
 
-from pycon.schedule.models import Day
+from pycon.schedule.models import Day, Presentation
 from pycon.schedule.timetable import TimeTable
 
 class ScheduleView(PyconTemplateView):
@@ -17,10 +17,12 @@ class ScheduleView(PyconTemplateView):
         })
 
 
-class TalkDetailView(PyconTemplateView):
-    template_name = 'schedule/talk_detail.html'
+class PresentationView(PyconTemplateView):
+    template_name = 'schedule/presentation.html'
     
-    def get(self, request, *args, **kwargs):
-        talk = get_object_or_404(Talk, pk=kwargs['pk'])
+    def get(self, request, pk, *args, **kwargs):
+        presentation = get_object_or_404(Presentation, pk=pk)
         
-        return self.render_to_response({'talk': talk})
+        return self.render_to_response({
+            'p': presentation
+        })

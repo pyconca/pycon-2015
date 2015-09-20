@@ -47,7 +47,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                             {% if not slot.content %}
                             {% else %}
                                 <span class="title">
-                                    <a href="{% url "schedule_talk_detail" slot.content.pk %}">{{ slot.content.title }}</a>
+                                    <a href="{% url 'schedule_talk_detail' pk=slot.content.pk %}">{{ slot.content.title }}</a>
                                 </span>
                                 <span class="speaker">
                                     {{ slot.content.speakers|join:", " }}

@@ -28,6 +28,8 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
+import datetime
+
 from django.db import models
 from django.core.exceptions import ObjectDoesNotExist
 
@@ -165,6 +167,10 @@ class Presentation(models.Model):
     
     def __str__(self):
         return "%s (%s)" % (self.title, self.speaker)
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('schedule_talk_detail', {'pk': self.pk})
 
     class Meta:
         ordering = ["slot"]
