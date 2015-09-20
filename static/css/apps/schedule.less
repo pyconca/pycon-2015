@@ -1,6 +1,20 @@
 .schedule {
 	text-align: center;
 	
+	.day {
+		&.day-2015-11-07 {
+			td.slot {
+				width: 22.50%;
+			}
+		}
+		
+		&.day-2015-11-08 {
+			td.slot { 
+				width: 30%;
+			}
+		}
+	}
+	
 	table {
 		width: 100%;
 	}
@@ -14,9 +28,31 @@
 		width: 10%
 	}
 	
+	.slot-breakfast {
+		background-color: @color-accent5;
+	}
+	
+	.slot-keynote {
+		background-color: @color-accent6;
+	}
+	
+	.slot-break, .slot-lunch {
+		background-color: @color-accent4;
+	}
+	
+	.slot-empty {
+		border: none;
+		.hide-text();
+	}
+	
 	tr:hover {
 		td {
 			border: 1px solid @color-accent5;
+			background-color: @color-accent2;
+			
+			a {
+				color: @color-accent5;
+			}
 		}
 	}
 }
