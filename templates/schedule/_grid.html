@@ -55,6 +55,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                                 <span class="speaker">
                                     {{ slot.content.speakers|join:", " }}
                                 </span>
+                                {% if user.is_authenticated %}
+                                <small class="admin_link">
+                                    (<a href="{% url 'admin:schedule_presentation_change' slot.content.pk %}">Edit Presentation</a>)
+                                </small>
+                                {% endif %}
                             {% endif %}
                         {% else %}
                             {% if slot.content_override %}
@@ -62,6 +67,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                             {% else %}
                                 {{ slot.kind.label }}
                             {% endif %}
+                        {% endif %}
+                        {% if user.is_authenticated %}
+                        <small class="admin_link">
+                            (<a href="{% url 'admin:schedule_slot_change' slot.pk %}">Edit Slot</a>)
+                        </small>
                         {% endif %}
                     </td>
                 {% endfor %}
