@@ -40,11 +40,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <tbody>
         {% for row in timetable %}
             <tr>
+                <td class="time time-{{ row.time|date:"H-i-s" }}">
                 {% if LANGUAGE_CODE == 'fr' %}
-                <td class="time">{{ row.time|date:"H\hi" }}</td>
+                    {{ row.time|date:"H\hi" }}
                 {% else %}
-                <td class="time">{{ row.time|date:"fA" }}</td>
+                    {{ row.time|date:"fA" }}
                 {% endif %}
+                </td>
                 {% for slot in row.slots %}
                     <td class="slot slot-{{ slot.kind.label }}" colspan="{{ slot.colspan }}" rowspan="{{ slot.rowspan }}">
                         {% if slot.kind.label == "talk" or slot.kind.label == "tutorial" %}
