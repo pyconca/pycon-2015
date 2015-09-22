@@ -53,9 +53,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                             {% else %}
                                 <span class="title">
                                     {% comment "Link to presentation" %}
-                                    <a href="{% url 'schedule_talk_detail' pk=slot.content.pk %}">{{ slot.content.title|title }}</a>
+                                    <a href="{% url 'schedule_talk_detail' pk=slot.content.pk %}">{{ slot.content.title }}</a>
                                     {% endcomment %}
-                                    {{ slot.content.title|title }}
+                                    {{ slot.content.title }}
                                 </span>
                                 <span class="speaker">
                                     {{ slot.content.speakers|join:", " }}
