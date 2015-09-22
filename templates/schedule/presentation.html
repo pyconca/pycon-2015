@@ -1,21 +1,36 @@
 {% extends 'base.html' %}
 {% load i18n %}
 {% load static %}
+{% load markup_tags %}
+
+{% block title %}{{ p.title }} {% trans 'with' %} {% for speaker in p.speakers %}{{ speaker }}{% endfor %}{% endblock %}
 
 {% block content %}
+
+    <div class="container presentation">
+        <div class="grid">
+            <div class="col-3 spacer"></div>
+            <div class="col-6">
+                <h1>{{ p.title }} <em>{% trans 'with' %} {% for speaker in p.speakers %}{{ speaker }}{% if not forloop.last %}{% ifequal forloop.revcounter 2 %} and {% else %}, {% endifequal %}{% else %}{% endif %}{% endfor %}</em></h1>
+                <p><strong>{% trans 'Date' %}</strong>: {{ p.slot.start_datetime|date:"l" }} at {{ p.slot.start_datetime|date:"P" }} to {{ p.slot.end_datetime|date:"P" }}</p>
+                <p><strong>{% trans 'Room' %}</strong>: {{ p.slot.rooms|first }}</p>
+                <div class="description">
+                    {{ p.description|apply_markup:"markdown" }}
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <div class="container">
-        <h1>{{ p.name }} <em>with {% for speaker in p.speakers %}{{ speaker }}{% if not forloop.last %}{% ifequal forloop.revcounter 2 %} and {% else %}, {% endifequal %}{% else %}{% endif %}{% endfor %}</em></h1>
-        
-        <p><strong>Date</strong>: {{ p.slot.start_datetime|date:"l" }} at {{ p.slot.start_datetime|date:"P" }} to {{ p.slot.end_datetime|date:"P" }}</p>
-        
-        <p><strong>Room</strong>: {{ p.slot.rooms|first }}</p>
-        
-        {{ p.description|linebreaks }}
-        
-        {% for speaker in p.speakers %}
-        <h2>{{ speaker }} Bio</h2>
-        
-        {{ speaker.bio|linebreaks }}
-        {% endfor %}
+        <div class="grid speaker">
+            <div class="col-3 spacer"></div>
+            <div class="col-6">
+                {% for speaker in p.speakers %}
+                <h2>{{ speaker }} {% trans 'Bio' %}</h2>
+    
+                {{ speaker.bio|linebreaks }}
+                {% endfor %}
+            </div>
+        </div>
     </div>
 {% endblock %}
