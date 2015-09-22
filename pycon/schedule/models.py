@@ -170,7 +170,7 @@ class Presentation(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('schedule_talk_detail', {'pk': self.pk})
+        return ('schedule_presentation_detail', (), {'pk': self.pk})
 
     class Meta:
         ordering = ["slot"]
