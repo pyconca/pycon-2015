@@ -48,41 +48,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                 {% endif %}
                 </td>
                 {% for slot in row.slots %}
-                    <td class="slot slot-{{ slot.kind.label }}" colspan="{{ slot.colspan }}" rowspan="{{ slot.rowspan }}">
-                        {% if slot.kind.label == "talk" or slot.kind.label == "tutorial" or slot.kind.label == "keynote" %}
-                            {% if not slot.content %}
-                            {{ slot.content_override|safe }}
-                            {% if user.is_authenticated %}
-                            <small class="admin_link">
-                                (<a href="{% url 'admin:schedule_presentation_add' %}?slot={{ slot.pk }}">Add Presentation</a>)
-                            </small>
-                            {% endif %}
-                            {% else %}
-                                <span class="title">
-                                    <a href="{{ slot.content.get_absolute_url }}">{{ slot.content.title }}</a>
-                                </span>
-                                <span class="speaker">
-                                    {{ slot.content.speakers|join:", " }}
-                                </span>
-                                {% if user.is_authenticated %}
-                                <small class="admin_link">
-                                    (<a href="{% url 'admin:schedule_presentation_change' slot.content.pk %}">Edit Presentation</a>)
-                                </small>
-                                {% endif %}
-                            {% endif %}
-                        {% else %}
-                            {% if slot.content_override %}
-                                {{ slot.content_override|safe }}
-                            {% else %}
-                                {{ slot.kind.label }}
-                            {% endif %}
-                        {% endif %}
-                        {% if user.is_authenticated %}
-                        <small class="admin_link">
-                            (<a href="{% url 'admin:schedule_slot_change' slot.pk %}">Edit Slot</a>)
-                        </small>
-                        {% endif %}
-                    </td>
+                    {% include "schedule/_slot.html" %}
                 {% endfor %}
                 {% if forloop.last %}
                     <!-- <td colspan="{{ timetable.rooms|length }}"></td> -->
@@ -91,3 +57,25 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         {% endfor %}
     </tbody>
 </table>
+
+<div class="fake-table">
+    {% for row in timetable %}
+        {% if row.slots %}
+        <div class="fake-tr">
+            <div class="fake-td fake-cell fake-time fake-time-{{ row.time|date:"H-i-s"}}">
+            {% if LANGUAGE_CODE == 'fr' %}
+                {{ row.time|date:"H\hi" }}
+            {% else %}
+                {{ row.time|date:"fA" }}
+            {% endif %}
+            </div>
+            
+            {% for slot in row.slots %}
+                <div class="fake-td fake-cell slot slot-{{ slot.kind.label }}">
+                    {% include "schedule/_slot.html" %}
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>
