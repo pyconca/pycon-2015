@@ -1,5 +1,5 @@
 from django import template
-from django.core.urlresolvers import reverse
+from django.core.urlresolvers import reverse, NoReverseMatch
 from django.utils.translation import activate, get_language
 
 register = template.Library()
@@ -14,12 +14,19 @@ def lang_url(context, new_lang):
     :param new_lang: The language the URL should be for
     :return:
     """
-
-    url_name = context.request.resolver_match.url_name
+    
     cur_lang = get_language()
     activate(new_lang)
-    new_url = reverse(url_name)
+    resolver_match = context.request.resolver_match
+
+    new_url = reverse(
+        viewname = resolver_match.url_name,
+        args = resolver_match.args,
+        kwargs = resolver_match.kwargs
+    )
+
     activate(cur_lang)
+    
     return new_url
 
 
