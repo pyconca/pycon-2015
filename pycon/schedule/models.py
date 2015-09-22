@@ -157,6 +157,7 @@ class Presentation(models.Model):
     description = models.TextField()
     speaker = models.ForeignKey(Speaker, related_name="presentations")
     additional_speakers = models.ManyToManyField(Speaker, related_name="copresentations", blank=True)
+    proposal_id = models.PositiveIntegerField('Proposal ID', unique=True)
     cancelled = models.BooleanField(default=False)
     
     def speakers(self):

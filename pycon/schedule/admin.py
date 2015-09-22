@@ -21,6 +21,13 @@ class RoomAdmin(admin.ModelAdmin):
 class PresentationAdmin(admin.ModelAdmin):
     model = Presentation
     list_filter = ("cancelled", "slot")
+    fields = (
+        'slot',
+        ('title', 'proposal_id',),
+        'description',
+        ('speaker', 'additional_speakers',),
+        'cancelled'
+    )
 
 
 admin.site.register(Day)
