@@ -51,6 +51,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                     <td class="slot slot-{{ slot.kind.label }}" colspan="{{ slot.colspan }}" rowspan="{{ slot.rowspan }}">
                         {% if slot.kind.label == "talk" or slot.kind.label == "tutorial" or slot.kind.label == "keynote" %}
                             {% if not slot.content %}
+                            {{ slot.content_override|safe }}
                             {% if user.is_authenticated %}
                             <small class="admin_link">
                                 (<a href="{% url 'admin:schedule_presentation_add' %}?slot={{ slot.pk }}">Add Presentation</a>)
