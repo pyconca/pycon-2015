@@ -14,9 +14,16 @@ class Sponsor(models.Model):
     logo = models.ImageField(max_length=512, upload_to=upload_path)
     logo_bw = models.ImageField(max_length=512, upload_to=upload_path)
     name = models.CharField(max_length=128)
+    type = models.ForeignKey('Type')
     level = models.CharField(max_length=64, choices=SponsorLevels.choices)
     twitter_en = models.CharField(max_length=32, blank=True)
     twitter_fr = models.CharField(max_length=32, blank=True)
     url_website_en = models.URLField(blank=True)
     url_website_fr = models.URLField(blank=True)
 
+
+class Type(models.Model):
+
+    name_en = models.CharField(max_length=255)
+    name_fr = models.CharField(max_length=255)
+    order = models.IntegerField()
