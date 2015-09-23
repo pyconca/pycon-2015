@@ -1,4 +1,95 @@
 .schedule {
-    margin: 300px 0 350px 0;
-    text-align: center;
+	text-align: center;
+	
+	h3 {
+    font-size: 30px;
+    line-height: 36px;
+		margin: .5em 0;
+	}
+	
+	.day {
+		margin-bottom: 1em;
+		
+		&.day-2015-11-07 {
+			td.slot {
+				width: 22.50%;
+			}
+		}
+		
+		&.day-2015-11-08 {
+			td.slot { 
+				width: 30%;
+			}
+		}
+	}
+	
+	table {
+		width: 100%;
+		min-width: 700px;
+	}
+	
+	thead {
+		background-color: #FFF;
+	}
+	
+	th, td {
+		border: 1px solid @color-accent6;
+		padding: 0.5em 1em;
+	}
+	
+	.time {
+		width: 10%
+	}
+	
+	.slot {
+		.title {
+			display: block;
+		}
+		.speaker {
+			font-weight: bold;
+		}
+	}
+	
+	.slot-breakfast {
+		background-color: @color-accent5;
+	}
+	
+	.slot-keynote {
+		background-color: @color-accent6;
+	}
+	
+	.slot-break, .slot-lunch {
+		background-color: @color-accent4;
+	}
+	
+	.slot-empty {
+		border: none;
+		.hide-text();
+	}
+	
+	tr:hover {
+		td {
+			color: #FFF;
+			border: 1px solid @color-accent5;
+			background-color: @color-accent2;
+			
+			a {
+				color: @color-accent5;
+			}
+		}
+	}
+}
+
+.presentation {
+	.description {
+		margin-top: 1em;
+		color: @color-accent2;
+	}
+	
+	.bio,
+	.description {
+		p {
+			margin: auto auto 1.5em;
+		}
+	}
 }

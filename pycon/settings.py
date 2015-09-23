@@ -45,6 +45,8 @@ INSTALLED_APPS = (
     'pycon.schedule',
     'pycon.sponsors',
     'pycon.conduct',
+
+    'django_markup',
 )
 
 MIDDLEWARE_CLASSES = (
