@@ -8,7 +8,7 @@
     <div class="container schedule">
     {% for timetable in days %}
         <div class="day day-{{ timetable.day.date|date:"o-m-d" }}">
-            <h3>{{ timetable.day.date }}</h3>
+            <h3>{{ timetable.day.date|date:"l j F, Y" }}</h3>
             {% include "schedule/_grid.html" %}
         </div>
     {% endfor %}
