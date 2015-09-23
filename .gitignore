@@ -11,6 +11,7 @@ pycon/localsettings.py
 static/css/app.css
 dev_db.sqlite3
 db.sqlite3
+db*.sqlite3
 media/*
 deploy/vars/private.yml
 
