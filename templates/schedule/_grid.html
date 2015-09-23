@@ -49,7 +49,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                 </td>
                 {% for slot in row.slots %}
                     <td class="slot slot-{{ slot.kind.label }}" colspan="{{ slot.colspan }}" rowspan="{{ slot.rowspan }}">
-                        {% if slot.kind.label == "talk" or slot.kind.label == "tutorial" %}
+                        {% if slot.kind.label == "talk" or slot.kind.label == "tutorial" or slot.kind.label == "keynote" %}
                             {% if not slot.content %}
                             {% if user.is_authenticated %}
                             <small class="admin_link">
