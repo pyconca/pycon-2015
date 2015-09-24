@@ -14,10 +14,14 @@ class Sponsor(models.Model):
     name = models.CharField(max_length=128)
     type = models.ForeignKey('Type')
     level = models.CharField(max_length=64)
+    order = models.IntegerField(default=1)
     twitter_en = models.CharField(max_length=32, blank=True)
     twitter_fr = models.CharField(max_length=32, blank=True)
     url_website_en = models.URLField(blank=True)
     url_website_fr = models.URLField(blank=True)
+
+    def __str__(self):
+        return self.name
 
 
 class Type(models.Model):
@@ -25,3 +29,6 @@ class Type(models.Model):
     name_en = models.CharField(max_length=255)
     name_fr = models.CharField(max_length=255)
     order = models.IntegerField()
+
+    def __str__(self):
+        return self.name_en
