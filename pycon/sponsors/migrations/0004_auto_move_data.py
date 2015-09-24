@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
 from django.core.exceptions import ObjectDoesNotExist
-from django.db import models, migrations
-from django.utils import translation
+from django.db import migrations
 
 
 def from_level_to_type(apps, schema_editor):
-    # We can't import the Person model directly as it may be a newer
-    # version than this migration expects. We use the historical version.
     levels_en = {
         '1': 'Diamond',
         '2': 'Gold',
@@ -38,7 +35,6 @@ def from_level_to_type(apps, schema_editor):
 
     Sponsor = apps.get_model("sponsors", "Sponsor")
     Type = apps.get_model("sponsors", "Type")
-    translation.activate('fr')
     for sponsor in Sponsor.objects.all():
         try:
             type = Type.objects.get(
