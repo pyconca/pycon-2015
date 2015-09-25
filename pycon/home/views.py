@@ -8,5 +8,5 @@ class HomeView(PyconTemplateView):
 
     def get(self, request):
         return self.render_to_response({
-            'sponsors': Sponsor.objects.all().order_by('-level'),
+            'sponsors': Sponsor.objects.filter(type__isnull=False).order_by('type__order', 'order'),
         })
