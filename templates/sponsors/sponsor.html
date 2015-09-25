@@ -40,7 +40,9 @@
                         </div>
                     </div>
                 </div>
+                {% if not forloop.last %}
                 <div class="sponsor-divider diamond-divider"></div>
+                {% endif %}
         {% endfor %}
     </div>
 {% endblock %}
