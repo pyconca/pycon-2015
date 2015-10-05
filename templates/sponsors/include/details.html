@@ -1,5 +1,6 @@
 {% load core %}
 {% load i18n %}
+{% load markup_tags %}
 
 {% for sponsor in sponsors %}
     <div class="sponsor">
@@ -23,7 +24,7 @@
                 </div>
             {% endif %}
             <div class="sponsor-description">
-                {{ sponsor|i18n_get:'description'|linebreaks }}
+                {{ sponsor|i18n_get:'description'|apply_markup:"markdown" }}
             </div>
         </div>
     </div>
