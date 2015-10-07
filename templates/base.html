@@ -7,6 +7,9 @@
         <meta name="viewport" content="width=1024, minimum-scale=0.25">
         <link rel="icon" type="image/png" href="{{ STATIC_URL }}images/favicon.png">
         <link rel="stylesheet" href="{{ STATIC_URL }}css/app.css">
+        <!--[if lt IE 8]>
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/ie8.css">
+        <![endif]-->
         <title>{% block title %}Welcome!{% endblock %} | PyCon Canada 2015</title>
         {% include "include/analytics.html" %}
     </head>
