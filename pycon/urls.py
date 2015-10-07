@@ -4,6 +4,7 @@ from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 
 from pycon.home.views import HomeView
+from pycon.volunteers.views import VolunteersView
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -11,6 +12,8 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     url(r"^$", HomeView.as_view(), name='home'),
+    url(r'^volunteers/$', VolunteersView.as_view(), name='volunteers'),
+
     url(r'^about/', include('pycon.about.urls')),
     url(r'^schedule/', include('pycon.schedule.urls')),
     url(r'^sponsors/', include('pycon.sponsors.urls')),

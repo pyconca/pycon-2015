@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans 'Volunteering' %}{% endblock %}
+{% block content %}
+    <div class="container volunteers">
+        <div class="grid">
+            <div class="col-3 spacer"></div>
+            <div class="col-6">
+                    <div class="volunteering-title"><h1>{% trans 'Volunteering' %}</h1></div>
+		
+            		<div class='volunteer-content'>
+                        {% blocktrans %}
+            			<div class="session-text">
+                        <h2> Session Staff:</h2>
+            			<ul>
+            				<li>Session Chairs and Session Runners are present for an entire session (usually 2 to 3 talks in a row). </li>
+            				<li>A Session Chair introduces the speaker, manages the time, and facilitates the question and answer period, and clearing the front of the room after the talk.</li>
+            				<li>A Session Runner helps the speaker get from the Green room to the appropriate stage. They help in any way needed to make the session run smoothly, including assisting in Q&A moderating. Depending on the number of volunteers, we may make this all one role. </li>
+            			</ul>
+            			</div>
+			
+            			<div class="registraton-text">
+            			<h2>Registration:</h2>
+            				<ul>
+            					<li>On Saturday morning, we will need  several volunteers to get attendees’ names, and  get their name badges and the t-shirts that they’ve preordered.</li>
+            					<li> We will also have shifts throughout the day where you will be a point of contact for the organizers- we will give you a walkie talkie.</li>
+            					<li>We will need 1 person for registraton on Sunday morning for 2 hours. </li>
+            				</ul>
+            			</div>
+            			<div class='food-text'>
+            			<h2>Food:</h2>
+            				<ul>
+            					<li>OWhen food is set out, we will need one person directing traffic to ensure that food reserved for those with specific dietary needs gets to those who need it.</li>
+            				</ul>
+            			</div>
+			
+            			<div class='tutorials-text'>
+            			<h2>Tutorials:</h2>
+            				<ul>
+            					<li>We're looking for one "Tutorial Host" for each tutorial to help welcome participants as they arrive: be sure they're in the right tutorial, give them any printed handouts, ask them if they need help setting up their laptop, etc.</li>
+            					<li>This need is for approximately 20 minutes before tutorials start until about 20 minutes after they start (about 40 minutes). See guidelines at: tutorial hosts.</li>
+            				</ul>			  
+            			</div>
+                        {% endblocktrans %}
+            		</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+======
+
+
