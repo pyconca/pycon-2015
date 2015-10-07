@@ -48,7 +48,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                 {% endif %}
                 </td>
                 {% for slot in row.slots %}
+                <td class="slot slot-{{ slot.kind.label }}" colspan="{{ slot.colspan }}" rowspan="{{ slot.rowspan }}">
                     {% include "schedule/_slot.html" %}
+                </td>
                 {% endfor %}
                 {% if forloop.last %}
                     <!-- <td colspan="{{ timetable.rooms|length }}"></td> -->
