@@ -26,6 +26,9 @@
         {{ slot.kind.label }}
     {% endif %}
 {% endif %}
+<span class="fake-room">
+    {% for room in slot.rooms %}{{ room }}{% endfor %}
+</span>
 {% if user.is_authenticated %}
 <small class="admin_link">
     (<a href="{% url 'admin:schedule_slot_change' slot.pk %}">Edit Slot</a>)
