@@ -44,6 +44,45 @@
 		min-width: 700px;
 	}
 	
+	.fake-table, .fake-room {
+		display: none;
+	}
+	
+	@media screen and (max-width: 800px) {
+		table {
+			display: none;
+		}
+		
+		.fake-table {
+			display: block;
+		}
+		
+		.fake-room {
+			display: block;
+		}
+		
+		.fake-tr {
+			border: 1px solid @color-accent6;
+			margin-bottom: .5em;
+		}
+		
+		.fake-td.slot {
+			border-top: 1px solid @color-accent6;
+			border-bottom: 1px solid @color-accent6;
+		}
+		
+		.fake-time {
+			font-weight: bold;
+			border-bottom: 1px solid @color-accent6;
+		}
+		
+		.slot-breakfast, .slot-keynote, .slot-lunch {
+			.fake-room { 
+				display: none;
+			}
+		}
+	}
+	
 	thead {
 		background-color: #FFF;
 	}
