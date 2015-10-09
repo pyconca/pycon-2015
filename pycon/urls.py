@@ -8,6 +8,7 @@ from pycon.volunteers.views import VolunteersView
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^slides/', include('pycon.slides.urls')),
 ]
 
 urlpatterns += i18n_patterns(
