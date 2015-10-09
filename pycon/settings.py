@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'pycon.home',
     'pycon.about',
     'pycon.schedule',
+    'pycon.slides',
     'pycon.sponsors',
     'pycon.conduct',
 
