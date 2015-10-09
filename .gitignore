@@ -13,7 +13,7 @@ dev_db.sqlite3
 db.sqlite3
 db*.sqlite3
 media/*
-deploy/vars/private.yml
+deploy/var/private.yml
 
 #-------------------------------------------------------------------------------
 # JetBrains
