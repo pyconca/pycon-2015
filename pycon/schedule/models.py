@@ -66,7 +66,7 @@ class Room(models.Model):
 
 class SlotKind(models.Model):
     label = models.CharField(max_length=50)
-    
+
     def __str__(self):
         return self.label
 
@@ -132,7 +132,21 @@ class Slot(models.Model):
     @property
     def rooms(self):
         return Room.objects.filter(pk__in=self.slotroom_set.values("room"))
-    
+
+    @property
+    def kind_label(self):
+        return self.kind.label
+
+    @property
+    def feedback_url(self):
+        if self.content and self.content.feedback_url:
+            return self.content.feedback_url
+
+    @property
+    def presenter(self):
+        if self.content:
+            return self.content.speaker
+
     def __str__(self):
         roomlist = ' '.join(map(lambda r: r.__str__(), self.rooms))
         return "%s %s (%s - %s) %s" % (self.day, self.kind, self.start, self.end, roomlist)
@@ -159,6 +173,7 @@ class Presentation(models.Model):
     additional_speakers = models.ManyToManyField(Speaker, related_name="copresentations", blank=True)
     proposal_id = models.PositiveIntegerField('Proposal ID', unique=True)
     cancelled = models.BooleanField(default=False)
+    feedback_url = models.URLField(blank=True)
     
     def speakers(self):
         yield self.speaker
