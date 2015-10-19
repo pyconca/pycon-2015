@@ -135,7 +135,9 @@ class Slot(models.Model):
 
     @property
     def kind_label(self):
-        return self.kind.label
+        if hasattr(self, 'kind'):
+            return getattr(self.kind, 'label', '')
+        return ''
 
     @property
     def feedback_url(self):
@@ -146,6 +148,11 @@ class Slot(models.Model):
     def presenter(self):
         if self.content:
             return self.content.speaker
+
+    @property
+    def title(self):
+        if self.content:
+            return self.content.title
 
     def __str__(self):
         roomlist = ' '.join(map(lambda r: r.__str__(), self.rooms))

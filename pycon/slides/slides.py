@@ -2,9 +2,7 @@ from pycon.schedule.models import Room, Slot
 
 
 def gen_prev_text(slot):
-    text = ""
-
-    if getattr(slot, 'kind_label', None) is None:
+    if slot is None:
         return ''
 
     if slot.kind_label == 'talk' and slot.presenter:
@@ -16,6 +14,22 @@ def gen_prev_text(slot):
     if slot.feedback_url:
         text += " Please give feedback at {}.".format(slot.feedback_url)
     return text
+
+
+def get_next_text(slot):
+    if slot is None:
+        return ''
+
+    if slot.content_override:
+        return slot.content_override
+
+    presenter = getattr(slot, 'presenter', '')
+    title = getattr(slot, 'title', '')
+    if presenter:
+        if title:
+            return '{} by {}'.format(title, presenter)
+        return '{} by {}'.format(slot.kind_label, presenter)
+    return title
 
 
 class Slides(object):
@@ -32,6 +46,7 @@ class Slides(object):
                     'prev_text': gen_prev_text(prev_slot),
                     'next_start': getattr(next_slot, 'start', None),
                     'next_end': getattr(next_slot, 'end', None),
+                    'next_text': get_next_text(next_slot),
                 }
                 yield result
                 prev_slot = next_slot
