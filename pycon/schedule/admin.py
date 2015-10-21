@@ -26,7 +26,8 @@ class PresentationAdmin(admin.ModelAdmin):
         ('title', 'proposal_id',),
         'description',
         ('speaker', 'additional_speakers',),
-        'cancelled'
+        'cancelled',
+        'feedback_url',
     )
 
 
