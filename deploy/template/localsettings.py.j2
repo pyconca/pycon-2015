@@ -23,6 +23,10 @@ SESSION_COOKIE_DOMAIN = '.{{ fqdn }}'
 
 SECRET_KEY = '{{ secret_key }}'
 
+MEDUSA_RENDERER_CLASS = "django_medusa.renderers.DiskStaticSiteRenderer"
+MEDUSA_MULTITHREAD = True
+MEDUSA_DEPLOY_DIR = '{{ htdocs_dir }}/'
+
 #-------------------------------------------------------------------------------
 
 DEBUG = TEMPLATE_DEBUG = False

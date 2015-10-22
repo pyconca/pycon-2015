@@ -16,6 +16,7 @@
         django_dir: "{{ base_dir }}/pyconca"
         static_dir: "{{ base_dir }}/static"
         media_dir: "{{ base_dir }}/media"
+        htdocs_dir: "{{ base_dir }}/htdocs"
 
     - name: Create data dir
       file: path={{ base_dir }} state=directory
@@ -44,6 +45,7 @@
       with_items:
         - collectstatic
         - migrate
+        - staticsitegen
 
     - name: Compile less to CSS
       local_action: command lessc ../static/css/app.less /tmp/app.css
