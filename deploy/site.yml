@@ -27,7 +27,7 @@
     - name: Update Git repo
       git: repo=git@github.com:pyconca/pycon-2015.git
            dest={{ base_dir }}/pyconca
-           version=speaker-pngs
+           version={{ git_branch }}
 
     - template: src=template/localsettings.py.j2 dest={{ django_dir }}/pycon/localsettings.py
 
