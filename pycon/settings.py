@@ -47,6 +47,7 @@ INSTALLED_APPS = (
     'pycon.conduct',
 
     'django_markup',
+    'django_medusa',
 )
 
 MIDDLEWARE_CLASSES = (
