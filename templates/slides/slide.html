@@ -1,15 +1,23 @@
+{% load static from staticfiles %}
 <html>
-    <head>
-        <link rel="stylesheet" href="{{ STATIC_URL }}css/app.css">
-    </head>
-    <body>
-        {% if prev_text %}
-            <div>
-                <h1>Previous</h1>
-                <p>{{ prev_text }}</p>
-            </div>
-        {% endif %}
-        <h1>Up Next</h1>
-        <p>{{ next_start }} - {{ next_end }}: {{ next_text }}</p>
-    </body>
+<head>
+   <link type="text/css" href="../../static/css/slides.css">
+
+</head>
+<body>
+<div>
+    <img src="../../static/images/logo_alpha.png" height="200px"/>
+</div>
+<div id="shape2"></div>
+<div id="shape3"></div>
+<div id="shape4"></div>
+<div class="previous">
+    <h1>Previous</h1>
+    <p>{{ prev_text }}</p>
+</div>
+<div class="next">
+    <h1>Up Next</h1>
+    <p>{{ next_start }} - {{ next_end }} <br/> {{ next_text }}</p>
+</div>
+</body>
 </html>

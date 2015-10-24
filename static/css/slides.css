@@ -1,0 +1,73 @@
+/* A font by Jos Buivenga (exljbris) -> www.exljbris.com */
+        @font-face {
+            font-family: 'MuseoSans';
+            src: url('../../static/fonts/MuseoSans_500.otf');
+        }
+        html,
+        body {
+            background-color: #000000;
+            font-family: 'MuseoSans';
+            font-size: 15px;
+            line-height: 1.6;
+            min-width: 100%;
+        }
+
+        h1 {
+            color: #249cd7;
+            text-transform: uppercase;
+            font-size: 48px;
+            /*color: #FFFFFF;*/
+        }
+        p {
+            /*color: #249cd7;*/
+            color: #FFFFFF;
+            font-size: 28px;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        #shape2 {
+            position: absolute;
+            top: 70%;
+            left: 0;
+            background: transparent url("../../static/images/SnakeShape-12.svg") right center no-repeat;
+            background-position: right center;
+            width: 39%;
+            height: 120px;
+            opacity: 0.4;
+        }
+        #shape3 {
+            position: absolute;
+            right: 0;
+            top: 25%;
+            background: transparent url("../../static/images/SnakeShape-11.svg") right center no-repeat;
+            background-position: left center;
+            width: 30%;
+            height: 108px;
+            opacity: 0.4;
+        }
+
+        #shape4 {
+            position: absolute;
+            top: 180px;
+            left: 0;
+            background: transparent url("../../static/images/SnakeShape-14.svg") right center no-repeat;
+            background-position: right center;
+            width: 12%;
+            height: 130px;
+        }
+
+        .previous {
+            position: absolute;
+            left: 0px;
+            top: 250px;
+            width: 50%;
+        }
+        .next {
+            position: absolute;
+            right: 0px;
+            top: 45%;
+            width: 50%;
+        }

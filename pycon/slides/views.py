@@ -20,7 +20,7 @@ def slides(request):
         html_path = os.path.join(html_room_dir, slide['next_start'].strftime('%H%M%S')) + '.html'
         html = loader.render_to_string('slides/slide.html', slide)
         html_file = open(html_path, 'w')
-        html_file.write(html)
+        html_file.write(html.encode('utf-8'))
         html_file.close()
         html_paths.append(html_path)
 
