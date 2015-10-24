@@ -1,20 +1,95 @@
 {% load static from staticfiles %}
 <html>
 <head>
-   <link type="text/css" href="../../static/css/slides.css">
+    {#   <link type="text/css" href="{{ BASE_DIR }}/static/css/slides.css">#}
+    <style type="text/css">
+        /* A font by Jos Buivenga (exljbris) -> www.exljbris.com */
+        @font-face {
+            font-family: 'MuseoSans';
+            src: url('{{ BASE_DIR }}/static/fonts/MuseoSans_500.otf');
+        }
+        html,
+        body {
+            background-color: #000000;
+            font-family: 'MuseoSans';
+            font-size: 15px;
+            line-height: 1.6;
+            min-width: 100%;
+        }
 
+        h1 {
+            color: #249cd7;
+            text-transform: uppercase;
+            font-size: 48px;
+        }
+        p {
+            color: #FFFFFF;
+            font-size: 28px;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        #shape2 {
+            position: absolute;
+            top: 75%;
+            left: 0;
+            background: transparent url("{{ BASE_DIR }}/static/images/SnakeShape-12.svg") right center no-repeat;
+            background-position: right center;
+            width: 39%;
+            height: 120px;
+            opacity: 0.4;
+        }
+        #shape3 {
+            position: absolute;
+            right: 0;
+            top: 25%;
+            background: transparent url("{{ BASE_DIR }}/static/images/SnakeShape-11.svg") right center no-repeat;
+            background-position: left center;
+            width: 30%;
+            height: 108px;
+            opacity: 0.4;
+        }
+
+        #shape4 {
+            position: absolute;
+            top: 180px;
+            left: 0;
+            background: transparent url("{{ BASE_DIR }}/static/images/SnakeShape-14.svg") right center no-repeat;
+            background-position: right center;
+            width: 12%;
+            height: 130px;
+        }
+
+        .previous {
+            position: absolute;
+            left: 0px;
+            top: 220px;
+            width: 50%;
+        }
+        .next {
+            position: absolute;
+            right: 0px;
+            top: 40%;
+            width: 50%;
+        }
+    </style>
 </head>
 <body>
 <div>
-    <img src="../../static/images/logo_alpha.png" height="200px"/>
+    <img src="{{ BASE_DIR }}/static/images/logo_alpha.png" height="200px"/>
 </div>
 <div id="shape2"></div>
 <div id="shape3"></div>
 <div id="shape4"></div>
-<div class="previous">
-    <h1>Previous</h1>
-    <p>{{ prev_text }}</p>
-</div>
+
+{% if prev_text %}
+    <div class="previous">
+        <h1>Previous</h1>
+        <p>{{ prev_text }}</p>
+    </div>
+{% endif %}
 <div class="next">
     <h1>Up Next</h1>
     <p>{{ next_start }} - {{ next_end }} <br/> {{ next_text }}</p>

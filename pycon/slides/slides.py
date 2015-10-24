@@ -1,4 +1,6 @@
+# -*- coding: utf-8 -*-
 from pycon.schedule.models import Room, Slot, Day
+from django.conf import settings
 
 
 def gen_prev_text(slot):
@@ -50,6 +52,7 @@ class Slides(object):
                         'next_start': getattr(next_slot, 'start', None),
                         'next_end': getattr(next_slot, 'end', None),
                         'next_text': get_next_text(next_slot),
+                        'BASE_DIR': settings.BASE_DIR
                     }
                     yield result
                     prev_slot = next_slot
