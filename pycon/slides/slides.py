@@ -8,13 +8,11 @@ def gen_prev_text(slot):
         return ''
 
     if slot.kind_label == 'talk' and slot.presenter:
-        text = "Thanks for viewing {}'s talk!".format(slot.presenter)
+        text = "Thanks for attending {}'s talk!".format(slot.presenter)
     elif slot.kind_label == 'tutorial' and slot.presenter:
         text = "Thanks for attending {}'s tutorial!".format(slot.presenter)
     else:
         text = slot.content_override
-    if slot.feedback_url:
-        text += " Please give feedback at {}.".format(slot.feedback_url)
     return text
 
 
@@ -49,6 +47,7 @@ class Slides(object):
                         'prev_start': getattr(prev_slot, 'start', None),
                         'prev_end': getattr(prev_slot, 'end', None),
                         'prev_text': gen_prev_text(prev_slot),
+                        'feedback_url': getattr(prev_slot, 'feedback_url', None),
                         'next_start': getattr(next_slot, 'start', None),
                         'next_end': getattr(next_slot, 'end', None),
                         'next_text': get_next_text(next_slot),
