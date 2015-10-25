@@ -27,7 +27,7 @@ def get_next_text(slot):
     title = getattr(slot, 'title', '')
     if presenter:
         if title:
-            return '{} by {}'.format(title, presenter)
+            return '<i>&ldquo;{}&rdquo;</i> <br/> by {}'.format(title, presenter)
         return '{} by {}'.format(slot.kind_label, presenter)
     return title
 

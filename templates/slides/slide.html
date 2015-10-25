@@ -1,6 +1,7 @@
 {% load static from staticfiles %}
 <html>
 <head>
+    <meta charset="UTF-8">
     <style type="text/css">
         /* A font by Jos Buivenga (exljbris) -> www.exljbris.com */
         @font-face {
@@ -103,7 +104,7 @@
 {% endif %}
 <div class="next">
     <h1>Up Next</h1>
-    <p>{{ next_start }} - {{ next_end }} <br/> <i>&ldquo;{{ next_text }}&rdquo;</i></p>
+    <p>{{ next_start }} - {{ next_end }} <br/> {{ next_text | safe }}</p>
 </div>
 </body>
 </html>
