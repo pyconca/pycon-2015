@@ -19,7 +19,7 @@
                     </small>
                     {% endif %}
                 </h1>
-                <p>{% trans 'Presentation on' %} <strong>{{ p.slot.start_datetime|date:"l" }}</strong> {% trans 'at' %} <strong>{{ p.slot.start_datetime|date:"P" }}</strong> {% trans 'to' %} <strong>{{ p.slot.end_datetime|date:"P" }}</strong> {% trans 'in' %}<strong>{{ p.slot.rooms|first }}</strong>.</p>
+                <p>{% trans 'Presentation on' %} <strong>{{ p.slot.start_datetime|date:"l" }}</strong> {% trans 'at' %} <strong>{{ p.slot.start_datetime|date:"P" }}</strong> {% trans 'to' %} <strong>{{ p.slot.end_datetime|date:"P" }}</strong> {% trans 'in' %} <strong>{{ p.slot.rooms|first }}</strong>.</p>
                 <div class="description">
                     {{ p.description|apply_markup:"markdown" }}
                 </div>
