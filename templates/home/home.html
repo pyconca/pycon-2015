@@ -20,6 +20,26 @@
             </span>
         </div>
     </div>
+    <div class="home-mobile_app">
+        <div id="home-shape4"></div>
+        <div class="home-mobile_app-inner">
+            <a href="https://play.google.com/store/apps/details?id=com.fivetouchsolutions.empyconca2015">
+                {% if LANGUAGE_CODE == 'fr' %}
+                <img alt="Application Android sur Google Play" src="{% static "images/google_play_fr.png" %}" />
+                {% else %}
+                <img alt="Android app on Google Play" src="{% static "images/google_play_en.png" %}" />
+                {% endif %}
+            </a>
+            
+            <a href="https://itunes.apple.com/ca/app/pyconca-2015/id1050453869?mt=8">
+                {% if LANGUAGE_CODE == 'fr' %}
+                <img alt="iOS sur l'App Store" src="{% static "images/apple_store_fr.svg" %}" height="45" />
+                {% else %}
+                <img alt="iOS app on the App Store" src="{% static "images/apple_store_en.svg" %}" height="45" />
+                {% endif %}
+            </a>
+        </div>
+    </div>
     <div class="home-section3">
         <div class="home-book-now">
             <div id='home-shape4'></div>
