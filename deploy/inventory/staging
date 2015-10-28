@@ -1,1 +1,2 @@
 pycon-ca fqdn='pycon2015-staging.pycon.ca' supervisor_name='pycon2015-staging.pycon.ca-pycon2015-staging.pycon.ca' dir='pycon2015-staging.pycon.ca'
+git_branch='django-medusa'
