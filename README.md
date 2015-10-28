@@ -35,15 +35,15 @@ Create the database:
 
 Create `pycon/localsettings.py` with the following
 
-    
+
     import os
-    
+
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    
+
     ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
     DEBUG = True
     TEMPLATE_DEBUG = True
-    
+
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -70,7 +70,7 @@ Translation files are stored in `/locale`. To create these files, you must have
 [gettext](http://www.gnu.org/software/gettext/) installed.
 
     $ django-admin makemessages -l fr
-    
+
 To update translation files from the code for all languages:
 
     $ django-admin makemessages -a
@@ -102,4 +102,4 @@ Obtain a copy of private.yml and put it in `deploy/vars`.
 
 Go to the `deploy` directory and run:
 
-    $ ansible-playbook -i inventories/prod site.yml
+    $ ansible-playbook -i inventory/prod site.yml

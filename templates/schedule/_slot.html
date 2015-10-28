@@ -8,7 +8,7 @@
     {% endif %}
     {% else %}
         <span class="title">
-            <a href="{{ slot.content.get_absolute_url }}">{{ slot.content.title }}</a>
+            <a href="{{ slot.content.get_absolute_url }}">{{ slot.content.title }}</a> {{ slot.content_override|safe }}
         </span>
         <span class="speaker">
             {{ slot.content.speakers|join:", " }}
