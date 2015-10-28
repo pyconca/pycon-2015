@@ -29,11 +29,6 @@
            dest={{ base_dir }}/pyconca
            version=speaker-pngs
 
-    - name: Download webkit2png
-      get_url: url=https://raw.githubusercontent.com/paulhammond/webkit2png/0e4c83c670f5af976090c3061ca7506bf2b46477/webkit2png
-               dest={{ bin_dir }}/webkit2png
-               mode=755
-
     - template: src=template/localsettings.py.j2 dest={{ django_dir }}/pycon/localsettings.py
 
     - name: Create virtualenv
