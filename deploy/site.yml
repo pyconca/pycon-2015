@@ -57,3 +57,8 @@
 
     - name: Restart site
       command: sudo supervisorctl restart {{ supervisor_name }}
+    
+    - name: Run Django Medusa to compile static HTML files.
+      django_manage: command={{ item }} app_path={{ django_dir }} virtualenv={{ venv_dir }}
+      with_items:
+        - staticsitegen
