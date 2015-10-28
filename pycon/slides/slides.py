@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-from pycon.schedule.models import Room, Slot, Day
+from django.utils.text import slugify
 from django.conf import settings
+from pycon.schedule.models import Room, Slot, Day
 
 
 def gen_prev_text(slot):
@@ -32,6 +33,12 @@ def get_next_text(slot):
     return title
 
 
+def get_slug(slot):
+    if slot.kind_label in ['tutorial', 'talk'] and slot.presenter:
+        return slugify(slot.presenter)
+    return slugify(slot.content_override)
+
+
 class Slides(object):
 
     def __iter__(self):
@@ -51,6 +58,7 @@ class Slides(object):
                         'next_start': getattr(next_slot, 'start', None),
                         'next_end': getattr(next_slot, 'end', None),
                         'next_text': get_next_text(next_slot),
+                        'slug': get_slug(next_slot),
                         'BASE_DIR': settings.BASE_DIR
                     }
                     yield result

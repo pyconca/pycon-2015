@@ -5,7 +5,6 @@ import subprocess
 import zipfile
 from uuid import uuid4
 from django.conf import settings
-from django.http.response import HttpResponse
 from django.shortcuts import redirect
 from django.template import loader
 from pycon.slides.slides import Slides
@@ -18,7 +17,8 @@ def slides(request):
             os.makedirs(html_room_dir)
         except FileExistsError:
             pass
-        html_path = os.path.join(html_room_dir, slide['next_start'].strftime('%H%M%S')) + '.html'
+        file_name = '{}_{}.html'.format(slide['next_start'].strftime('%H%M%S'), slide['slug'])
+        html_path = os.path.join(html_room_dir, file_name)
         html = loader.render_to_string('slides/slide.html', slide)
         html_file = open(html_path, 'wb')
         html_file.write(html.encode('utf8'))
@@ -52,7 +52,6 @@ def slides(request):
         html_paths = []
 
         for slide in Slides():
-            print(str(slide['next_start']) + slide['room'].name)
             generate_html(slide)
 
         png_paths = []
@@ -65,8 +64,6 @@ def slides(request):
         for path in png_paths:
             rel_path = '/'.join(path.split('/')[-3:])
             zip.write(path, rel_path)
-        response = HttpResponse(zip_path, content_type='application/zip')
-        response['Content-Disposition'] = 'attachment; filename="slides.zip"'
     finally:
         shutil.rmtree(base_dir)
 
