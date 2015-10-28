@@ -24,7 +24,7 @@
     - name: Update Git repo
       git: repo=git@github.com:pyconca/pycon-2015.git
            dest={{ base_dir }}/pyconca
-           version=master
+           version={{ git_branch }}
 
     - template: src=template/localsettings.py.j2 dest={{ django_dir }}/pycon/localsettings.py
 
@@ -55,3 +55,8 @@
 
     - name: Restart site
       command: sudo supervisorctl restart {{ supervisor_name }}
+    
+    - name: Run Django Medusa to compile static HTML files.
+      django_manage: command={{ item }} app_path={{ django_dir }} virtualenv={{ venv_dir }}
+      with_items:
+        - staticsitegen
