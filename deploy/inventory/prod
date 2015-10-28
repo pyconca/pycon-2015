@@ -1,2 +1,1 @@
-pycon-ca fqdn='2015.pycon.ca' supervisor_name='gunicorn-2015.pycon.ca' dir='2015.pycon.ca'
-git_branch='master'
+pycon-ca fqdn='2015.pycon.ca' supervisor_name='gunicorn-2015.pycon.ca' dir='2015.pycon.ca' git_branch='master'
