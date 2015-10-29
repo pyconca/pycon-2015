@@ -103,3 +103,14 @@ Obtain a copy of private.yml and put it in `deploy/vars`.
 Go to the `deploy` directory and run:
 
     $ ansible-playbook -i inventory/prod site.yml
+
+Importing Feedback URLs
+-----------------------
+
+Sign up at (Bitly)[https://bitly.com/a/sign_in?rd=%2Fa%2Foauth_apps] and get auth token.
+
+Add `BITLY_KEY = 'YOUR_TOKEN_HERE'` to your `localsettings.py` file.
+
+Import the URLs:
+
+    $ python manage.py importfeedbackurls

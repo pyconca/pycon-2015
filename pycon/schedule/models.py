@@ -76,15 +76,15 @@ class Slot(models.Model):
     start = models.TimeField()
     end = models.TimeField()
     content_override = models.TextField(blank=True)
-    
+    feedback_url = models.URLField(blank=True)
+
     def assign(self, content):
         """
         Assign the given content to this slot and if a previous slot content
         was given we need to unlink it to avoid integrity errors.
         """
         self.unassign()
-        content.slot = self
-        content.save()
+        content.slots()
     
     def unassign(self):
         """
@@ -140,11 +140,6 @@ class Slot(models.Model):
         return ''
 
     @property
-    def feedback_url(self):
-        if self.content and self.content.feedback_url:
-            return self.content.feedback_url
-
-    @property
     def presenter(self):
         if self.content:
             return self.content.speaker
@@ -180,8 +175,7 @@ class Presentation(models.Model):
     additional_speakers = models.ManyToManyField(Speaker, related_name="copresentations", blank=True)
     proposal_id = models.PositiveIntegerField('Proposal ID', unique=True)
     cancelled = models.BooleanField(default=False)
-    feedback_url = models.URLField(blank=True)
-    
+
     def speakers(self):
         yield self.speaker
         for speaker in self.additional_speakers.all():
