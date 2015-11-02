@@ -12,14 +12,28 @@
             <div class="col-6">
                 <h1>
                     {{ p.title }}
-                    <em>{% trans 'with' %} {% for speaker in p.speakers %}{{ speaker }}{% if not forloop.last %}{% ifequal forloop.revcounter 2 %} and {% else %}, {% endifequal %}{% else %}{% endif %}{% endfor %}</em>
+                    <em>
+                        {% trans 'with' %}
+                        {% for speaker in p.speakers %}
+                            {{ speaker }}{% if not forloop.last %}{% ifequal forloop.revcounter 2 %} and {% else %}, {% endifequal %}{% else %}{% endif %}
+                        {% endfor %}
+                    </em>
                     {% if user.is_authenticated %}
                     <small class="admin_link">
                         (<a href="{% url 'admin:schedule_presentation_change' p.pk %}">Edit Presentation</a>)
                     </small>
                     {% endif %}
                 </h1>
-                <p>{% trans 'Presentation on' %} <strong>{{ p.slot.start_datetime|date:"l" }}</strong> {% trans 'at' %} <strong>{{ p.slot.start_datetime|date:"P" }}</strong> {% trans 'to' %} <strong>{{ p.slot.end_datetime|date:"P" }}</strong> {% trans 'in' %} <strong>{{ p.slot.rooms|first }}</strong>.</p>
+                <p>
+                    {% trans 'Presentation on' %}
+                    <strong>{{ p.slot.start_datetime|date:"l" }}</strong>
+                    {% trans 'at' %}
+                    <strong>{{ p.slot.start_datetime|date:"P" }}</strong>
+                    {% trans 'to' %}
+                    <strong>{{ p.slot.end_datetime|date:"P" }}</strong>
+                    {% trans 'in' %}
+                    <strong>{{ p.slot.rooms|first }}</strong>.
+                </p>
                 <div class="description">
                     {{ p.description|apply_markup:"markdown" }}
                 </div>
