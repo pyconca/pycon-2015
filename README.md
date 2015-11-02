@@ -114,3 +114,10 @@ Add `BITLY_KEY = 'YOUR_TOKEN_HERE'` to your `localsettings.py` file.
 Import the URLs:
 
     $ python manage.py importfeedbackurls
+
+Building the Static Cache on the Server
+---------------------------------------
+
+	$ cd /data/web/2015.pycon.ca/pyconca/
+	$ . ../activate
+	$ python manage.py staticsitegen
