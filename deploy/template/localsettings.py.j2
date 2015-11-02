@@ -17,6 +17,7 @@ ADMINS = (
 
 ALLOWED_HOSTS = [
     '.{{ fqdn }}',
+	'testserver', # Added to support django-medusa's compile.
 ]
 
 SESSION_COOKIE_DOMAIN = '.{{ fqdn }}'
