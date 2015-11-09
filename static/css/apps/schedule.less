@@ -136,6 +136,21 @@
 }
 
 .presentation {
+	a {
+		color: @color-accent6;
+		text-decoration: underline;
+		
+		&:hover {
+			color: @color-accent2;
+		}
+	}
+	
+	.video iframe {
+		height: 350px;
+		width: 100%;
+		margin-top: 1em;
+	}
+	
 	.description {
 		margin-top: 1em;
 		color: @color-accent2;
@@ -145,15 +160,6 @@
 	.description {
 		p {
 			margin: auto auto 1.5em;
-		}
-		
-		a {
-			color: @color-accent6;
-			text-decoration: underline;
-			
-			&:hover {
-				color: @color-accent2;
-			}
 		}
 	}
 }

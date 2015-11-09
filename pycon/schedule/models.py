@@ -174,6 +174,7 @@ class Presentation(models.Model):
     speaker = models.ForeignKey(Speaker, related_name="presentations")
     additional_speakers = models.ManyToManyField(Speaker, related_name="copresentations", blank=True)
     proposal_id = models.PositiveIntegerField('Proposal ID', unique=True)
+    youtube_hash = models.CharField(max_length=25, null=True, blank=True)
     cancelled = models.BooleanField(default=False)
 
     def speakers(self):
@@ -187,6 +188,20 @@ class Presentation(models.Model):
     @models.permalink
     def get_absolute_url(self):
         return ('schedule_presentation_detail', (), {'pk': self.pk})
+
+    @property
+    def youtube_link(self):
+        if self.youtube_hash:
+            return "https://www.youtube.com/watch?v=%s" % self.youtube_hash
+        else:
+            return None
+
+    @property
+    def youtube_embed_code(self):
+        if self.youtube_hash:
+            return '<iframe src="https://www.youtube-nocookie.com/embed/%s?rel=0" frameborder="0" allowfullscreen></iframe>' % self.youtube_hash
+        else:
+            return None
 
     class Meta:
         ordering = ["slot"]

@@ -34,6 +34,14 @@
                     {% trans 'in' %}
                     <strong>{{ p.slot.rooms|first }}</strong>.
                 </p>
+                
+                {% if p.youtube_hash %}
+                <div class="video">
+                    {{ p.youtube_embed_code|safe }}
+                    <p><a href="{{ p.youtube_link }}">Watch on YouTube</a>.</p>
+                </div>
+                {% endif %}
+                
                 <div class="description">
                     {{ p.description|apply_markup:"markdown" }}
                 </div>
